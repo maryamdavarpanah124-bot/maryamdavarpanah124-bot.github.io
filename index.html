@@ -34,12 +34,6 @@
       box-shadow: 0 0 12px rgba(0,0,0,0.15);
     }
 
-    .intro h1 {
-      font-size: 30px;
-      margin-bottom: 10px;
-      color: #1a237e;
-    }
-
     .intro-box {
       background:#f7f9fc;
       padding:18px 22px;
@@ -144,6 +138,36 @@
       font-size: 14px;
       padding-bottom: 30px;
     }
+
+    /* ✅ نسخه موبایل */
+    @media (max-width: 600px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .profile-img {
+        width: 120px;
+        margin-bottom: 15px;
+      }
+
+      .intro-box {
+        max-width: 100%;
+        font-size: 16px;
+      }
+
+      .columns {
+        flex-direction: column;
+      }
+
+      .column {
+        min-width: 100%;
+      }
+
+      .container {
+        padding: 25px 20px;
+      }
+    }
   </style>
 </head>
 
@@ -161,7 +185,7 @@
         <br>
         🌱 درک مفهومی و کسب بالاترین نمره در دروس ریاضی دانشگاهی
         <br>
-        ⭐ همه آموزش‌ها با استقبال دانشجویان، موفق به کسب رضایت‌مندی کامل شده‌اند
+         همه آموزش‌ها با استقبال دانشجویان، موفق به کسب رضایت‌مندی کامل (⭐⭐⭐⭐⭐) شده‌اند
       </div>
     </div>
   </div>
@@ -279,4 +303,14 @@
     </div>
 
     <div class="discount">
-      🎁🎁 کد تخفیف ۲۰٪ نیک‌درس: <span style="color:#d32f2f;">cdemada</span>
+      🎁 کد تخفیف ۲۰٪ نیک‌درس: <span style="color:#d32f2f;">cdemada</span>
+    </div>
+
+  </div>
+
+  <div class="footer">
+    © تمامی حقوق متعلق به مریم داورپناه است.
+  </div>
+
+</body>
+</html>
