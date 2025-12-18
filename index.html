@@ -1,63 +1,139 @@
-<!-- ⭐⭐⭐ هدر با جابه‌جایی 0.6 خط ⭐⭐⭐ -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>آموزش ریاضیات - مریم داورپناه</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-.header-bar {
-    width: 100%;
-    height: 165px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 0 0 16px 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-}
+    <style>
+    /* ⭐⭐⭐ هدر ⭐⭐⭐ */
+    .header-bar {
+        width: 100%;
+        height: 165px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 0 0 16px 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
 
-.header-bar img.bg-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-}
+    .header-bar img.bg-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
 
-/* عکس پروفایل */
-.header-profile {
-    position: absolute;
-    bottom: -20px; /* 0.6 خط پایین‌تر از نسخه قبلی */
-    right: 20px;
-    z-index: 10;
-}
+    .header-profile {
+        position: absolute;
+        bottom: -20px; /* 0.6 خط پایین‌تر */
+        right: 20px;
+        z-index: 10;
+    }
 
-.header-profile img {
-    width: 184px;
-    height: 184px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
+    .header-profile img {
+        width: 184px; /* 85٪ اندازه قبلی */
+        height: 184px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid white;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
 
-/* متن معرفی */
-.header-text {
-    text-align: right;
-    margin-top: 25px;
-    padding-right: 30px;
-}
+    .header-text {
+        text-align: right;
+        margin-top: 25px; /* یک خط بالاتر */
+        padding-right: 30px;
+    }
 
-.header-text h1 {
-    margin: 0;
-    font-size: 2rem;
-    font-weight: 900;
-    color: #111;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.15);
-}
+    .header-text h1 {
+        margin: 0;
+        font-size: 2rem;
+        font-weight: 900;
+        color: #111;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.15);
+    }
 
-.header-text p {
-    margin: 10px 0 0;
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #333;
-    text-shadow: 0 1px 2px rgba(0,0,0,0.1);
-}
-</style>
+    .header-text p {
+        margin: 10px 0 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #333;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    }
+
+    /* ⭐⭐⭐ کادر معرفی ⭐⭐⭐ */
+    .intro-box {
+        background: #ffffff;
+        padding: 20px 22px;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        margin-top: 20px;
+        font-size: 0.98rem;
+        line-height: 1.8;
+    }
+
+    /* ⭐⭐⭐ موبایل ⭐⭐⭐ */
+    @media (max-width: 768px) {
+        .header-bar {
+            height: 100px;
+        }
+
+        .header-profile {
+            bottom: -20px;
+            right: 12px;
+            text-align: center;
+        }
+
+        .header-profile img {
+            width: 130px;
+            height: 130px;
+        }
+
+        .header-text {
+            text-align: center;
+            padding-right: 0;
+            margin-top: 40px;
+        }
+
+        .header-text h1 {
+            font-size: 1.5rem;
+        }
+
+        .header-text p {
+            font-size: 1rem;
+        }
+    }
+    </style>
+</head>
+
+<body>
+
+<!-- ⭐⭐⭐ هدر ⭐⭐⭐ -->
+<header class="header-bar">
+    <img src="img/logo2.png" alt="لوگو" class="bg-logo">
+
+    <div class="header-profile">
+        <img src="img/profile2.jpg" alt="عکس مریم داورپناه">
+    </div>
+</header>
+
+<!-- ⭐⭐⭐ متن معرفی ⭐⭐⭐ -->
+<div class="header-text">
+    <h1>مریم داورپناه</h1>
+    <p>مدرس دانشگاه، مولف و مدرس کامل‌ترین فیلم‌های آموزشی ریاضی</p>
+</div>
+
+<!-- ⭐⭐⭐ کادر معرفی ⭐⭐⭐ -->
+<div class="intro-box">
+    <h2>آموزش ریاضیات با روش‌های نوین آموزش ریاضی</h2>
+    هدف این مجموعه، بی‌نیاز کردن شما از هر منبع دیگری مثل جزوه، کلاس خصوصی و کتاب‌های متعدد است؛
+    به‌طوری که بتوانید علاوه بر درک عمیق مفاهیم ریاضی، در آزمون‌های تشریحی، تستی، کنکور و آزمون‌های استخدامی
+    بهترین عملکرد را داشته باشید.
+</div>
+
+</body>
+</html>
 
