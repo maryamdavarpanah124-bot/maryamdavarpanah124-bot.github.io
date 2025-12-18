@@ -35,7 +35,7 @@
         filter: brightness(0.92);
     }
 
-    /* ⭐ عکس 0.4 خط پایین‌تر ⭐ */
+    /* ⭐ عکس ⭐ */
     .header-profile {
         position: absolute;
         bottom: -24px;
@@ -52,43 +52,30 @@
         box-shadow: 0 4px 14px rgba(0,0,0,0.25);
     }
 
-    /* ⭐ کادر اسم + معرفی (زیباتر + بالاتر) ⭐ */
-    .name-box {
-        margin-top: -5px; /* بالاتر از نسخه قبلی */
+    /* ⭐ متن اسم + معرفی بدون کادر ⭐ */
+    .name-text {
+        margin-top: 15px;
         margin-right: 20px;
-        background: rgba(180, 200, 255, 0.28);
-        padding: 18px 24px;
-        border-radius: 16px;
-        display: flex;
-        align-items: center;
-        gap: 25px;
-        width: fit-content;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        backdrop-filter: blur(4px);
+        font-size: 1.25rem;
+        font-weight: 800;
+        color: #0a1a4d;
     }
 
-    .name-box h1 {
-        margin: 0;
-        font-size: 2.1rem;
-        font-weight: 1000;
-        color: #0a1a4d; /* سورمه‌ای زیبا */
-        letter-spacing: -0.5px;
-    }
-
-    .name-box p {
-        margin: 0;
-        font-size: 1.15rem;
+    .name-sub {
+        margin-right: 20px;
+        margin-top: 5px;
+        font-size: 1.05rem;
+        color: #333;
         font-weight: 600;
-        color: #2d2d2d; /* خاکستری تیره شیک */
     }
 
-    /* ⭐ کادر معرفی دوره‌ها (۳ خط بالاتر + زیباتر) ⭐ */
+    /* ⭐ کادر توضیحات ⭐ */
     .intro-box {
         background: rgba(210, 235, 255, 0.45);
-        padding: 28px 28px;
+        padding: 28px 28px 15px;
         border-radius: 18px;
         box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-        margin: 0 auto 10px; /* بالاتر آمد */
+        margin: 10px auto 0;
         width: 90%;
         text-align: center;
         font-size: 1.08rem;
@@ -103,21 +90,21 @@
         color: #0f2a5f;
     }
 
-    /* ⭐ دکمه‌های رنگی ⭐ */
+    /* ⭐ دکمه‌ها داخل کادر ⭐ */
     .buttons {
-        margin: 20px auto 30px;
+        margin-top: 15px;
         text-align: center;
     }
 
     .buttons a {
         display: inline-block;
-        padding: 12px 26px;
-        margin: 8px;
-        border-radius: 14px;
+        padding: 10px 22px;
+        margin: 6px;
+        border-radius: 12px;
         color: white;
         font-weight: 700;
         text-decoration: none;
-        font-size: 1rem;
+        font-size: 0.95rem;
         box-shadow: 0 4px 12px rgba(0,0,0,0.12);
         transition: 0.25s;
     }
@@ -148,12 +135,12 @@
             height: 130px;
         }
 
-        .name-box {
-            margin: 60px auto 0;
-            flex-direction: column;
+        .name-text, .name-sub {
             text-align: center;
+            margin-right: 0;
         }
     }
+
     </style>
 </head>
 
@@ -168,28 +155,30 @@
     </div>
 </header>
 
-<!-- ⭐⭐⭐ کادر اسم + معرفی ⭐⭐⭐ -->
-<div class="name-box">
-    <h1>مریم داورپناه</h1>
-    <p>مدرس دانشگاه، مولف و مدرس کامل‌ترین فیلم‌های آموزشی ریاضی</p>
-</div>
+<!-- ⭐⭐⭐ متن اسم + معرفی ⭐⭐⭐ -->
+<div class="name-text">مریم داورپناه</div>
+<div class="name-sub">مدرس دانشگاه، مولف و مدرس کامل‌ترین فیلم‌های آموزشی ریاضی</div>
 
-<!-- ⭐⭐⭐ کادر معرفی دوره‌ها ⭐⭐⭐ -->
+<!-- ⭐⭐⭐ کادر توضیحات ⭐⭐⭐ -->
 <div class="intro-box">
     <h2>آموزش ریاضیات با روش‌های نوین آموزش ریاضی</h2>
+
     هدف این مجموعه، بی‌نیاز کردن شما از هر منبع دیگری مثل جزوه، کلاس خصوصی و کتاب‌های متعدد است؛  
     <br>
     به‌طوری که بتوانید علاوه بر درک عمیق مفاهیم ریاضی، در آزمون‌های تشریحی، تستی، کنکور و آزمون‌های استخدامی  
     بهترین عملکرد را داشته باشید.
+
+    <!-- ⭐⭐⭐ دکمه‌ها داخل کادر ⭐⭐⭐ -->
+    <div class="buttons">
+        <a class="btn1" href="#">معرفی مدرس</a>
+        <a class="btn2" href="#">نظرات دانشجویان</a>
+        <a class="btn3" href="#">ارتباط با ما</a>
+        <a class="btn4" href="#">مقالات</a>
+    </div>
 </div>
 
-<!-- ⭐⭐⭐ دکمه‌های رنگی ⭐⭐⭐ -->
-<div class="buttons">
-    <a class="btn1" href="#">معرفی مدرس</a>
-    <a class="btn2" href="#">نظرات دانشجویان</a>
-    <a class="btn3" href="#">ارتباط با ما</a>
-    <a class="btn4" href="#">مقالات</a>
-</div>
+<!-- ⭐⭐⭐ فضای خالی برای دوره‌ها ⭐⭐⭐ -->
+<div style="height: 120px;"></div>
 
 </body>
 </html>
