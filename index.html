@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <style>
+
+    body {
+        font-family: "IRANSans", sans-serif;
+        background: #f7f9fc;
+        margin: 0;
+        padding: 0;
+    }
+
     /* ⭐⭐⭐ هدر ⭐⭐⭐ */
     .header-bar {
         width: 100%;
         height: 165px;
         position: relative;
         overflow: hidden;
-        border-radius: 0 0 16px 16px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+        border-radius: 0 0 18px 18px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
     }
 
     .header-bar img.bg-logo {
@@ -24,6 +32,7 @@
         height: 100%;
         object-fit: cover;
         object-position: center;
+        filter: brightness(0.92);
     }
 
     /* ⭐ عکس 0.4 خط پایین‌تر ⭐ */
@@ -40,84 +49,87 @@
         border-radius: 50%;
         object-fit: cover;
         border: 4px solid white;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.25);
     }
 
-    /* ⭐ کادر اسم + معرفی (۲ خط بالاتر) ⭐ */
+    /* ⭐ کادر اسم + معرفی (زیباتر + بالاتر) ⭐ */
     .name-box {
-        margin-top: 10px; /* دو خط بالاتر */
+        margin-top: -5px; /* بالاتر از نسخه قبلی */
         margin-right: 20px;
-        background: rgba(180, 200, 255, 0.25);
-        padding: 15px 20px;
-        border-radius: 14px;
+        background: rgba(180, 200, 255, 0.28);
+        padding: 18px 24px;
+        border-radius: 16px;
         display: flex;
         align-items: center;
-        gap: 20px;
+        gap: 25px;
         width: fit-content;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+        backdrop-filter: blur(4px);
     }
 
     .name-box h1 {
         margin: 0;
-        font-size: 2rem;
-        font-weight: 1000; /* برجسته‌تر */
-        color: #0b1a55; /* سورمه‌ای */
+        font-size: 2.1rem;
+        font-weight: 1000;
+        color: #0a1a4d; /* سورمه‌ای زیبا */
+        letter-spacing: -0.5px;
     }
 
     .name-box p {
         margin: 0;
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         font-weight: 600;
-        color: #333;
+        color: #2d2d2d; /* خاکستری تیره شیک */
     }
 
-    /* ⭐ کادر معرفی دوره‌ها (۳ خط بالاتر) ⭐ */
+    /* ⭐ کادر معرفی دوره‌ها (۳ خط بالاتر + زیباتر) ⭐ */
     .intro-box {
-        background: rgba(200, 230, 255, 0.35);
-        padding: 25px 25px;
-        border-radius: 16px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        margin: 10px auto; /* سه خط بالاتر */
+        background: rgba(210, 235, 255, 0.45);
+        padding: 28px 28px;
+        border-radius: 18px;
+        box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+        margin: 0 auto 10px; /* بالاتر آمد */
         width: 90%;
         text-align: center;
-        font-size: 1rem;
-        line-height: 1.9;
+        font-size: 1.08rem;
+        line-height: 2.1;
+        color: #1f1f1f;
     }
 
     .intro-box h2 {
         margin-top: 0;
-        font-size: 1.3rem;
+        font-size: 1.35rem;
         font-weight: 800;
-        color: #222;
+        color: #0f2a5f;
     }
 
     /* ⭐ دکمه‌های رنگی ⭐ */
     .buttons {
-        margin: 25px auto;
+        margin: 20px auto 30px;
         text-align: center;
     }
 
     .buttons a {
         display: inline-block;
-        padding: 12px 22px;
+        padding: 12px 26px;
         margin: 8px;
-        border-radius: 12px;
+        border-radius: 14px;
         color: white;
         font-weight: 700;
         text-decoration: none;
         font-size: 1rem;
-        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-        transition: 0.2s;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+        transition: 0.25s;
     }
 
-    .btn1 { background: #4a6cf7; }   /* آبی */
-    .btn2 { background: #ff7a59; }   /* نارنجی */
-    .btn3 { background: #28b463; }   /* سبز */
-    .btn4 { background: #af7ac5; }   /* بنفش */
+    .btn1 { background: #4a6cf7; }
+    .btn2 { background: #ff7a59; }
+    .btn3 { background: #28b463; }
+    .btn4 { background: #af7ac5; }
 
     .buttons a:hover {
-        transform: translateY(-3px);
-        box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+        transform: translateY(-4px);
+        box-shadow: 0 7px 18px rgba(0,0,0,0.18);
     }
 
     /* ⭐ موبایل ⭐ */
@@ -165,8 +177,9 @@
 <!-- ⭐⭐⭐ کادر معرفی دوره‌ها ⭐⭐⭐ -->
 <div class="intro-box">
     <h2>آموزش ریاضیات با روش‌های نوین آموزش ریاضی</h2>
-    هدف این مجموعه، بی‌نیاز کردن شما از هر منبع دیگری مثل جزوه، کلاس خصوصی و کتاب‌های متعدد است؛
-    به‌طوری که بتوانید علاوه بر درک عمیق مفاهیم ریاضی، در آزمون‌های تشریحی، تستی، کنکور و آزمون‌های استخدامی
+    هدف این مجموعه، بی‌نیاز کردن شما از هر منبع دیگری مثل جزوه، کلاس خصوصی و کتاب‌های متعدد است؛  
+    <br>
+    به‌طوری که بتوانید علاوه بر درک عمیق مفاهیم ریاضی، در آزمون‌های تشریحی، تستی، کنکور و آزمون‌های استخدامی  
     بهترین عملکرد را داشته باشید.
 </div>
 
