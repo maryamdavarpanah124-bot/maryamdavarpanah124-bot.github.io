@@ -1,9 +1,9 @@
-<!-- ⭐⭐⭐ هدر نهایی با ارتفاع کمتر و موقعیت اصلاح‌شده ⭐⭐⭐ -->
+<!-- ⭐⭐⭐ هدر نهایی با اصلاح موقعیت عکس و متن ⭐⭐⭐ -->
 
 <style>
 .header-bar {
     width: 100%;
-    height: 165px; /* کاهش به 75٪ ارتفاع قبلی */
+    height: 165px; /* ارتفاع لوگو */
     position: relative;
     overflow: hidden;
     border-radius: 0 0 16px 16px;
@@ -23,7 +23,7 @@
 /* عکس پروفایل */
 .header-profile {
     position: absolute;
-    bottom: 20px; /* بالاتر آمده تا داخل لوگو قرار بگیرد */
+    bottom: -5px; /* دو خط پایین‌تر از نسخه قبلی */
     right: 20px;
     display: flex;
     flex-direction: column;
@@ -44,7 +44,7 @@
 /* متن معرفی */
 .header-text {
     text-align: right;
-    margin-top: 40px; /* دو خط بالاتر از قبل */
+    margin-top: 25px; /* یک خط بالاتر از نسخه قبلی */
     padding-right: 30px;
 }
 
@@ -82,7 +82,7 @@
     }
 
     .header-profile {
-        bottom: 10px;
+        bottom: -20px;
         right: 12px;
         align-items: center;
         text-align: center;
@@ -96,7 +96,7 @@
     .header-text {
         text-align: center;
         padding-right: 0;
-        margin-top: 30px;
+        margin-top: 40px;
     }
 
     .header-text h1 {
