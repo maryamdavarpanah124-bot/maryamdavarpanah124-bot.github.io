@@ -1,11 +1,10 @@
-<!DOCTYPE html>  
+<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <title>آموزش ریاضیات با روش‌های نوین آموزش ریاضی - مریم داورپناه</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- سئو پایه -->
     <meta name="description" content="آموزش ریاضیات با روش‌های نوین آموزش ریاضی؛ دوره‌های جامع، مثال‌محور و عمیق با تدریس مریم داورپناه.">
     <meta name="keywords" content="آموزش ریاضیات, مریم داورپناه, ریاضی عمومی, معادلات دیفرانسیل, آموزش آنلاین ریاضی">
 
@@ -24,7 +23,6 @@
             padding: 16px;
         }
 
-        /* هدر: لوگو + تصویر پروفایل */
         .hero {
             display: flex;
             align-items: center;
@@ -73,7 +71,6 @@
             color: #555;
         }
 
-        /* بخش تیتر اصلی و معرفی + دکمه‌ها */
         .intro-section {
             background: #ffffff;
             padding: 20px 22px;
@@ -143,7 +140,6 @@
             filter: brightness(1.03);
         }
 
-        /* عناوین بخش‌ها */
         .section-title {
             margin: 24px 0 12px;
             font-size: 1.1rem;
@@ -158,26 +154,75 @@
             color: #6b6bd9;
         }
 
-        /* کارت دوره‌ها */
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 12px;
+        }
+
+        .course-card {
+            padding: 14px 16px;
+            border-radius: 14px;
+            background: #ffffff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .course-title {
+            font-weight: bold;
+            margin-bottom: 6px;
+            font-size: 0.99rem;
+        }
+
+        .course-desc {
+            font-size: 0.89rem;
+            color: #555;
+            margin-bottom: 10px;
+        }
+
+        .course-button {
+            display: inline-block;
+            text-align: center;
+            padding: 8px 10px;
+            border-radius: 999px;
+            border: none;
+            font-size: 0.9rem;
+            cursor: pointer;
+            text-decoration: none;
+            color: #222;
+        }
+
+        .btn-color-1 { background-color: #ffe8ec; }
+        .btn-color-2 { background-color: #e7f3ff; }
+        .btn-color-3 { background-color: #e8fff1; }
+        .btn-color-4 { background-color: #fff7e0; }
+        .btn-color-5 { background-color: #f0e9ff; }
+        .btn-color-6 { background-color: #e9f7f7; }
+        .btn-color-7 { background-color: #ffe9f5; }
+        .btn-color-8 { background-color: #e5fff5; }
+        .btn-color-9 { background-color: #fff3e5; }
+        .btn-color-10 { background-color: #e9ecff; }
+        .btn-color-11 { background-color: #e6f8ff; }
+        .btn-color-12 { background-color: #f9e6ff; }
+    </style>
 </head>
 <body>
-
 <div class="page-container">
 
-    <!-- هدر: لوگو + تصویر پروفایل -->
-    <header class="hero">
-        <div class="hero-logo">
-            <img src="images/logo2.png" alt="لوگوی آموزش ریاضیات">
+<header class="hero">
+    <div class="hero-logo">
+        <img src="img/logo2.png" alt="لوگوی آموزش ریاضیات">
+    </div>
+    <div class="hero-profile">
+        <div class="hero-text">
+            <h1>مریم داورپناه</h1>
+            <p>مدرس ریاضیات دانشگاهی و طراح دوره‌های کامل و مثال‌محور</p>
         </div>
-        <div class="hero-profile">
-            <div class="hero-text">
-                <h1>مریم داورپناه</h1>
-                <p>مدرس ریاضیات دانشگاهی و طراح دوره‌های کامل و مثال‌محور</p>
-            </div>
-            <img src="images/profile2.jpg" alt="عکس مریم داورپناه">
-        </div>
-    </header>
-
+        <img src="img/profile2.jpg" alt="عکس مریم داورپناه">
+    </div>
+</header>
     <!-- بخش تیتر اصلی + متن معرفی + دکمه‌ها -->
     <section class="intro-section">
         <h2>آموزش ریاضیات با روش‌های نوین آموزش ریاضی</h2>
@@ -205,7 +250,7 @@
 
         <div class="courses-grid">
 
-            <!-- مبانی آنالیز ریاضی (فرادرس) -->
+            <!-- مبانی آنالیز ریاضی (فرادرس) — بدون کد تخفیف -->
             <article class="course-card">
                 <div>
                     <div class="course-title">مبانی آنالیز ریاضی (ویژه کنکور ارشد و دکترا)</div>
@@ -217,120 +262,130 @@
                    class="course-button btn-color-1">مشاهده در فرادرس</a>
             </article>
 
-            <!-- ریاضی عمومی ۱ -->
+            <!-- ریاضی عمومی ۱ (نیک‌درس) -->
             <article class="course-card">
                 <div>
                     <div class="course-title">ریاضی عمومی ۱</div>
                     <div class="course-desc">
                         کامل‌ترین آموزش ریاضی عمومی ۱ با بیش از ۳۳۵ مثال حل‌شده، بیان ساده، نکات تستی و تشریحی، و حل مسائل امتحانی دانشگاه‌ها.
+                        <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmdmat01-00022-general-mathematics-1/"
                    class="course-button btn-color-2">مشاهده در نیک‌درس</a>
             </article>
 
-            <!-- ریاضی عمومی ۲ -->
+            <!-- ریاضی عمومی ۲ (نیک‌درس) -->
             <article class="course-card">
                 <div>
                     <div class="course-title">ریاضی عمومی ۲</div>
                     <div class="course-desc">
                         کامل‌ترین آموزش ریاضی عمومی ۲ با بیش از ۳۷۹ مثال، بیان ساده، حل مسائل امتحانی دانشگاه‌ها و پوشش نکات تستی و تشریحی.
+                        <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmdmat03-00031-general-mathematics-2/"
                    class="course-button btn-color-3">مشاهده در نیک‌درس</a>
             </article>
 
-            <!-- معادلات دیفرانسیل -->
+            <!-- معادلات دیفرانسیل (نیک‌درس) -->
             <article class="course-card">
                 <div>
                     <div class="course-title">معادلات دیفرانسیل</div>
                     <div class="course-desc">
                         کامل‌ترین آموزش معادلات دیفرانسیل با بیش از ۴۷۹ مثال حل‌شده، همراه با حل مسائل امتحانی دانشگاه‌ها و آزمون انتهای هر فصل.
+                        <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmddeq12-00053-differential-equations/"
                    class="course-button btn-color-4">مشاهده در نیک‌درس</a>
             </article>
 
-            <!-- مثلثات -->
+            <!-- مثلثات (نیک‌درس) -->
             <article class="course-card">
                 <div>
                     <div class="course-title">مثلثات (جامع)</div>
                     <div class="course-desc">
                         کامل‌ترین آموزش مثلثات با بیش از ۱۹۰ مثال و بیان ساده، ویژه دبیرستان، کنکور، دانشگاه و دبیران ریاضی.
+                        <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmdtrg14-00067-trigonometry-education/"
                    class="course-button btn-color-5">مشاهده در نیک‌درس</a>
             </article>
 
-            <!-- مشتق و انتگرال -->
+            <!-- مشتق و انتگرال (نیک‌درس) -->
             <article class="course-card">
                 <div>
                     <div class="course-title">مشتق و انتگرال</div>
                     <div class="course-desc">
                         کامل‌ترین آموزش مشتق و انتگرال با بیش از ۱۶۸ مثال حل‌شده، بیان ساده و حل مسائل مهم امتحانی.
+                        <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmdmat02-00024-derivative-and-integral/"
                    class="course-button btn-color-6">مشاهده در نیک‌درس</a>
             </article>
 
-            <!-- بردار و ماتریس -->
+            <!-- بردار و ماتریس (نیک‌درس) -->
             <article class="course-card">
                 <div>
                     <div class="course-title">بردار و ماتریس (جبر خطی مقدماتی)</div>
                     <div class="course-desc">
                         آموزش جبر خطی مقدماتی با بیش از ۵۷ مثال، ویژه دانشجویان همه رشته‌ها و علاقه‌مندان به برنامه‌نویسی و هوش مصنوعی.
+                        <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmdvec11-00049-vector-and-matrix/"
                    class="course-button btn-color-7">مشاهده در نیک‌درس</a>
             </article>
 
-            <!-- تبدیل لاپلاس -->
+            <!-- تبدیل لاپلاس (نیک‌درس) -->
             <article class="course-card">
                 <div>
                     <div class="course-title">تبدیل لاپلاس</div>
                     <div class="course-desc">
                         کامل‌ترین آموزش تبدیل لاپلاس با بیش از ۱۶۶ مثال، بیان ساده و حل مسائل امتحانی دانشگاه‌ها به‌صورت منظم و طبقه‌بندی‌شده.
+                        <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmdmat08-00045-laplace-transform/"
                    class="course-button btn-color-8">مشاهده در نیک‌درس</a>
             </article>
 
-            <!-- دنباله و سری -->
+            <!-- دنباله و سری (نیک‌درس) -->
             <article class="course-card">
                 <div>
                     <div class="course-title">دنباله و سری</div>
                     <div class="course-desc">
                         کامل‌ترین آموزش دنباله و سری با بیش از ۸۰ مثال کاربردی، با بیان ساده و مناسب برای فهم عمیق مفاهیم همگرایی.
+                        <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmdmat06-00039-sequence-and-series/"
                    class="course-button btn-color-9">مشاهده در نیک‌درس</a>
             </article>
 
-            <!-- ریاضی عمومی ۲ (ویژه رشته ریاضی) -->
+            <!-- ریاضی عمومی ۲ (ویژه رشته ریاضی) — نیک‌درس -->
             <article class="course-card">
                 <div>
                     <div class="course-title">ریاضی عمومی ۲ (ویژه دانشجویان رشته ریاضی)</div>
                     <div class="course-desc">
                         کامل‌ترین آموزش ریاضی عمومی ۲ برای دانشجویان ریاضیات و کاربردها، با بیان ساده و بیشترین تعداد مثال حل‌شده.
+                        <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmdmat04-00037-general-mathematics-2-mathematics-field/"
                    class="course-button btn-color-10">مشاهده در نیک‌درس</a>
             </article>
 
-            <!-- ریاضی عمومی ۳ (ویژه رشته ریاضی) -->
+            <!-- ریاضی عمومی ۳ (ویژه رشته ریاضی) — نیک‌درس -->
             <article class="course-card">
                 <div>
                     <div class="course-title">ریاضی عمومی ۳ (ویژه دانشجویان رشته ریاضی)</div>
                     <div class="course-desc">
                         کامل‌ترین آموزش ریاضی عمومی ۳ برای دانشجویان ریاضیات و کاربردها، همراه با حل تعداد زیادی مثال آموزشی و امتحانی.
+                        <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmdmat05-00038-general-mathematics-3/"
@@ -339,6 +394,7 @@
 
         </div>
     </section>
+        </div>
     </section>
 
     <!-- آموزش‌های رایگان -->
@@ -355,7 +411,7 @@
                 <div>
                     <div class="course-title">آموزش ماتریس (رایگان)</div>
                     <div class="course-desc">
-                        آموزش رایگان مفاهیم پایه‌ای ماتریس‌ها و محاسبات مرتبط، مناسب برای شروع یادگیری جبر خطی و تقویت پایه دانشگاهی.
+                        آموزش رایگان ماتریس‌، قسمتی از اموزش بردار و ماتریس است
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmdmat07-00044-matrix/"
@@ -367,7 +423,7 @@
                 <div>
                     <div class="course-title">آموزش مشتق جزئی (نسبی) (رایگان)</div>
                     <div class="course-desc">
-                        آموزش رایگان مشتق جزئی و مفاهیم نسبی، با بیانی ساده و مثال‌های کاربردی برای دروس ریاضی پیشرفته‌تر.
+                        آموزش رایگان مشتق جزئی و مفاهیم نسبی، قسمتی از آموزش ریاضی عمومی 2 است.
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmdpti09-00046-partial-perivative/"
@@ -379,7 +435,7 @@
                 <div>
                     <div class="course-title">آموزش اعداد مختلط (رایگان)</div>
                     <div class="course-desc">
-                        آموزش رایگان اعداد مختلط، نمایش هندسی و محاسبات مربوطه، مناسب برای دانشجویان و علاقه‌مندان به مباحث پیشرفته‌تر ریاضی.
+                        آموزش رایگان اعداد مختلط، قسمتی از آموزش ریاضی عمومی 1 است.
                     </div>
                 </div>
                 <a href="https://nikdars.com/edu/mmdplx10-00047-complex-numbers/"
@@ -391,7 +447,7 @@
                 <div>
                     <div class="course-title">معادلات دیفرانسیل کامل و عامل انتگرال‌ساز (رایگان)</div>
                     <div class="course-desc">
-                        آموزش رایگان معادلات دیفرانسیل کامل و عامل انتگرال‌ساز، با تمرکز بر حل مسئله و درک روش‌های حل کلاسیک.
+                        آموزش رایگان معادلات دیفرانسیل کامل و عامل انتگرال‌ساز، این آموزش، قسمتی از آموزش معادلات دیفرانسیل است.
                     </div>
                 </div>
                 <a href="https://nikdars.com/?p=28032"
@@ -420,7 +476,7 @@
             <span>بازخورد و تجربه دانشجویان</span>
         </h2>
         <p style="margin-bottom: 10px; max-width: 720px;">
-            برای آشنایی با تجربهٔ دیگر دانشجویان و دیدن نظرات واقعی دربارهٔ دوره‌ها، می‌توانید صفحهٔ نظرات را ببینید.
+            برای مشاهده نظرات دانشجویانم دربارهٔ دوره‌های آموزشی، می‌توانید صفحهٔ نظرات را ببینید.
         </p>
         <a href="reviews.html" class="primary-button">مشاهده نظرات دانشجویان</a>
     </section>
@@ -432,7 +488,7 @@
             <span>ارتباط با من</span>
         </h2>
         <p style="margin-bottom: 10px; max-width: 720px;">
-            برای درخواست دوره‌های جدید، پیشنهاد بهبود، یا پرسش‌های آموزشی می‌توانید از راه‌های زیر با من در ارتباط باشید:
+             با من در ارتباط باشید:
         </p>
 
         <div class="button-row contact-button-group">
@@ -456,7 +512,7 @@
         </h2>
 
         <p style="margin-bottom: 10px;">
-            برای دنبال‌کردن آخرین آموزش‌ها، ویدئوها و اطلاع‌رسانی دوره‌ها می‌توانید در رسانه‌های اجتماعی همراه من باشید:
+             در رسانه‌های اجتماعی همراه من باشید:
         </p>
 
         <div class="social-buttons">
@@ -475,3 +531,4 @@
 
 </body>
 </html>
+
