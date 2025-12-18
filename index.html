@@ -1,71 +1,74 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<meta charset="UTF-8">
-<title>آموزش ریاضیات - مریم داورپناه</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>آموزش ریاضیات - مریم داورپناه</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-body{font-family:"IRANSans",sans-serif;background:#f7f9fc;margin:0}
+  <style>
+    body{font-family:"IRANSans",sans-serif;background:#f7f9fc;margin:0}
 
-/* هدر */
-.header-bar{width:100%;height:165px;position:relative;overflow:hidden;border-radius:0 0 18px 18px;box-shadow:0 4px 14px rgba(0,0,0,0.08)}
-.header-bar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.92)}
-.header-profile{position:absolute;bottom:-24px;right:20px;z-index:10}
-.header-profile img{width:184px;height:184px;border-radius:50%;border:4px solid #fff;object-fit:cover;box-shadow:0 4px 14px rgba(0,0,0,0.25)}
+    /* هدر */
+    .header-bar{width:100%;height:165px;position:relative;overflow:hidden;border-radius:0 0 18px 18px;box-shadow:0 4px 14px rgba(0,0,0,0.08)}
+    .header-bar img.bg-logo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:brightness(.92)}
+    .header-profile{position:absolute;bottom:-24px;right:20px;z-index:10}
+    .header-profile img{width:184px;height:184px;border-radius:50%;border:4px solid #fff;object-fit:cover;box-shadow:0 4px 14px rgba(0,0,0,0.25)}
 
-/* نام */
-.name-text{margin:15px 20px 0;font-size:1.45rem;font-weight:900;color:#0a1a4d}
-.name-sub{margin:5px 20px 0;font-size:1.1rem;font-weight:600;color:#333}
+    /* نام */
+    .name-text{margin:15px 20px 0;font-size:1.45rem;font-weight:900;color:#0a1a4d}
+    .name-sub{margin:5px 20px 0;font-size:1.1rem;font-weight:600;color:#333}
 
-/* توضیحات */
-.intro-box{background:rgba(210,235,255,.45);padding:28px;border-radius:18px;width:90%;margin:10px auto 0;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,0.06)}
-.intro-box h2{margin:0 0 10px;font-size:1.35rem;font-weight:800;color:#0f2a5f}
+    /* توضیحات */
+    .intro-box{background:rgba(210,235,255,.45);padding:28px;border-radius:18px;width:90%;margin:10px auto 0;text-align:center;box-shadow:0 4px 14px rgba(0,0,0,0.06)}
+    .intro-box h2{margin:0 0 10px;font-size:1.35rem;font-weight:800;color:#0f2a5f}
 
-/* دکمه‌های بالا */
-.buttons{text-align:center;margin-top:15px}
-.buttons a{display:inline-block;padding:10px 22px;margin:6px;border-radius:12px;color:#fff;font-weight:700;text-decoration:none;font-size:.95rem;box-shadow:0 4px 12px rgba(0,0,0,0.12)}
-.btn1{background:#4a6cf7}.btn2{background:#ff7a59}.btn3{background:#28b463}.btn4{background:#af7ac5}.btn5{background:#34495e}
+    /* دکمه‌های بالا */
+    .buttons{text-align:center;margin-top:15px}
+    .buttons a{display:inline-block;padding:10px 22px;margin:6px;border-radius:12px;color:#fff;font-weight:700;text-decoration:none;font-size:.95rem;box-shadow:0 4px 12px rgba(0,0,0,0.12)}
+    .btn1{background:#4a6cf7}.btn2{background:#ff7a59}.btn3{background:#28b463}.btn4{background:#af7ac5}.btn5{background:#34495e}
 
-/* دوره‌ها */
-.courses-section{width:92%;margin:40px auto}
-.courses-section h2{text-align:center;color:#0a1a4d;margin-bottom:25px;font-size:1.4rem}
-.courses-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    /* دوره‌ها (بالاتر آورده شده تا بدون اسکرول دیده شوند) */
+    .courses-section{width:92%;margin:20px auto}
+    .courses-section h2{text-align:center;color:#0a1a4d;margin:8px 0 14px;font-size:1.4rem}
+    .courses-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
 
-/* کارت‌ها */
-.course-card{background:#fff;padding:18px;border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,0.06);display:flex;flex-direction:column;min-height:240px}
-.course-card.small{min-height:140px;padding:14px}
-.course-title-box{padding:10px;border-radius:12px;text-align:center;margin-bottom:12px}
-.color1{background:rgba(180,200,255,.35)}
-.color2{background:rgba(200,180,255,.35)}
-.color3{background:rgba(180,255,220,.35)}
-.color4{background:rgba(255,220,200,.35)}
-.color5{background:rgba(255,200,230,.35)}
-.course-title-box h3{margin:0;font-size:1.02rem;font-weight:900;color:#12306b}
-.course-card p{font-size:.95rem;line-height:1.7;color:#333;margin:10px 0}
-.discount{font-size:.9rem;color:#2a4a7b;margin-top:8px}
-.course-card a{margin-top:auto;display:inline-block;padding:8px 18px;background:#4a6cf7;color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:.9rem;text-align:center}
-.faradars-btn{background:#0f7dc2!important}
-.free-card{background:#eef6ff;border:1px solid #d6e8ff}
+    /* کارت‌ها */
+    .course-card{background:#fff;padding:18px;border-radius:16px;box-shadow:0 4px 14px rgba(0,0,0,0.06);display:flex;flex-direction:column;min-height:240px}
+    .course-card.small{min-height:140px;padding:14px}
+    .course-title-box{padding:10px;border-radius:12px;text-align:center;margin-bottom:12px}
+    .color1{background:rgba(180,200,255,.35)}
+    .color2{background:rgba(200,180,255,.35)}
+    .color3{background:rgba(180,255,220,.35)}
+    .color4{background:rgba(255,220,200,.35)}
+    .color5{background:rgba(255,200,230,.35)}
+    .course-title-box h3{margin:0;font-size:1.02rem;font-weight:900;color:#12306b}
+    .course-card p{font-size:.95rem;line-height:1.7;color:#333;margin:10px 0}
+    .discount{font-size:.9rem;color:#2a4a7b;margin-top:8px}
+    .course-card a{margin-top:auto;display:inline-block;padding:8px 18px;background:#4a6cf7;color:#fff;border-radius:10px;text-decoration:none;font-weight:700;font-size:.9rem;text-align:center}
+    .faradars-btn{background:#0f7dc2!important}
+    .free-card{background:#eef6ff;border:1px solid #d6e8ff}
 
-/* ارتباط با ما و شبکه‌های اجتماعی */
-.section{width:92%;margin:40px auto;text-align:center}
-.section h2{color:#0a1a4d;margin-bottom:18px;font-size:1.25rem}
-.section a{display:inline-block;padding:10px 22px;margin:6px;border-radius:12px;color:#fff;font-weight:700;text-decoration:none;font-size:.95rem}
-.insta{background:#d6249f}.linkedin{background:#0a66c2}
-.s-linkedin{background:#0a66c2}.s-aparat{background:#ed145b}.s-youtube{background:#ff0000}.s-zlink{background:#4a6cf7}
+    /* ارتباط با ما و شبکه‌های اجتماعی */
+    .section{width:92%;margin:40px auto;text-align:center}
+    .section h2{color:#0a1a4d;margin-bottom:18px;font-size:1.25rem}
+    .section a{display:inline-block;padding:10px 22px;margin:6px;border-radius:12px;color:#fff;font-weight:700;text-decoration:none;font-size:.95rem}
+    .insta{background:#d6249f}.linkedin{background:#0a66c2}
+    .s-linkedin{background:#0a66c2}.s-aparat{background:#ed145b}.s-youtube{background:#ff0000}.s-zlink{background:#4a6cf7}
 
-/* رسپانسیو */
-@media(max-width:992px){.courses-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:600px){.courses-grid{grid-template-columns:1fr}.name-text,.name-sub{text-align:center;margin-right:0}}
-</style>
+    /* رسپانسیو */
+    @media(max-width:1200px){.courses-grid{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:992px){.courses-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:600px){.courses-grid{grid-template-columns:1fr}.name-text,.name-sub{text-align:center;margin-right:0}}
+  </style>
 </head>
 
 <body>
 
 <header class="header-bar">
-  <img src="img/logo2.png" alt="لوگو">
-  <div class="header-profile"><img src="img/profile2.jpg" alt="مریم داورپناه"></div>
+  <img src="img/logo2.png" alt="لوگو" class="bg-logo">
+  <div class="header-profile">
+    <img src="img/profile2.jpg" alt="عکس مریم داورپناه">
+  </div>
 </header>
 
 <div class="name-text">مریم داورپناه</div>
@@ -84,17 +87,16 @@ body{font-family:"IRANSans",sans-serif;background:#f7f9fc;margin:0}
   </div>
 </div>
 
-<!-- فیلم‌های آموزشی -->
+<!-- فیلم‌های آموزشی (بالا آورده شده) -->
 <div id="films" class="courses-section">
   <h2>فیلم‌های آموزشی</h2>
 
   <div class="courses-grid">
 
-    <!-- 1 مبانی آنالیز (فرادرس) -->
+    <!-- 1 مبانی آنالیز (فرادرس) - بدون کد تخفیف -->
     <div class="course-card">
       <div class="course-title-box color1"><h3>مبانی آنالیز ریاضی (مرور و حل تست)</h3></div>
       <p>مرور کامل آنالیز ریاضی برای کنکور ارشد و دکترا همراه با نکات تستی و حل تست‌های سال‌های گذشته.</p>
-      <div class="discount">کد تخفیف: cdemada</div>
       <a class="faradars-btn" href="https://faradars.org/courses/basics-of-mathematical-analysis-reviewing-and-solving-masters-entrance-exam-part-i-fvmthe009" target="_blank">مشاهده در فرادرس</a>
     </div>
 
@@ -117,7 +119,7 @@ body{font-family:"IRANSans",sans-serif;background:#f7f9fc;margin:0}
     <!-- 4 دیفرانسیل -->
     <div class="course-card">
       <div class="course-title-box color4"><h3>آموزش معادلات دیفرانسیل</h3></div>
-      <p>کامل‌ترین آموزش معادلات دیفرانسیل با بیش از ۴۷۹ مثال؛ حل مسائل امتحانی دانشگاه‌ها و آزمون پایان فصل.</p>
+      <p>کامل‌ترین آموزش معادلات دیفرانسیل با بیش از ۴۷۹ مثال؛ حل مسائل امتحانی و آزمون پایان فصل.</p>
       <div class="discount">کد تخفیف: cdemada</div>
       <a href="https://nikdars.com/edu/mmddeq12-00053-differential-equations/" target="_blank">مشاهده در نیک‌درس</a>
     </div>
@@ -181,8 +183,7 @@ body{font-family:"IRANSans",sans-serif;background:#f7f9fc;margin:0}
   </div>
 
   <!-- رایگان -->
-  <h2 style="margin-top:40px;">آموزش‌های رایگان</h2>
-
+  <h2 style="margin-top:26px;">آموزش‌های رایگان</h2>
   <div class="courses-grid">
 
     <div class="course-card small free-card">
@@ -201,7 +202,7 @@ body{font-family:"IRANSans",sans-serif;background:#f7f9fc;margin:0}
     </div>
 
     <div class="course-card small free-card">
-      <div class="course-title-box color5"><h3>آموزش معادلات دیفرانسیل کامل و عامل انتگرال‌ساز (رایگان)</h3></div>
+      <div class="course-title-box color5"><h3>دیفرانسیل کامل و عامل انتگرال‌ساز (رایگان)</h3></div>
       <a href="https://nikdars.com/?p=28032" target="_blank">مشاهده در نیک‌درس</a>
     </div>
 
@@ -226,4 +227,3 @@ body{font-family:"IRANSans",sans-serif;background:#f7f9fc;margin:0}
 
 </body>
 </html>
-
