@@ -26,15 +26,16 @@
         object-position: center;
     }
 
+    /* ⭐ اصلاح ۱: عکس 0.4 خط پایین‌تر ⭐ */
     .header-profile {
         position: absolute;
-        bottom: -20px; /* 0.6 خط پایین‌تر */
+        bottom: -24px; /* 0.4 خط پایین‌تر */
         right: 20px;
         z-index: 10;
     }
 
     .header-profile img {
-        width: 184px; /* 85٪ اندازه قبلی */
+        width: 184px;
         height: 184px;
         border-radius: 50%;
         object-fit: cover;
@@ -42,40 +43,55 @@
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    .header-text {
-        text-align: right;
-        margin-top: 25px; /* یک خط بالاتر */
-        padding-right: 30px;
+    /* ⭐ اصلاح ۲: کادر اسم و معرفی ⭐ */
+    .name-box {
+        margin-top: 40px;
+        margin-right: 20px;
+        background: rgba(180, 200, 255, 0.25); /* پس‌زمینه ملایم */
+        padding: 15px 20px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: fit-content;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.05);
     }
 
-    .header-text h1 {
+    .name-box h1 {
         margin: 0;
-        font-size: 2rem;
+        font-size: 1.8rem;
         font-weight: 900;
         color: #111;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.15);
     }
 
-    .header-text p {
-        margin: 10px 0 0;
-        font-size: 1.2rem;
+    .name-box p {
+        margin: 0;
+        font-size: 1.1rem;
         font-weight: 600;
         color: #333;
-        text-shadow: 0 1px 2px rgba(0,0,0,0.1);
     }
 
-    /* ⭐⭐⭐ کادر معرفی ⭐⭐⭐ */
+    /* ⭐ اصلاح ۳: کادر معرفی دوره‌ها ⭐ */
     .intro-box {
-        background: #ffffff;
-        padding: 20px 22px;
+        background: rgba(200, 230, 255, 0.35);
+        padding: 25px 25px;
         border-radius: 16px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-        margin-top: 20px;
-        font-size: 0.98rem;
-        line-height: 1.8;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        margin: 30px auto;
+        width: 90%;
+        text-align: center;
+        font-size: 1rem;
+        line-height: 1.9;
     }
 
-    /* ⭐⭐⭐ موبایل ⭐⭐⭐ */
+    .intro-box h2 {
+        margin-top: 0;
+        font-size: 1.3rem;
+        font-weight: 800;
+        color: #222;
+    }
+
+    /* ⭐ موبایل ⭐ */
     @media (max-width: 768px) {
         .header-bar {
             height: 100px;
@@ -84,7 +100,6 @@
         .header-profile {
             bottom: -20px;
             right: 12px;
-            text-align: center;
         }
 
         .header-profile img {
@@ -92,18 +107,10 @@
             height: 130px;
         }
 
-        .header-text {
+        .name-box {
+            margin: 80px auto 0;
+            flex-direction: column;
             text-align: center;
-            padding-right: 0;
-            margin-top: 40px;
-        }
-
-        .header-text h1 {
-            font-size: 1.5rem;
-        }
-
-        .header-text p {
-            font-size: 1rem;
         }
     }
     </style>
@@ -120,13 +127,13 @@
     </div>
 </header>
 
-<!-- ⭐⭐⭐ متن معرفی ⭐⭐⭐ -->
-<div class="header-text">
+<!-- ⭐⭐⭐ اصلاح ۲: کادر اسم + معرفی ⭐⭐⭐ -->
+<div class="name-box">
     <h1>مریم داورپناه</h1>
     <p>مدرس دانشگاه، مولف و مدرس کامل‌ترین فیلم‌های آموزشی ریاضی</p>
 </div>
 
-<!-- ⭐⭐⭐ کادر معرفی ⭐⭐⭐ -->
+<!-- ⭐⭐⭐ اصلاح ۳: کادر معرفی دوره‌ها ⭐⭐⭐ -->
 <div class="intro-box">
     <h2>آموزش ریاضیات با روش‌های نوین آموزش ریاضی</h2>
     هدف این مجموعه، بی‌نیاز کردن شما از هر منبع دیگری مثل جزوه، کلاس خصوصی و کتاب‌های متعدد است؛
@@ -136,4 +143,3 @@
 
 </body>
 </html>
-
