@@ -1,9 +1,9 @@
-<!-- ⭐⭐⭐ هدر کامل با لوگوی تمام‌عرض ⭐⭐⭐ -->
+<!-- ⭐⭐⭐ هدر نهایی با ارتفاع کمتر و موقعیت اصلاح‌شده ⭐⭐⭐ -->
 
 <style>
 .header-bar {
     width: 100%;
-    height: 220px;
+    height: 165px; /* کاهش به 75٪ ارتفاع قبلی */
     position: relative;
     overflow: hidden;
     border-radius: 0 0 16px 16px;
@@ -20,10 +20,10 @@
     object-position: center;
 }
 
-/* عکس پروفایل بزرگ‌تر */
+/* عکس پروفایل */
 .header-profile {
     position: absolute;
-    bottom: -72px;
+    bottom: 20px; /* بالاتر آمده تا داخل لوگو قرار بگیرد */
     right: 20px;
     display: flex;
     flex-direction: column;
@@ -41,10 +41,10 @@
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* متن معرفی زیر هدر */
+/* متن معرفی */
 .header-text {
     text-align: right;
-    margin-top: 90px;
+    margin-top: 40px; /* دو خط بالاتر از قبل */
     padding-right: 30px;
 }
 
@@ -64,7 +64,7 @@
     text-shadow: 0 1px 2px rgba(0,0,0,0.1);
 }
 
-/* کادر معرفی زیر متن */
+/* کادر معرفی */
 .intro-box {
     background: #ffffff;
     padding: 20px 22px;
@@ -78,11 +78,11 @@
 /* موبایل */
 @media (max-width: 768px) {
     .header-bar {
-        height: 120px;
+        height: 100px;
     }
 
     .header-profile {
-        bottom: -50px;
+        bottom: 10px;
         right: 12px;
         align-items: center;
         text-align: center;
@@ -96,7 +96,7 @@
     .header-text {
         text-align: center;
         padding-right: 0;
-        margin-top: 70px;
+        margin-top: 30px;
     }
 
     .header-text h1 {
@@ -134,4 +134,3 @@
     به‌طوری که بتوانید علاوه بر درک عمیق مفاهیم ریاضی، در آزمون‌های تشریحی، تستی، کنکور و آزمون‌های استخدامی
     بهترین عملکرد را داشته باشید.
 </div>
-
