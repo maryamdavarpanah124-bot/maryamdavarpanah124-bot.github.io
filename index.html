@@ -1,378 +1,368 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <title>آموزش ریاضیات - مریم داورپناه</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <title>آموزش ریاضیات - مریم داورپناه</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <style>
+  <style>
+  body {
+    font-family: "IRANSans", sans-serif;
+    background: #f7f9fc;
+    margin: 0;
+  }
 
-    body {
-        font-family: "IRANSans", sans-serif;
-        background: #f7f9fc;
-        margin: 0;
-        padding: 0;
-    }
+  /* هدر */
+  .header-bar {
+    width: 100%;
+    height: 165px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+  }
+  .header-bar img.bg-logo {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.92);
+  }
+  .header-profile {
+    position: absolute;
+    bottom: -24px;
+    right: 20px;
+    z-index: 10;
+  }
+  .header-profile img {
+    width: 184px;
+    height: 184px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.25);
+  }
 
-    /* ⭐⭐⭐ هدر ⭐⭐⭐ */
-    .header-bar {
-        width: 100%;
-        height: 165px;
-        position: relative;
-        overflow: hidden;
-        border-radius: 0 0 18px 18px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    }
+  /* نام و معرفی */
+  .name-text {
+    margin: 15px 20px 0 0;
+    font-size: 1.45rem;
+    font-weight: 900;
+    color: #0a1a4d;
+  }
+  .name-sub {
+    margin: 5px 20px 0 0;
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: 600;
+  }
 
-    .header-bar img.bg-logo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        filter: brightness(0.92);
-    }
+  /* کادر توضیحات بالا */
+  .intro-box {
+    background: rgba(210,235,255,0.45);
+    padding: 28px 28px 15px;
+    border-radius: 18px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    margin: 10px auto 0;
+    width: 90%;
+    text-align: center;
+    font-size: 1.1rem;
+    line-height: 2.1;
+    color: #1f1f1f;
+  }
+  .intro-box h2 {
+    margin-top: 0;
+    font-size: 1.35rem;
+    font-weight: 800;
+    color: #0f2a5f;
+  }
 
-    /* ⭐ عکس ⭐ */
-    .header-profile {
-        position: absolute;
-        bottom: -24px;
-        right: 20px;
-        z-index: 10;
-    }
+  /* دکمه‌های بالای صفحه */
+  .buttons {
+    margin-top: 15px;
+    text-align: center;
+  }
+  .buttons a {
+    display: inline-block;
+    padding: 10px 22px;
+    margin: 6px;
+    border-radius: 12px;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+    transition: 0.25s;
+  }
+  .btn1 { background:#4a6cf7; }
+  .btn2 { background:#ff7a59; }
+  .btn3 { background:#28b463; }
+  .btn4 { background:#af7ac5; }
+  .btn5 { background:#34495e; }
+  .buttons a:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 7px 18px rgba(0,0,0,0.18);
+  }
 
-    .header-profile img {
-        width: 184px;
-        height: 184px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 4px solid white;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-    }
+  /* بخش دوره‌ها */
+  .courses-section {
+    width: 92%;
+    margin: 40px auto;
+  }
+  .courses-section h2 {
+    text-align: center;
+    color: #0a1a4d;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+  }
 
-    /* ⭐ متن اسم + معرفی ⭐ */
-    .name-text {
-        margin-top: 15px;
-        margin-right: 20px;
-        font-size: 1.45rem;
-        font-weight: 900;
-        color: #0a1a4d;
-    }
+  /* شبکه ۴ ستونه */
+  .courses-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 22px;
+  }
 
-    .name-sub {
-        margin-right: 20px;
-        margin-top: 5px;
-        font-size: 1.1rem;
-        color: #333;
-        font-weight: 600;
-    }
+  /* کارت دوره */
+  .course-card {
+    background: #fff;
+    padding: 18px 20px;
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 230px;
+  }
 
-    /* ⭐ کادر توضیحات ⭐ */
-    .intro-box {
-        background: rgba(210, 235, 255, 0.45);
-        padding: 28px 28px 15px;
-        border-radius: 18px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-        margin: 10px auto 0;
-        width: 90%;
-        text-align: center;
-        font-size: 1.1rem;
-        line-height: 2.1;
-        color: #1f1f1f;
-    }
+  /* رنگ‌های مختلف برای عنوان درس‌ها */
+  .color1 { background: rgba(180,200,255,0.35); }
+  .color2 { background: rgba(200,180,255,0.35); }
+  .color3 { background: rgba(180,255,220,0.35); }
+  .color4 { background: rgba(255,220,200,0.35); }
+  .color5 { background: rgba(255,200,230,0.35); }
 
-    .intro-box h2 {
-        margin-top: 0;
-        font-size: 1.35rem;
-        font-weight: 800;
-        color: #0f2a5f;
-    }
+  .course-title-box {
+    padding: 10px 12px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 12px;
+  }
+  .course-title-box h3 {
+    margin: 0;
+    font-size: 1.02rem;
+    font-weight: 900;
+    color: #12306b;
+  }
 
-    /* ⭐ دکمه‌های بالای صفحه ⭐ */
-    .buttons {
-        margin-top: 15px;
-        text-align: center;
-    }
+  .course-card p {
+    margin: 12px 0;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #333;
+  }
 
-    .buttons a {
-        display: inline-block;
-        padding: 10px 22px;
-        margin: 6px;
-        border-radius: 12px;
-        color: white;
-        font-weight: 700;
-        text-decoration: none;
-        font-size: 0.95rem;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-        transition: 0.25s;
-    }
+  .course-card a {
+    margin-top: auto;
+    display: inline-block;
+    padding: 8px 18px;
+    background: #4a6cf7;
+    color: #fff;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+    text-align: center;
+  }
+  .faradars-btn { background:#0f7dc2 !important; }
 
-    .btn1 { background: #4a6cf7; }
-    .btn2 { background: #ff7a59; }
-    .btn3 { background: #28b463; }
-    .btn4 { background: #af7ac5; }
-    .btn5 { background: #34495e; }
+  .free-card {
+    background:#eef6ff;
+    border:1px solid #d6e8ff;
+  }
 
-    .buttons a:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 7px 18px rgba(0,0,0,0.18);
-    }
-
-    /* ⭐ بخش دوره‌ها ⭐ */
-    .courses-section {
-        width: 92%;
-        margin: 40px auto;
-    }
-
-    .courses-section h2 {
-        text-align: center;
-        color: #0a1a4d;
-        margin-bottom: 25px;
-        font-size: 1.4rem;
-    }
-
-    /* ⭐ ۴ ستونه – کامپیوتر ⭐ */
-    .courses-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 22px;
-    }
-
-    /* ⭐ کارت دوره ⭐ */
-    .course-card {
-        background: white;
-        padding: 18px 20px;
-        border-radius: 16px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 260px;
-    }
-
-    /* ⭐ کادر عنوان درس ⭐ */
-    .course-title-box {
-        background: rgba(180, 200, 255, 0.35);
-        padding: 10px 12px;
-        border-radius: 12px;
-        text-align: center;
-        margin-bottom: 12px;
-    }
-
-    .course-title-box h3 {
-        margin: 0;
-        font-size: 1.05rem;
-        font-weight: 900;
-        color: #12306b;
-    }
-
-    /* ⭐ توضیحات درس ⭐ */
-    .course-card p {
-        margin: 12px 0;
-        font-size: 0.95rem;
-        line-height: 1.7;
-        color: #333;
-    }
-
-    /* ⭐ دکمه کارت ⭐ */
-    .course-card a {
-        margin-top: auto;
-        display: inline-block;
-        padding: 8px 18px;
-        background: #4a6cf7;
-        color: white;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: 700;
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    /* ⭐ دکمه فرادرس ⭐ */
-    .faradars-btn {
-        background: #0f7dc2 !important;
-    }
-
-    /* ⭐ کارت‌های رایگان ⭐ */
-    .free-card {
-        background: #eef6ff;
-        border: 1px solid #d6e8ff;
-    }
-
-    /* ⭐ تبلت → ۲ ستونه ⭐ */
-    @media (max-width: 992px) {
-        .courses-grid {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    /* ⭐ موبایل → ۱ ستونه ⭐ */
-    @media (max-width: 600px) {
-        .courses-grid {
-            grid-template-columns: repeat(1, 1fr);
-        }
-    }
-
-    </style>
+  /* رسپانسیو */
+  @media (max-width: 992px){
+    .courses-grid { grid-template-columns: repeat(2,1fr); }
+  }
+  @media (max-width: 600px){
+    .courses-grid { grid-template-columns: 1fr; }
+    .name-text, .name-sub { margin-right:0; text-align:center; }
+  }
+  </style>
 </head>
 
 <body>
 
-<!-- ⭐⭐⭐ هدر ⭐⭐⭐ -->
 <header class="header-bar">
-    <img src="img/logo2.png" alt="لوگو" class="bg-logo">
-
-    <div class="header-profile">
-        <img src="img/profile2.jpg" alt="عکس مریم داورپناه">
-    </div>
+  <img src="img/logo2.png" alt="لوگو" class="bg-logo">
+  <div class="header-profile">
+    <img src="img/profile2.jpg" alt="عکس مریم داورپناه">
+  </div>
 </header>
 
-<!-- ⭐⭐⭐ متن اسم + معرفی ⭐⭐⭐ -->
 <div class="name-text">مریم داورپناه</div>
 <div class="name-sub">مدرس دانشگاه، مولف و مدرس کامل‌ترین فیلم‌های آموزشی ریاضی</div>
 
-<!-- ⭐⭐⭐ کادر توضیحات سایت ⭐⭐⭐ -->
 <div class="intro-box">
-    <h2>آموزش ریاضیات با روش‌های نوین آموزش ریاضی</h2>
-
-    هدف این مجموعه، بی‌نیاز کردن شما از هر منبع دیگری مثل جزوه، کلاس خصوصی و کتاب‌های متعدد است؛  
-    <br>
-    به‌طوری که بتوانید علاوه بر درک عمیق مفاهیم ریاضی، در آزمون‌های تشریحی، تستی، کنکور و آزمون‌های استخدامی  
-    بهترین عملکرد را داشته باشید.
-
-    <!-- ⭐⭐⭐ دکمه‌های بالای صفحه ⭐⭐⭐ -->
-    <div class="buttons">
-        <a class="btn1" href="#">معرفی مدرس</a>
-        <a class="btn2" href="#">نظرات دانشجویان</a>
-        <a class="btn3" href="#">ارتباط با ما</a>
-        <a class="btn4" href="#">مقالات</a>
-        <a class="btn5" href="#courses">فیلم‌های آموزشی</a>
-    </div>
+  <h2>آموزش ریاضیات با روش‌های نوین آموزش ریاضی</h2>
+  هدف این مجموعه، بی‌نیاز کردن شما از هر منبع دیگری مثل جزوه، کلاس خصوصی و کتاب‌های متعدد است؛  
+  <br>
+  به‌طوری که بتوانید علاوه بر درک عمیق مفاهیم ریاضی، در آزمون‌های تشریحی، تستی، کنکور و آزمون‌های استخدامی  
+  بهترین عملکرد را داشته باشید.
+  <div class="buttons">
+    <a class="btn1" href="#">معرفی مدرس</a>
+    <a class="btn2" href="#">نظرات دانشجویان</a>
+    <a class="btn3" href="#">ارتباط با ما</a>
+    <a class="btn4" href="#">مقالات</a>
+    <a class="btn5" href="#films">فیلم‌های آموزشی</a>
+  </div>
 </div>
 
-<!-- ⭐⭐⭐ بخش دوره‌ها ⭐⭐⭐ -->
-<div id="courses" class="courses-section">
+<div id="films" class="courses-section">
 
-    <!-- آموزش‌های غیررایگان -->
-    <h2>آموزش‌های غیررایگان</h2>
+  <h2>فیلم‌های آموزشی</h2>
 
-    <div class="courses-grid">
+  <div class="courses-grid">
 
-        <!-- 1) مبانی آنالیز ریاضی - فرادرس -->
-        <div class="course-card">
-            <div class="course-title-box">
-                <h3>مبانی آنالیز ریاضی (مرور و حل تست کنکور ارشد و دکترا)</h3>
-            </div>
-            <p>
-                ویژهٔ مرور و جمع‌بندی آنالیز ریاضی برای کنکور ارشد و دکترا؛  
-                شامل خلاصهٔ درس، بیان نکات تستی و حل تست‌های کنکور سال‌های گذشته.
-            </p>
-            <a class="faradars-btn" href="https://faradars.org/courses/basics-of-mathematical-analysis-reviewing-and-solving-masters-entrance-exam-part-i-fvmthe009" target="_blank">
-                مشاهده در فرادرس
-            </a>
-        </div>
+    <!-- 1) مبانی آنالیز ریاضی -->
+    <div class="course-card">
+      <div class="course-title-box color1">
+        <h3>مبانی آنالیز ریاضی (مرور و حل تست)</h3>
+      </div>
+      <p>مرور کامل آنالیز ریاضی برای کنکور ارشد و دکترا همراه با نکات تستی و حل تست‌های سال‌های گذشته.</p>
+      <a class="faradars-btn" href="https://faradars.org/courses/basics-of-mathematical-analysis-reviewing-and-solving-masters-entrance-exam-part-i-fvmthe009" target="_blank">مشاهده در فرادرس</a>
+    </div>
 
-        <!-- 2) ریاضی عمومی 1 -->
-        <div class="course-card">
-            <div class="course-title-box">
-                <h3>آموزش ریاضی عمومی ۱</h3>
-            </div>
-            <p>
-                کامل‌ترین آموزش ریاضی عمومی ۱ به همراه بیش از ۳۳۵ مثال؛  
-                بیان ساده، نکات تستی و تشریحی، و حل مسائل امتحانی دانشگاه‌ها.
-            </p>
-            <a href="https://nikdars.com/edu/mmdmat01-00022-general-mathematics-1/" target="_blank">
-                مشاهده در نیک‌درس
-            </a>
-        </div>
+    <!-- 2) ریاضی عمومی 1 -->
+    <div class="course-card">
+      <div class="course-title-box color2">
+        <h3>آموزش ریاضی عمومی ۱</h3>
+      </div>
+      <p>کامل‌ترین آموزش ریاضی عمومی ۱ با بیش از ۳۳۵ مثال و حل مسائل امتحانی دانشگاه‌ها.</p>
+      <a href="https://nikdars.com/edu/mmdmat01-00022-general-mathematics-1/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
 
-        <!-- 3) ریاضی عمومی 2 -->
-        <div class="course-card">
-            <div class="course-title-box">
-                <h3>آموزش ریاضی عمومی ۲</h3>
-            </div>
-            <p>
-                کامل‌ترین آموزش ریاضی عمومی ۲ با بیش از ۳۷۹ مثال؛  
-                بیان ساده، حل مسائل امتحانی دانشگاه‌ها و نکات تستی و تشریحی.
-            </p>
-            <a href="https://nikdars.com/edu/mmdmat03-00031-general-mathematics-2/" target="_blank">
-                مشاهده در نیک‌درس
-            </a>
-        </div>
+    <!-- 3) ریاضی عمومی 2 -->
+    <div class="course-card">
+      <div class="course-title-box color3">
+        <h3>آموزش ریاضی عمومی ۲</h3>
+      </div>
+      <p>کامل‌ترین آموزش ریاضی عمومی ۲ با بیش از ۳۷۹ مثال و نکات تستی و تشریحی.</p>
+      <a href="https://nikdars.com/edu/mmdmat03-00031-general-mathematics-2/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
 
-        <!-- 4) معادلات دیفرانسیل -->
-        <div class="course-card">
-            <div class="course-title-box">
-                <h3>آموزش معادلات دیفرانسیل</h3>
-            </div>
-            <p>
-                کامل‌ترین آموزش معادلات دیفرانسیل با بیش از ۴۷۹ مثال؛  
-                حل مسائل امتحانی دانشگاه‌ها و آزمون انتهای هر فصل.
-            </p>
-            <a href="https://nikdars.com/edu/mmddeq12-00053-differential-equations/" target="_blank">
-                مشاهده در نیک‌درس
-            </a>
-        </div>
+    <!-- 4) معادلات دیفرانسیل -->
+    <div class="course-card">
+      <div class="course-title-box color4">
+        <h3>آموزش معادلات دیفرانسیل</h3>
+      </div>
+      <p>کامل‌ترین آموزش معادلات دیفرانسیل با بیش از ۴۷۹ مثال و آزمون پایان فصل.</p>
+      <a href="https://nikdars.com/edu/mmddeq12-00053-differential-equations/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
 
-        <!-- 5) مثلثات -->
-        <div class="course-card">
-            <div class="course-title-box">
-                <h3>آموزش مثلثات</h3>
-            </div>
-            <p>
-                کامل‌ترین آموزش مثلثات با بیش از ۱۹۰ مثال؛  
-                بیان ساده، ویژهٔ دبیرستان، کنکور، دانشگاه و دبیران ریاضی.
-            </p>
-            <a href="https://nikdars.com/edu/mmdtrg14-00067-trigonometry-education/" target="_blank">
-                مشاهده در نیک‌درس
-            </a>
-        </div>
+    <!-- 5) مثلثات -->
+    <div class="course-card">
+      <div class="course-title-box color5">
+        <h3>آموزش مثلثات</h3>
+      </div>
+      <p>آموزش کامل مثلثات با بیش از ۱۹۰ مثال؛ مناسب دبیرستان، کنکور و دانشگاه.</p>
+      <a href="https://nikdars.com/edu/mmdtrg14-00067-trigonometry-education/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
 
-        <!-- 6) مشتق و انتگرال -->
-        <div class="course-card">
-            <div class="course-title-box">
-                <h3>آموزش مشتق و انتگرال</h3>
-            </div>
-            <p>
-                کامل‌ترین آموزش مشتق و انتگرال با بیش از ۱۶۸ مثال؛  
-                بیان ساده و تمرکز بر حل مسائل امتحانی دانشگاه‌ها.
-            </p>
-            <a href="https://nikdars.com/edu/mmdmat02-00024-derivative-and-integral/" target="_blank">
-                مشاهده در نیک‌درس
-            </a>
-        </div>
+    <!-- 6) مشتق و انتگرال -->
+    <div class="course-card">
+      <div class="course-title-box color1">
+        <h3>آموزش مشتق و انتگرال</h3>
+      </div>
+      <p>کامل‌ترین آموزش مشتق و انتگرال با بیش از ۱۶۸ مثال و حل مسائل امتحانی.</p>
+      <a href="https://nikdars.com/edu/mmdmat02-00024-derivative-and-integral/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
 
-        <!-- 7) بردار و ماتریس -->
-        <div class="course-card">
-            <div class="course-title-box">
-                <h3>آموزش بردار و ماتریس (جبر خطی مقدماتی)</h3>
-            </div>
-            <p>
-                جبر خطی مقدماتی با بیش از ۵۷ مثال؛  
-                ویژهٔ دانشجویان تمام رشته‌ها و علاقه‌مندان به برنامه‌نویسی و هوش مصنوعی.
-            </p>
-            <a href="https://nikdars.com/edu/mmdvec11-00049-vector-and-matrix/" target="_blank">
-                مشاهده در نیک‌درس
-            </a>
-        </div>
+    <!-- 7) بردار و ماتریس -->
+    <div class="course-card">
+      <div class="course-title-box color2">
+        <h3>آموزش بردار و ماتریس</h3>
+      </div>
+      <p>جبر خطی مقدماتی با بیش از ۵۷ مثال؛ مناسب دانشجویان و علاقه‌مندان به هوش مصنوعی.</p>
+      <a href="https://nikdars.com/edu/mmdvec11-00049-vector-and-matrix/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
 
-        <!-- 8) تبدیل لاپلاس -->
-        <div class="course-card">
-            <div class="course-title-box">
-                <h3>آموزش جامع تبدیل لاپلاس</h3>
-            </div>
-            <p>
-                کامل‌ترین آموزش موضوع تبدیل لاپلاس با بیش از ۱۶۶ مثال؛  
-                بیان ساده و حل مسائل امتحانی دانشگاه‌ها.
-            </p>
-            <a href="https://nikdars.com/edu/mmdmat08-00045-laplace-transform/" target="_blank">
-                مشاهده در نیک‌درس
-            </a>
-        </div>
+    <!-- 8) تبدیل لاپلاس -->
+    <div class="course-card">
+      <div class="course-title-box color3">
+        <h3>آموزش جامع تبدیل لاپلاس</h3>
+      </div>
+      <p>کامل‌ترین آموزش تبدیل لاپلاس با بیش از ۱۶۶ مثال و حل مسائل امتحانی.</p>
+      <a href="https://nikdars.com/edu/mmdmat08-00045-laplace-transform/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
 
-        <!-- 9) دنباله و سری -->
-        <div class="course-card">
-            <div class="course-title-box">
-                <h3>آموزش دنباله
+    <!-- 9) دنباله و سری -->
+    <div class="course-card">
+      <div class="course-title-box color4">
+        <h3>آموزش دنباله و سری</h3>
+      </div>
+      <p>کامل‌ترین آموزش دنباله و سری با بیش از ۸۰ مثال و بیان ساده.</p>
+      <a href="https://nikdars.com/edu/mmdmat06-00039-sequence-and-series/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
+
+    <!-- 10) ریاضی عمومی 2 ویژه ریاضی -->
+    <div class="course-card">
+      <div class="course-title-box color5">
+        <h3>آموزش ریاضی عمومی ۲ (ویژه رشته ریاضی)</h3>
+      </div>
+      <p>کامل‌ترین آموزش ریاضی عمومی ۲ برای دانشجویان ریاضی و کاربردها.</p>
+      <a href="https://nikdars.com/edu/mmdmat04-00037-general-mathematics-2-mathematics-field/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
+
+    <!-- 11) ریاضی عمومی 3 ویژه ریاضی -->
+    <div class="course-card">
+      <div class="course-title-box color1">
+        <h3>آموزش ریاضی عمومی ۳ (ویژه رشته ریاضی)</h3>
+      </div>
+      <p>کامل‌ترین آموزش ریاضی عمومی ۳ با مثال‌های فراوان و بیان ساده.</p>
+      <a href="https://nikdars.com/edu/mmdmat05-00038-general-mathematics-3/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
+
+  </div>
+
+  <!-- رایگان -->
+  <h2 style="margin-top:40px;">آموزش‌های رایگان</h2>
+
+  <div class="courses-grid">
+
+    <div class="course-card free-card">
+      <div class="course-title-box color2">
+        <h3>آموزش ماتریس (رایگان)</h3>
+      </div>
+      <a href="https://nikdars.com/edu/mmdmat07-00044-matrix/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
+
+    <div class="course-card free-card">
+      <div class="course-title-box color3">
+        <h3>آموزش مشتق جزئی (رایگان)</h3>
+      </div>
+      <a href="https://nikdars.com/edu/mmdpti09-00046-partial-perivative/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
+
+    <div class="course-card free-card">
+      <div class="course-title-box color4">
+        <h3>آموزش اعداد مختلط (رایگان)</h3>
+      </div>
+      <a href="https://nikdars.com/edu/mmdplx10-00047-complex-numbers/" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
+
+    <div class="course-card free-card">
+      <div class="course-title-box color5">
+        <h3>آموزش معادلات دیفرانسیل کامل (رایگان)</h3>
+      </div>
+      <a href="https://nikdars.com/?p=28032" target="_blank">مشاهده در نیک‌درس</a>
+    </div>
+
+  </div>
+
+</div>
+
+</body>
+</html>
