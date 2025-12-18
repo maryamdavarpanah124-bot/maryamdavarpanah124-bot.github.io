@@ -23,16 +23,16 @@
             padding: 16px;
         }
 
-        /* هدر جدید: لوگو نوار باریک + پروفایل شناور */
+        /* هدر جدید */
         .hero-logo {
             width: 100%;
-            height: 20vh;
+            height: 22vh;
             position: relative;
             overflow: hidden;
             border-radius: 0 0 16px 16px;
-            background: #fff;
+            background: linear-gradient(90deg, #fceabb, #f8b500);
             box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-            margin-bottom: 60px; /* جا برای بیرون‌زدگی پروفایل */
+            margin-bottom: 70px;
         }
 
         .hero-logo img {
@@ -40,48 +40,41 @@
             height: 100%;
             object-fit: cover;
             object-position: center;
+            opacity: 0.2;
         }
 
-        /* تصویر پروفایل شناور */
         .hero-profile {
             position: absolute;
             bottom: -48px;
             right: 20px;
             display: flex;
-            align-items: center;
-            gap: 12px;
+            flex-direction: column;
+            align-items: flex-end;
+            text-align: right;
             z-index: 10;
         }
 
         .hero-profile img {
-            width: 96px;
-            height: 96px;
+            width: 144px;
+            height: 144px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid white;
+            border: 4px solid white;
             box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
-        .hero-text {
-            text-align: right;
-            background: rgba(255,255,255,0.9);
-            padding: 6px 12px;
-            border-radius: 12px;
-            backdrop-filter: blur(4px);
+        .hero-profile h1 {
+            margin: 8px 0 4px;
+            font-size: 1.3rem;
+            font-weight: bold;
         }
 
-        .hero-text h1 {
-            margin: 0 0 4px;
-            font-size: 1.2rem;
-        }
-
-        .hero-text p {
+        .hero-profile p {
             margin: 0;
-            font-size: 0.85rem;
+            font-size: 0.95rem;
             color: #444;
         }
 
-        /* نسخه موبایل */
         @media (max-width: 768px) {
             .hero-logo {
                 height: 80px;
@@ -90,11 +83,21 @@
             .hero-profile {
                 bottom: -40px;
                 right: 12px;
+                align-items: center;
+                text-align: center;
             }
 
             .hero-profile img {
-                width: 80px;
-                height: 80px;
+                width: 100px;
+                height: 100px;
+            }
+
+            .hero-profile h1 {
+                font-size: 1.1rem;
+            }
+
+            .hero-profile p {
+                font-size: 0.85rem;
             }
         }
 
@@ -158,11 +161,9 @@
     <img src="img/logo2.png" alt="لوگوی آموزش ریاضیات">
 
     <div class="hero-profile">
-        <div class="hero-text">
-            <h1>مریم داورپناه</h1>
-            <p>مدرس ریاضیات دانشگاهی، مولف و مدرس کامل‌ترین فیلم‌های آموزشی ریاضی</p>
-        </div>
         <img src="img/profile2.jpg" alt="عکس مریم داورپناه">
+        <h1>مریم داورپناه</h1>
+        <p>مدرس ریاضیات دانشگاهی، مولف و مدرس کامل‌ترین فیلم‌های آموزشی ریاضی</p>
     </div>
 </header>
 
@@ -182,6 +183,79 @@
         <a href="articles.html" class="intro-button articles">مقالات</a>
     </div>
 </section>
+<!-- ⭐⭐⭐ بخش ۲: معرفی دوره‌ها ⭐⭐⭐ -->
+
+<style>
+/* متن سورمه‌ای و برجسته برای دکمه‌های دوره‌ها */
+.navy-text {
+    color: #001a4d !important;
+    font-weight: bold;
+    border: 2px solid #001a4d;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ساختار چندستونه دوره‌ها */
+.courses-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.course-card {
+    padding: 14px 16px;
+    border-radius: 14px;
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.course-title {
+    font-weight: bold;
+    margin-bottom: 6px;
+    font-size: 0.99rem;
+}
+
+.course-desc {
+    font-size: 0.89rem;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+/* دکمه‌های دوره‌ها */
+.course-button {
+    display: inline-block;
+    padding: 9px 18px;
+    border-radius: 999px;
+    border: 1px solid rgba(0,0,0,0.04);
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.15s ease-in-out;
+    font-weight: bold;
+}
+
+.course-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+}
+
+/* رنگ‌های ملایم پس‌زمینه */
+.btn-color-1 { background-color: #ffe8ec; }
+.btn-color-2 { background-color: #e7f3ff; }
+.btn-color-3 { background-color: #e8fff1; }
+.btn-color-4 { background-color: #fff7e0; }
+.btn-color-5 { background-color: #f0e9ff; }
+.btn-color-6 { background-color: #e9f7f7; }
+.btn-color-7 { background-color: #ffe9f5; }
+.btn-color-8 { background-color: #e5fff5; }
+.btn-color-9 { background-color: #fff3e5; }
+</style>
+
+
 <section>
     <h2 class="section-title">
         <span class="section-symbol">∫</span>
@@ -190,7 +264,7 @@
 
     <div class="courses-grid">
 
-        <!-- مبانی آنالیز ریاضی (فرادرس) -->
+        <!-- مبانی آنالیز ریاضی -->
         <article class="course-card">
             <div>
                 <div class="course-title">مبانی آنالیز ریاضی (ویژه کنکور ارشد و دکترا)</div>
@@ -199,7 +273,7 @@
                 </div>
             </div>
             <a href="https://faradars.org/courses/basics-of-mathematical-analysis-reviewing-and-solving-masters-entrance-exam-part-i-fvmthe009"
-               class="course-button btn-color-1">مشاهده در فرادرس</a>
+               class="course-button btn-color-1 navy-text">مشاهده در فرادرس</a>
         </article>
 
         <!-- ریاضی عمومی ۱ -->
@@ -212,7 +286,7 @@
                 </div>
             </div>
             <a href="https://nikdars.com/edu/mmdmat01-00022-general-mathematics-1/"
-               class="course-button btn-color-2">مشاهده در نیک‌درس</a>
+               class="course-button btn-color-2 navy-text">مشاهده در نیک‌درس</a>
         </article>
 
         <!-- ریاضی عمومی ۲ -->
@@ -225,7 +299,7 @@
                 </div>
             </div>
             <a href="https://nikdars.com/edu/mmdmat03-00031-general-mathematics-2/"
-               class="course-button btn-color-3">مشاهده در نیک‌درس</a>
+               class="course-button btn-color-3 navy-text">مشاهده در نیک‌درس</a>
         </article>
 
         <!-- معادلات دیفرانسیل -->
@@ -238,7 +312,7 @@
                 </div>
             </div>
             <a href="https://nikdars.com/edu/mmddeq12-00053-differential-equations/"
-               class="course-button btn-color-4">مشاهده در نیک‌درس</a>
+               class="course-button btn-color-4 navy-text">مشاهده در نیک‌درس</a>
         </article>
 
         <!-- مثلثات -->
@@ -251,7 +325,7 @@
                 </div>
             </div>
             <a href="https://nikdars.com/edu/mmdtrg14-00067-trigonometry-education/"
-               class="course-button btn-color-5">مشاهده در نیک‌درس</a>
+               class="course-button btn-color-5 navy-text">مشاهده در نیک‌درس</a>
         </article>
 
         <!-- مشتق و انتگرال -->
@@ -264,7 +338,7 @@
                 </div>
             </div>
             <a href="https://nikdars.com/edu/mmdmat02-00024-derivative-and-integral/"
-               class="course-button btn-color-6">مشاهده در نیک‌درس</a>
+               class="course-button btn-color-6 navy-text">مشاهده در نیک‌درس</a>
         </article>
 
         <!-- بردار و ماتریس -->
@@ -277,7 +351,7 @@
                 </div>
             </div>
             <a href="https://nikdars.com/edu/mmdvec11-00049-vector-and-matrix/"
-               class="course-button btn-color-7">مشاهده در نیک‌درس</a>
+               class="course-button btn-color-7 navy-text">مشاهده در نیک‌درس</a>
         </article>
 
         <!-- تبدیل لاپلاس -->
@@ -290,7 +364,7 @@
                 </div>
             </div>
             <a href="https://nikdars.com/edu/mmdmat08-00045-laplace-transform/"
-               class="course-button btn-color-8">مشاهده در نیک‌درس</a>
+               class="course-button btn-color-8 navy-text">مشاهده در نیک‌درس</a>
         </article>
 
         <!-- دنباله و سری -->
@@ -302,186 +376,125 @@
                     <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
                 </div>
             </div>
-            <a href="https://nikdars.com/edu/mmdmat06-00039-sequence-and-series/"
-               class="course-button btn-color-9">مشاهده در نیک‌درس</a>
-        </article>
-
-        <!-- ریاضی عمومی ۲ (ویژه رشته ریاضی) -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">ریاضی عمومی ۲ (ویژه دانشجویان رشته ریاضی)</div>
-                <div class="course-desc">
-                    کامل‌ترین آموزش ریاضی عمومی ۲ برای دانشجویان ریاضیات و کاربردها، با بیان ساده و بیشترین تعداد مثال حل‌شده.
-                    <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmdmat04-00037-general-mathematics-2-mathematics-field/"
-               class="course-button btn-color-10">مشاهده در نیک‌درس</a>
-        </article>
-
-        <!-- ریاضی عمومی ۳ (ویژه رشته ریاضی) -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">ریاضی عمومی ۳ (ویژه دانشجویان رشته ریاضی)</div>
-                <div class="course-desc">
-                    کامل‌ترین آموزش ریاضی عمومی ۳ برای دانشجویان ریاضیات و کاربردها، همراه با حل تعداد زیادی مثال آموزشی و امتحانی.
-                    <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmdmat05-00038-general-mathematics-3/"
-               class="course-button btn-color-11">مشاهده در نیک‌درس</a>
+            <a href="https://nikdars.com/edu/mmdser10-00041-sequences-and-series/"
+               class="course-button btn-color-9 navy-text">مشاهده در نیک‌درس</a>
         </article>
 
     </div>
 </section>
-<!-- آموزش‌های رایگان -->
+<!-- ⭐⭐⭐ بخش ۳ ⭐⭐⭐ -->
+
+<style>
+.section-title {
+    margin: 24px 0 12px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.section-symbol {
+    font-size: 1.1rem;
+    color: #6b6bd9;
+}
+
+.simple-card {
+    background: #ffffff;
+    padding: 18px 20px;
+    border-radius: 16px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    margin-bottom: 24px;
+}
+
+.round-button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 999px;
+    background: #eef0ff;
+    color: #001a4d;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: all 0.15s ease-in-out;
+    margin: 6px;
+}
+
+.round-button:hover {
+    filter: brightness(1.05);
+}
+
+.button-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+</style>
+
+
+<!-- ⭐ نظرات دانشجویان ⭐ -->
 <section>
     <h2 class="section-title">
         <span class="section-symbol">∑</span>
-        <span>آموزش‌های رایگان</span>
+        <span>نظرات دانشجویان</span>
     </h2>
 
-    <div class="courses-grid">
-
-        <!-- ماتریس (رایگان) -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">آموزش ماتریس (رایگان)</div>
-                <div class="course-desc">
-                    آموزش رایگان ماتریس‌، قسمتی از آموزش بردار و ماتریس است.
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmdmat07-00044-matrix/"
-               class="course-button btn-color-12">مشاهده آموزش رایگان</a>
-        </article>
-
-        <!-- مشتق جزئی (رایگان) -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">آموزش مشتق جزئی (نسبی) (رایگان)</div>
-                <div class="course-desc">
-                    آموزش رایگان مشتق جزئی و مفاهیم نسبی، قسمتی از آموزش ریاضی عمومی ۲ است.
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmdpti09-00046-partial-perivative/"
-               class="course-button btn-color-5">مشاهده آموزش رایگان</a>
-        </article>
-
-        <!-- اعداد مختلط (رایگان) -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">آموزش اعداد مختلط (رایگان)</div>
-                <div class="course-desc">
-                    آموزش رایگان اعداد مختلط، قسمتی از آموزش ریاضی عمومی ۱ است.
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmdplx10-00047-complex-numbers/"
-               class="course-button btn-color-6">مشاهده آموزش رایگان</a>
-        </article>
-
-        <!-- معادلات دیفرانسیل کامل و عامل انتگرال‌ساز (رایگان) -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">معادلات دیفرانسیل کامل و عامل انتگرال‌ساز (رایگان)</div>
-                <div class="course-desc">
-                    آموزش رایگان معادلات دیفرانسیل کامل و عامل انتگرال‌ساز، قسمتی از آموزش معادلات دیفرانسیل است.
-                </div>
-            </div>
-            <a href="https://nikdars.com/?p=28032"
-               class="course-button btn-color-7">مشاهده آموزش رایگان</a>
-        </article>
-
+    <div class="simple-card">
+        <div class="button-grid">
+            <a href="reviews.html" class="round-button">مشاهده نظرات دانشجویان</a>
+        </div>
     </div>
 </section>
 
-<!-- بخش مقالات -->
-<section class="intro-section" style="text-align: right; margin-top: 28px;">
-    <h2 class="section-title" style="margin-top: 0;">
-        <span class="section-symbol">∞</span>
-        <span>مقالات</span>
-    </h2>
 
-    <a href="articles.html" class="primary-button"
-       style="display:inline-block; margin-top:10px;">
-        مشاهده مقالات
-    </a>
-</section>
-
-<!-- دکمه نظرات دانشجویان -->
-<section class="intro-section" style="text-align: right; margin-top: 28px;">
-    <h2 class="section-title" style="margin-top: 0;">
+<!-- ⭐ رسانه‌های اجتماعی ⭐ -->
+<section>
+    <h2 class="section-title">
         <span class="section-symbol">π</span>
-        <span>بازخورد و تجربه دانشجویان</span>
-    </h2>
-
-    <a href="reviews.html" class="primary-button"
-       style="display:inline-block; margin-top:10px;">
-        مشاهده نظرات دانشجویان
-    </a>
-</section>
-<!-- ارتباط با من -->
-<section id="contact" class="intro-section" style="text-align: right; margin-top: 28px;">
-    <h2 class="section-title" style="margin-top: 0;">
-        <span class="section-symbol">→</span>
-        <span>ارتباط با من</span>
-    </h2>
-
-    <div class="contact-button-group" style="margin-top: 10px;">
-
-        <!-- لینکدین -->
-        <a href="https://www.linkedin.com/in/مریم-داورپناه-9849b3241"
-           class="primary-button"
-           style="background:#0A66C2; color:#fff;">
-            لینکدین
-        </a>
-
-        <!-- اینستاگرام -->
-        <a href="https://www.instagram.com/maryam_davarpanah.math"
-           class="primary-button"
-           style="background:#E1306C; color:#fff;">
-            اینستاگرام
-        </a>
-
-    </div>
-</section>
-
-<!-- رسانه‌های اجتماعی -->
-<section class="social-section">
-    <h2 class="section-title" style="margin-top: 0;">
-        <span class="section-symbol">√</span>
         <span>رسانه‌های اجتماعی</span>
     </h2>
 
-    <div class="social-buttons">
-
-        <a href="https://www.linkedin.com/in/مریم-داورپناه-9849b3241"
-           class="social-button social-linkedin">
-            LinkedIn
-        </a>
-
-        <a href="https://youtube.com/@maryamdavarpanah124?si=UDo0EAXieAu45Xdh"
-           class="social-button social-youtube">
-            YouTube
-        </a>
-
-        <a href="https://www.aparat.com/maryam_davarpanah"
-           class="social-button social-aparat">
-            Aparat
-        </a>
-
-        <a href="https://zil.ink/maryamdavarpanah"
-           class="social-button social-zilink">
-            Zilink
-        </a>
-
+    <div class="simple-card">
+        <div class="button-grid">
+            <a href="https://www.instagram.com/maryam_davarpanah.math" class="round-button">اینستاگرام</a>
+            <a href="https://youtube.com/@maryamdavarpanah124?si=UDo0EAXieAu45Xdh" class="round-button">یوتیوب</a>
+            <a href="https://www.aparat.com/maryam_davarpanah" class="round-button">آپارات</a>
+            <a href="https://www.linkedin.com/in/مریم-داورپناه-9849b3241" class="round-button">لینکدین</a>
+            <a href="https://zil.ink/maryamdavarpanah" class="round-button">زیل‌لینک</a>
+        </div>
     </div>
 </section>
+<!-- ⭐⭐⭐ بخش ۴: فوتر ⭐⭐⭐ -->
 
-</div>
+<style>
+.footer {
+    background: #f7f7fb;
+    padding: 28px 20px;
+    text-align: center;
+    border-radius: 18px;
+    margin-top: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
 
-<footer style="text-align:center; padding:20px; margin-top:30px; color:#555;">
-    © مریم داورپناه – تمامی حقوق محفوظ است.
-</footer>
+.footer-text {
+    font-size: 0.9rem;
+    color: #444;
+    line-height: 1.7;
+}
 
-</body>
-</html>
+.footer-name {
+    font-weight: bold;
+    color: #001a4d;
+}
+</style>
+
+<footer class="footer">
+    <div class="footer-text">
+        طراحی و توسعه توسط  
+        <span class="footer-name">مریم داورپناه</span>
+        <br>
+        تمامی حقوق محفوظ است.
+    </div>
+</footer>    
