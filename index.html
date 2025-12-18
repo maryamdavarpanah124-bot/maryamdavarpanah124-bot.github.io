@@ -1,500 +1,129 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <title>آموزش ریاضیات با روش‌های نوین آموزش ریاضی - مریم داورپناه</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <meta name="description" content="آموزش ریاضیات با روش‌های نوین آموزش ریاضی؛ دوره‌های جامع، مثال‌محور و عمیق با تدریس مریم داورپناه.">
-    <meta name="keywords" content="آموزش ریاضیات, مریم داورپناه, ریاضی عمومی, معادلات دیفرانسیل, آموزش آنلاین ریاضی">
-
-    <style>
-        body {
-            margin: 0;
-            font-family: sans-serif;
-            background-color: #f7f7fb;
-            color: #222;
-            line-height: 1.7;
-        }
-
-        .page-container {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 16px;
-        }
-
-        /* هدر جدید */
-        .hero-logo {
-            width: 100%;
-            height: 22vh;
-            position: relative;
-            overflow: hidden;
-            border-radius: 0 0 16px 16px;
-            background: linear-gradient(90deg, #fceabb, #f8b500);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
-            margin-bottom: 70px;
-        }
-
-        .hero-logo img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-            opacity: 0.2;
-        }
-
-        .hero-profile {
-            position: absolute;
-            bottom: -48px;
-            right: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            text-align: right;
-            z-index: 10;
-        }
-
-        .hero-profile img {
-            width: 144px;
-            height: 144px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-        .hero-profile h1 {
-            margin: 8px 0 4px;
-            font-size: 1.3rem;
-            font-weight: bold;
-        }
-
-        .hero-profile p {
-            margin: 0;
-            font-size: 0.95rem;
-            color: #444;
-        }
-
-        @media (max-width: 768px) {
-            .hero-logo {
-                height: 80px;
-            }
-
-            .hero-profile {
-                bottom: -40px;
-                right: 12px;
-                align-items: center;
-                text-align: center;
-            }
-
-            .hero-profile img {
-                width: 100px;
-                height: 100px;
-            }
-
-            .hero-profile h1 {
-                font-size: 1.1rem;
-            }
-
-            .hero-profile p {
-                font-size: 0.85rem;
-            }
-        }
-
-        /* بخش معرفی و دکمه‌ها */
-        .intro-section {
-            background: #ffffff;
-            padding: 20px 22px;
-            border-radius: 16px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
-            margin-bottom: 24px;
-            font-size: 0.98rem;
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .intro-section::before {
-            content: "∫   ∑   π   √";
-            position: absolute;
-            left: 10px;
-            bottom: -8px;
-            font-size: 1.2rem;
-            color: rgba(120, 120, 200, 0.08);
-            pointer-events: none;
-        }
-
-        .intro-buttons {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 8px;
-        }
-
-        .intro-button {
-            background: #eef0ff;
-            color: #222;
-            padding: 9px 18px;
-            border-radius: 999px;
-            text-decoration: none;
-            font-size: 0.9rem;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-        }
-
-        .intro-button.primary {
-            background: linear-gradient(135deg, #ff7aa2, #ffb347);
-            color: #fff;
-        }
-
-        .intro-button.articles {
-            background: #ffe8cc;
-            color: #663300;
-        }
-    </style>
-</head>
-
-<body>
-<div class="page-container">
-
-<header class="hero-logo">
-    <img src="img/logo2.png" alt="لوگوی آموزش ریاضیات">
-
-    <div class="hero-profile">
-        <img src="img/profile2.jpg" alt="عکس مریم داورپناه">
-        <h1>مریم داورپناه</h1>
-        <p>مدرس ریاضیات دانشگاهی، مولف و مدرس کامل‌ترین فیلم‌های آموزشی ریاضی</p>
-    </div>
-</header>
-
-<section class="intro-section">
-    <h2>آموزش ریاضیات با روش‌های نوین آموزش ریاضی</h2>
-
-    <p>
-        هدف این مجموعه، بی‌نیاز کردن شما از هر منبع دیگری مثل جزوه، کلاس خصوصی و کتاب‌های متعدد است؛
-        به‌طوری که بتوانید علاوه بر درک عمیق مفاهیم ریاضی، در آزمون‌های تشریحی، تستی، کنکور و آزمون‌های استخدامی
-        بهترین عملکرد را داشته باشید.
-    </p>
-
-    <div class="intro-buttons">
-        <a href="about-me.html" class="intro-button primary">درباره مدرس</a>
-        <a href="reviews.html" class="intro-button" style="background:#e7f3ff;">نظرات دانشجویان</a>
-        <a href="#contact" class="intro-button" style="background:#e8fff1;">ارتباط با ما</a>
-        <a href="articles.html" class="intro-button articles">مقالات</a>
-    </div>
-</section>
-<!-- ⭐⭐⭐ بخش ۲: معرفی دوره‌ها ⭐⭐⭐ -->
+<!-- ⭐⭐⭐ هدر جدید ⭐⭐⭐ -->
 
 <style>
-/* متن سورمه‌ای و برجسته برای دکمه‌های دوره‌ها */
-.navy-text {
-    color: #001a4d !important;
-    font-weight: bold;
-    border: 2px solid #001a4d;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-}
-
-/* ساختار چندستونه دوره‌ها */
-.courses-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 12px;
-    margin-top: 16px;
-}
-
-.course-card {
-    padding: 14px 16px;
-    border-radius: 14px;
-    background: #ffffff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-.course-title {
-    font-weight: bold;
-    margin-bottom: 6px;
-    font-size: 0.99rem;
-}
-
-.course-desc {
-    font-size: 0.89rem;
-    color: #555;
-    margin-bottom: 10px;
-}
-
-/* دکمه‌های دوره‌ها */
-.course-button {
-    display: inline-block;
-    padding: 9px 18px;
-    border-radius: 999px;
-    border: 1px solid rgba(0,0,0,0.04);
-    font-size: 0.9rem;
-    cursor: pointer;
-    text-decoration: none;
-    text-align: center;
-    transition: all 0.15s ease-in-out;
-    font-weight: bold;
-}
-
-.course-button:hover {
-    transform: translateY(-1px);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-}
-
-/* رنگ‌های ملایم پس‌زمینه */
-.btn-color-1 { background-color: #ffe8ec; }
-.btn-color-2 { background-color: #e7f3ff; }
-.btn-color-3 { background-color: #e8fff1; }
-.btn-color-4 { background-color: #fff7e0; }
-.btn-color-5 { background-color: #f0e9ff; }
-.btn-color-6 { background-color: #e9f7f7; }
-.btn-color-7 { background-color: #ffe9f5; }
-.btn-color-8 { background-color: #e5fff5; }
-.btn-color-9 { background-color: #fff3e5; }
-</style>
-
-
-<section>
-    <h2 class="section-title">
-        <span class="section-symbol">∫</span>
-        <span>معرفی دوره‌های آموزش ریاضی</span>
-    </h2>
-
-    <div class="courses-grid">
-
-        <!-- مبانی آنالیز ریاضی -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">مبانی آنالیز ریاضی (ویژه کنکور ارشد و دکترا)</div>
-                <div class="course-desc">
-                    مرور فشرده مبانی آنالیز ریاضی همراه با خلاصه درس، نکات تستی و حل تست‌های منتخب کنکورهای کارشناسی ارشد سال‌های گذشته.
-                </div>
-            </div>
-            <a href="https://faradars.org/courses/basics-of-mathematical-analysis-reviewing-and-solving-masters-entrance-exam-part-i-fvmthe009"
-               class="course-button btn-color-1 navy-text">مشاهده در فرادرس</a>
-        </article>
-
-        <!-- ریاضی عمومی ۱ -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">ریاضی عمومی ۱</div>
-                <div class="course-desc">
-                    کامل‌ترین آموزش ریاضی عمومی ۱ با بیش از ۳۳۵ مثال حل‌شده، بیان ساده، نکات تستی و تشریحی، و حل مسائل امتحانی دانشگاه‌ها.
-                    <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmdmat01-00022-general-mathematics-1/"
-               class="course-button btn-color-2 navy-text">مشاهده در نیک‌درس</a>
-        </article>
-
-        <!-- ریاضی عمومی ۲ -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">ریاضی عمومی ۲</div>
-                <div class="course-desc">
-                    کامل‌ترین آموزش ریاضی عمومی ۲ با بیش از ۳۷۹ مثال، بیان ساده، حل مسائل امتحانی دانشگاه‌ها و پوشش نکات تستی و تشریحی.
-                    <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmdmat03-00031-general-mathematics-2/"
-               class="course-button btn-color-3 navy-text">مشاهده در نیک‌درس</a>
-        </article>
-
-        <!-- معادلات دیفرانسیل -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">معادلات دیفرانسیل</div>
-                <div class="course-desc">
-                    کامل‌ترین آموزش معادلات دیفرانسیل با بیش از ۴۷۹ مثال حل‌شده، همراه با حل مسائل امتحانی دانشگاه‌ها و آزمون انتهای هر فصل.
-                    <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmddeq12-00053-differential-equations/"
-               class="course-button btn-color-4 navy-text">مشاهده در نیک‌درس</a>
-        </article>
-
-        <!-- مثلثات -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">مثلثات (جامع)</div>
-                <div class="course-desc">
-                    کامل‌ترین آموزش مثلثات با بیش از ۱۹۰ مثال و بیان ساده، ویژه دبیرستان، کنکور، دانشگاه و دبیران ریاضی.
-                    <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmdtrg14-00067-trigonometry-education/"
-               class="course-button btn-color-5 navy-text">مشاهده در نیک‌درس</a>
-        </article>
-
-        <!-- مشتق و انتگرال -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">مشتق و انتگرال</div>
-                <div class="course-desc">
-                    کامل‌ترین آموزش مشتق و انتگرال با بیش از ۱۶۸ مثال حل‌شده، بیان ساده و حل مسائل مهم امتحانی.
-                    <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmdmat02-00024-derivative-and-integral/"
-               class="course-button btn-color-6 navy-text">مشاهده در نیک‌درس</a>
-        </article>
-
-        <!-- بردار و ماتریس -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">بردار و ماتریس (جبر خطی مقدماتی)</div>
-                <div class="course-desc">
-                    آموزش جبر خطی مقدماتی با بیش از ۵۷ مثال، ویژه دانشجویان همه رشته‌ها و علاقه‌مندان به برنامه‌نویسی و هوش مصنوعی.
-                    <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmdvec11-00049-vector-and-matrix/"
-               class="course-button btn-color-7 navy-text">مشاهده در نیک‌درس</a>
-        </article>
-
-        <!-- تبدیل لاپلاس -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">تبدیل لاپلاس</div>
-                <div class="course-desc">
-                    کامل‌ترین آموزش تبدیل لاپلاس با بیش از ۱۶۶ مثال، بیان ساده و حل مسائل امتحانی دانشگاه‌ها به‌صورت منظم و طبقه‌بندی‌شده.
-                    <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmdmat08-00045-laplace-transform/"
-               class="course-button btn-color-8 navy-text">مشاهده در نیک‌درس</a>
-        </article>
-
-        <!-- دنباله و سری -->
-        <article class="course-card">
-            <div>
-                <div class="course-title">دنباله و سری</div>
-                <div class="course-desc">
-                    کامل‌ترین آموزش دنباله و سری با بیش از ۸۰ مثال کاربردی، با بیان ساده و مناسب برای فهم عمیق مفاهیم همگرایی.
-                    <br><strong>کد تخفیف نیک‌درس: cdemada</strong>
-                </div>
-            </div>
-            <a href="https://nikdars.com/edu/mmdser10-00041-sequences-and-series/"
-               class="course-button btn-color-9 navy-text">مشاهده در نیک‌درس</a>
-        </article>
-
-    </div>
-</section>
-<!-- ⭐⭐⭐ بخش ۳ ⭐⭐⭐ -->
-
-<style>
-.section-title {
-    margin: 24px 0 12px;
-    font-size: 1.1rem;
-    font-weight: bold;
+/* نوار هدر */
+.header-bar {
+    width: 100%;
+    background: linear-gradient(90deg, #fceabb, #f8b500);
+    padding: 20px 0;
     display: flex;
     align-items: center;
-    gap: 6px;
+    justify-content: space-between;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.section-symbol {
-    font-size: 1.1rem;
-    color: #6b6bd9;
+/* لوگو */
+.header-logo {
+    width: 25%;
+    min-width: 140px;
+    margin-right: 20px;
 }
 
-.simple-card {
-    background: #ffffff;
-    padding: 18px 20px;
-    border-radius: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    margin-bottom: 24px;
+.header-logo img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
-.round-button {
-    display: inline-block;
-    padding: 10px 20px;
-    border-radius: 999px;
-    background: #eef0ff;
-    color: #001a4d;
-    font-weight: bold;
-    text-decoration: none;
-    font-size: 0.9rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    transition: all 0.15s ease-in-out;
-    margin: 6px;
-}
-
-.round-button:hover {
-    filter: brightness(1.05);
-}
-
-.button-grid {
+/* پروفایل */
+.header-profile {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 12px;
-}
-</style>
-
-
-<!-- ⭐ نظرات دانشجویان ⭐ -->
-<section>
-    <h2 class="section-title">
-        <span class="section-symbol">∑</span>
-        <span>نظرات دانشجویان</span>
-    </h2>
-
-    <div class="simple-card">
-        <div class="button-grid">
-            <a href="reviews.html" class="round-button">مشاهده نظرات دانشجویان</a>
-        </div>
-    </div>
-</section>
-
-
-<!-- ⭐ رسانه‌های اجتماعی ⭐ -->
-<section>
-    <h2 class="section-title">
-        <span class="section-symbol">π</span>
-        <span>رسانه‌های اجتماعی</span>
-    </h2>
-
-    <div class="simple-card">
-        <div class="button-grid">
-            <a href="https://www.instagram.com/maryam_davarpanah.math" class="round-button">اینستاگرام</a>
-            <a href="https://youtube.com/@maryamdavarpanah124?si=UDo0EAXieAu45Xdh" class="round-button">یوتیوب</a>
-            <a href="https://www.aparat.com/maryam_davarpanah" class="round-button">آپارات</a>
-            <a href="https://www.linkedin.com/in/مریم-داورپناه-9849b3241" class="round-button">لینکدین</a>
-            <a href="https://zil.ink/maryamdavarpanah" class="round-button">زیل‌لینک</a>
-        </div>
-    </div>
-</section>
-<!-- ⭐⭐⭐ بخش ۴: فوتر ⭐⭐⭐ -->
-
-<style>
-.footer {
-    background: #f7f7fb;
-    padding: 28px 20px;
-    text-align: center;
-    border-radius: 18px;
-    margin-top: 40px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 20px;
+    text-align: right;
 }
 
-.footer-text {
-    font-size: 0.9rem;
-    color: #444;
-    line-height: 1.7;
+.header-profile img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.footer-name {
+.header-profile h1 {
+    margin: 10px 0 4px;
+    font-size: 1.3rem;
     font-weight: bold;
-    color: #001a4d;
+    color: #222;
+}
+
+.header-profile p {
+    margin: 0;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+/* ریسپانسیو موبایل */
+@media (max-width: 768px) {
+    .header-bar {
+        flex-direction: column;
+        padding: 16px 0 24px;
+        text-align: center;
+    }
+
+    .header-logo {
+        width: 40%;
+        margin: 0;
+    }
+
+    .header-profile {
+        align-items: center;
+        margin: 0;
+    }
+
+    .header-profile img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .header-profile h1 {
+        font-size: 1.1rem;
+    }
+
+    .header-profile p {
+        font-size: 0.85rem;
+    }
+}
+
+/* کادر معرفی زیر هدر */
+.intro-box {
+    background: #ffffff;
+    padding: 20px 22px;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    margin-top: 20px;
+    font-size: 0.98rem;
+    line-height: 1.8;
 }
 </style>
 
-<footer class="footer">
-    <div class="footer-text">
-        طراحی و توسعه توسط  
-        <span class="footer-name">مریم داورپناه</span>
-        <br>
-        تمامی حقوق محفوظ است.
+
+<!-- ساختار هدر -->
+<header class="header-bar">
+
+    <!-- لوگو -->
+    <div class="header-logo">
+        <img src="img/logo2.png" alt="لوگوی آموزش ریاضیات">
     </div>
-</footer>    
+
+    <!-- پروفایل -->
+    <div class="header-profile">
+        <img src="img/profile2.jpg" alt="عکس مریم داورپناه">
+        <h1>مریم داورپناه</h1>
+        <p>مدرس دانشگاه، مولف و مدرس کامل‌ترین فیلم‌های آموزشی ریاضی</p>
+    </div>
+
+</header>
+
+
+<!-- کادر معرفی زیر هدر -->
+<div class="intro-box">
+    <h2>آموزش ریاضیات با روش‌های نوین آموزش ریاضی</h2>
+    هدف این مجموعه، بی‌نیاز کردن شما از هر منبع دیگری مثل جزوه، کلاس خصوصی و کتاب‌های متعدد است؛
+    به‌طوری که بتوانید علاوه بر درک عمیق مفاهیم ریاضی، در آزمون‌های تشریحی، تستی، کنکور و آزمون‌های استخدامی
+    بهترین عملکرد را داشته باشید.
+</div>
