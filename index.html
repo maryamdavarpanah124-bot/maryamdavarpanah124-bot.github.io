@@ -26,10 +26,10 @@
         object-position: center;
     }
 
-    /* ⭐ اصلاح ۱: عکس 0.4 خط پایین‌تر ⭐ */
+    /* ⭐ عکس 0.4 خط پایین‌تر ⭐ */
     .header-profile {
         position: absolute;
-        bottom: -24px; /* 0.4 خط پایین‌تر */
+        bottom: -24px;
         right: 20px;
         z-index: 10;
     }
@@ -43,11 +43,11 @@
         box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    /* ⭐ اصلاح ۲: کادر اسم و معرفی ⭐ */
+    /* ⭐ کادر اسم + معرفی (۲ خط بالاتر) ⭐ */
     .name-box {
-        margin-top: 40px;
+        margin-top: 10px; /* دو خط بالاتر */
         margin-right: 20px;
-        background: rgba(180, 200, 255, 0.25); /* پس‌زمینه ملایم */
+        background: rgba(180, 200, 255, 0.25);
         padding: 15px 20px;
         border-radius: 14px;
         display: flex;
@@ -59,9 +59,9 @@
 
     .name-box h1 {
         margin: 0;
-        font-size: 1.8rem;
-        font-weight: 900;
-        color: #111;
+        font-size: 2rem;
+        font-weight: 1000; /* برجسته‌تر */
+        color: #0b1a55; /* سورمه‌ای */
     }
 
     .name-box p {
@@ -71,13 +71,13 @@
         color: #333;
     }
 
-    /* ⭐ اصلاح ۳: کادر معرفی دوره‌ها ⭐ */
+    /* ⭐ کادر معرفی دوره‌ها (۳ خط بالاتر) ⭐ */
     .intro-box {
         background: rgba(200, 230, 255, 0.35);
         padding: 25px 25px;
         border-radius: 16px;
         box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-        margin: 30px auto;
+        margin: 10px auto; /* سه خط بالاتر */
         width: 90%;
         text-align: center;
         font-size: 1rem;
@@ -89,6 +89,35 @@
         font-size: 1.3rem;
         font-weight: 800;
         color: #222;
+    }
+
+    /* ⭐ دکمه‌های رنگی ⭐ */
+    .buttons {
+        margin: 25px auto;
+        text-align: center;
+    }
+
+    .buttons a {
+        display: inline-block;
+        padding: 12px 22px;
+        margin: 8px;
+        border-radius: 12px;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        font-size: 1rem;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        transition: 0.2s;
+    }
+
+    .btn1 { background: #4a6cf7; }   /* آبی */
+    .btn2 { background: #ff7a59; }   /* نارنجی */
+    .btn3 { background: #28b463; }   /* سبز */
+    .btn4 { background: #af7ac5; }   /* بنفش */
+
+    .buttons a:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 14px rgba(0,0,0,0.15);
     }
 
     /* ⭐ موبایل ⭐ */
@@ -108,7 +137,7 @@
         }
 
         .name-box {
-            margin: 80px auto 0;
+            margin: 60px auto 0;
             flex-direction: column;
             text-align: center;
         }
@@ -127,18 +156,26 @@
     </div>
 </header>
 
-<!-- ⭐⭐⭐ اصلاح ۲: کادر اسم + معرفی ⭐⭐⭐ -->
+<!-- ⭐⭐⭐ کادر اسم + معرفی ⭐⭐⭐ -->
 <div class="name-box">
     <h1>مریم داورپناه</h1>
     <p>مدرس دانشگاه، مولف و مدرس کامل‌ترین فیلم‌های آموزشی ریاضی</p>
 </div>
 
-<!-- ⭐⭐⭐ اصلاح ۳: کادر معرفی دوره‌ها ⭐⭐⭐ -->
+<!-- ⭐⭐⭐ کادر معرفی دوره‌ها ⭐⭐⭐ -->
 <div class="intro-box">
     <h2>آموزش ریاضیات با روش‌های نوین آموزش ریاضی</h2>
     هدف این مجموعه، بی‌نیاز کردن شما از هر منبع دیگری مثل جزوه، کلاس خصوصی و کتاب‌های متعدد است؛
     به‌طوری که بتوانید علاوه بر درک عمیق مفاهیم ریاضی، در آزمون‌های تشریحی، تستی، کنکور و آزمون‌های استخدامی
     بهترین عملکرد را داشته باشید.
+</div>
+
+<!-- ⭐⭐⭐ دکمه‌های رنگی ⭐⭐⭐ -->
+<div class="buttons">
+    <a class="btn1" href="#">معرفی مدرس</a>
+    <a class="btn2" href="#">نظرات دانشجویان</a>
+    <a class="btn3" href="#">ارتباط با ما</a>
+    <a class="btn4" href="#">مقالات</a>
 </div>
 
 </body>
