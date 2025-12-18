@@ -16,7 +16,7 @@
 /* لوگو */
 .header-logo {
     width: 25%;
-    min-width: 140px;
+    min-width: 150px;
     margin-right: 20px;
 }
 
@@ -26,70 +26,37 @@
     display: block;
 }
 
-/* پروفایل */
-.header-profile {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: 20px;
-    text-align: right;
-}
-
-.header-profile img {
+/* عکس پروفایل */
+.header-profile-img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
     border: 4px solid white;
+    margin-left: 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-.header-profile h1 {
-    margin: 10px 0 4px;
-    font-size: 1.3rem;
+/* متن زیر هدر */
+.header-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 1.4rem;
     font-weight: bold;
     color: #222;
 }
 
-.header-profile p {
-    margin: 0;
-    font-size: 0.95rem;
-    color: #333;
+.header-text p {
+    margin: 6px 0 0;
+    font-size: 1rem;
+    color: #444;
 }
 
-/* ریسپانسیو موبایل */
-@media (max-width: 768px) {
-    .header-bar {
-        flex-direction: column;
-        padding: 16px 0 24px;
-        text-align: center;
-    }
-
-    .header-logo {
-        width: 40%;
-        margin: 0;
-    }
-
-    .header-profile {
-        align-items: center;
-        margin: 0;
-    }
-
-    .header-profile img {
-        width: 100px;
-        height: 100px;
-    }
-
-    .header-profile h1 {
-        font-size: 1.1rem;
-    }
-
-    .header-profile p {
-        font-size: 0.85rem;
-    }
-}
-
-/* کادر معرفی زیر هدر */
+/* کادر معرفی زیر متن */
 .intro-box {
     background: #ffffff;
     padding: 20px 22px;
@@ -98,6 +65,33 @@
     margin-top: 20px;
     font-size: 0.98rem;
     line-height: 1.8;
+}
+
+/* ریسپانسیو موبایل */
+@media (max-width: 768px) {
+    .header-bar {
+        flex-direction: column;
+        padding: 16px 0 24px;
+    }
+
+    .header-logo {
+        width: 40%;
+        margin: 0;
+    }
+
+    .header-profile-img {
+        width: 90px;
+        height: 90px;
+        margin: 10px 0 0;
+    }
+
+    .header-text h1 {
+        font-size: 1.2rem;
+    }
+
+    .header-text p {
+        font-size: 0.9rem;
+    }
 }
 </style>
 
@@ -110,17 +104,20 @@
         <img src="img/logo2.png" alt="لوگوی آموزش ریاضیات">
     </div>
 
-    <!-- پروفایل -->
-    <div class="header-profile">
-        <img src="img/profile2.jpg" alt="عکس مریم داورپناه">
-        <h1>مریم داورپناه</h1>
-        <p>مدرس دانشگاه، مولف و مدرس کامل‌ترین فیلم‌های آموزشی ریاضی</p>
-    </div>
+    <!-- عکس پروفایل -->
+    <img src="img/profile2.jpg" alt="عکس مریم داورپناه" class="header-profile-img">
 
 </header>
 
 
-<!-- کادر معرفی زیر هدر -->
+<!-- متن زیر هدر -->
+<div class="header-text">
+    <h1>مریم داورپناه</h1>
+    <p>مدرس دانشگاه، مولف و مدرس کامل‌ترین فیلم‌های آموزشی ریاضی</p>
+</div>
+
+
+<!-- کادر معرفی -->
 <div class="intro-box">
     <h2>آموزش ریاضیات با روش‌های نوین آموزش ریاضی</h2>
     هدف این مجموعه، بی‌نیاز کردن شما از هر منبع دیگری مثل جزوه، کلاس خصوصی و کتاب‌های متعدد است؛
