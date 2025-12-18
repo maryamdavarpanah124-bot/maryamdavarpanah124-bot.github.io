@@ -23,38 +23,34 @@
             padding: 16px;
         }
 
-        /* هدر اصلی */
-        .hero {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            gap: 16px;
-            margin-bottom: 24px;
-            padding: 10px 20px;
-            background: #ffffff;
-            border-radius: 16px;
+        /* هدر جدید: لوگو نوار باریک + پروفایل شناور */
+        .hero-logo {
+            width: 100%;
+            height: 20vh;
+            position: relative;
+            overflow: hidden;
+            border-radius: 0 0 16px 16px;
+            background: #fff;
             box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            margin-bottom: 60px; /* جا برای بیرون‌زدگی پروفایل */
         }
 
-        /* لوگو به صورت نوار باریک */
         .hero-logo img {
             width: 100%;
-            height: 20vh; /* 20 درصد ارتفاع صفحه */
-            object-fit: contain;
+            height: 100%;
+            object-fit: cover;
             object-position: center;
         }
 
-        @media (max-width: 768px) {
-            .hero-logo img {
-                height: 80px; /* اندازه مناسب موبایل */
-            }
-        }
-
+        /* تصویر پروفایل شناور */
         .hero-profile {
+            position: absolute;
+            bottom: -48px;
+            right: 20px;
             display: flex;
             align-items: center;
-            justify-content: flex-end;
             gap: 12px;
+            z-index: 10;
         }
 
         .hero-profile img {
@@ -62,25 +58,47 @@
             height: 96px;
             border-radius: 50%;
             object-fit: cover;
-            border: 3px solid #e0e0ff;
+            border: 3px solid white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
         }
 
         .hero-text {
             text-align: right;
+            background: rgba(255,255,255,0.9);
+            padding: 6px 12px;
+            border-radius: 12px;
+            backdrop-filter: blur(4px);
         }
 
         .hero-text h1 {
             margin: 0 0 4px;
-            font-size: 1.35rem;
+            font-size: 1.2rem;
         }
 
         .hero-text p {
             margin: 0;
-            font-size: 0.95rem;
-            color: #555;
+            font-size: 0.85rem;
+            color: #444;
         }
 
-        /* بخش معرفی و دکمه‌های اصلی */
+        /* نسخه موبایل */
+        @media (max-width: 768px) {
+            .hero-logo {
+                height: 80px;
+            }
+
+            .hero-profile {
+                bottom: -40px;
+                right: 12px;
+            }
+
+            .hero-profile img {
+                width: 80px;
+                height: 80px;
+            }
+        }
+
+        /* بخش معرفی و دکمه‌ها */
         .intro-section {
             background: #ffffff;
             padding: 20px 22px;
@@ -103,18 +121,6 @@
             pointer-events: none;
         }
 
-        .intro-section h2 {
-            margin-top: 0;
-            font-size: 1.3rem;
-            margin-bottom: 10px;
-        }
-
-        .intro-section p {
-            margin: 0 auto 14px;
-            max-width: 720px;
-            color: #444;
-        }
-
         .intro-buttons {
             display: flex;
             flex-wrap: wrap;
@@ -123,26 +129,13 @@
             margin-top: 8px;
         }
 
-        /* دکمه‌های عمومی گرد */
-        .intro-button,
-        .primary-button,
-        .social-button,
-        .contact-chip,
-        .course-button {
-            display: inline-block;
-            padding: 9px 18px;
-            border-radius: 999px;
-            border: none;
-            font-size: 0.9rem;
-            cursor: pointer;
-            text-decoration: none;
-            text-align: center;
-            transition: all 0.15s ease-in-out;
-        }
-
         .intro-button {
             background: #eef0ff;
             color: #222;
+            padding: 9px 18px;
+            border-radius: 999px;
+            text-decoration: none;
+            font-size: 0.9rem;
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
@@ -155,90 +148,14 @@
             background: #ffe8cc;
             color: #663300;
         }
-
-        .intro-button:hover {
-            filter: brightness(1.03);
-        }
-
-        .section-title {
-            margin: 24px 0 12px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
-
-        .section-symbol {
-            font-size: 1.1rem;
-            color: #6b6bd9;
-        }
-
-        .courses-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-            gap: 12px;
-        }
-
-        .course-card {
-            padding: 14px 16px;
-            border-radius: 14px;
-            background: #ffffff;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-
-        .course-title {
-            font-weight: bold;
-            margin-bottom: 6px;
-            font-size: 0.99rem;
-        }
-
-        .course-desc {
-            font-size: 0.89rem;
-            color: #555;
-            margin-bottom: 10px;
-        }
-
-        /* دکمه‌های دوره‌ها */
-        .course-button {
-            font-weight: bold;
-            color: #001a4d;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.08);
-            border-radius: 999px;
-            border: 1px solid rgba(0,0,0,0.04);
-        }
-
-        .course-button:hover {
-            transform: translateY(-1px);
-            box-shadow: 0 3px 10px rgba(0,0,0,0.12);
-        }
-
-        .btn-color-1 { background-color: #ffe8ec; }
-        .btn-color-2 { background-color: #e7f3ff; }
-        .btn-color-3 { background-color: #e8fff1; }
-        .btn-color-4 { background-color: #fff7e0; }
-        .btn-color-5 { background-color: #f0e9ff; }
-        .btn-color-6 { background-color: #e9f7f7; }
-        .btn-color-7 { background-color: #ffe9f5; }
-        .btn-color-8 { background-color: #e5fff5; }
-        .btn-color-9 { background-color: #fff3e5; }
-        .btn-color-10 { background-color: #e9ecff; }
-        .btn-color-11 { background-color: #e6f8ff; }
-        .btn-color-12 { background-color: #f9e6ff; }
-
     </style>
 </head>
 
 <body>
 <div class="page-container">
 
-<header class="hero">
-    <div class="hero-logo">
-        <img src="img/logo2.png" alt="لوگوی آموزش ریاضیات">
-    </div>
+<header class="hero-logo">
+    <img src="img/logo2.png" alt="لوگوی آموزش ریاضیات">
 
     <div class="hero-profile">
         <div class="hero-text">
