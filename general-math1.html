@@ -1,49 +1,34 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>آموزش ریاضی عمومی ۱</title>
-  <style>
-    body{font-family:"IRANSans","Vazir",sans-serif;line-height:1.9;margin:0;padding:0;background:#fdfdfd;direction:rtl;text-align:right}
-    header{background:#004080;color:#fff;display:flex;align-items:center;justify-content:center;position:relative;height:100px;overflow:hidden}
-    header h1{margin:0;font-size:22px;z-index:3}
-    .header-img{height:80%;margin-right:15px;border-radius:8px;z-index:3}
-    header .symbols span{position:absolute;font-size:60px;color:rgba(255,255,255,0.22)}
-    header .symbols span:nth-child(1){top:6px;left:12px;transform:rotate(-18deg)}
-    header .symbols span:nth-child(2){top:22px;right:24px;transform:rotate(31deg)}
-    header .symbols span:nth-child(3){bottom:10px;left:50%;transform:rotate(-7deg)}
-    header .symbols span:nth-child(4){top:56px;left:68%;transform:rotate(43deg)}
-    header .symbols span:nth-child(5){bottom:3px;right:8px;transform:rotate(-33deg)}
-    header .symbols span:nth-child(6){top:8px;left:40%;transform:rotate(12deg)}
-    header .symbols span:nth-child(7){bottom:20px;left:8%;transform:rotate(-25deg)}
-    header .symbols span:nth-child(8){top:38px;right:50%;transform:rotate(5deg)}
-    header .symbols span:nth-child(9){bottom:28px;right:36%;transform:rotate(18deg)}
-    header .symbols span:nth-child(10){top:14px;right:70%;transform:rotate(-12deg)}
-    main{padding:8px;max-width:900px;margin:auto}
-    .content-box{max-width:900px;margin:10px auto 16px;padding:22px;border-radius:18px;background:#f7fbff;box-shadow:0 4px 14px rgba(0,0,0,0.08);position:relative;overflow:hidden}
-    .content-box::before{content:"∫ Σ f(x) lim ∂ ∑ ∞ ∫ Σ ∞";font-size:118px;color:rgba(0,64,128,0.12);position:absolute;top:6px;left:12px;white-space:nowrap;z-index:0}
-    .content-box h2,.content-box p,.content-box ul{position:relative;z-index:1}
-    h2{color:#004080;margin-top:6px}
-    ul{padding-right:20px}
-    .course-card{text-align:center;background:#f9f9f9;padding:20px;margin:20px auto;border-radius:10px;max-width:600px;box-shadow:0 4px 8px rgba(0,0,0,0.1)}
-    .btn-nikdars,.btn-home{display:inline-block;padding:12px 25px;color:#fff;text-decoration:none;font-size:16px;border-radius:6px;margin:8px;transition:all .3s ease}
-    .btn-nikdars{background:linear-gradient(135deg,#66cc99,#55aa88);box-shadow:0 4px 10px rgba(102,204,153,.4)}
-    .btn-nikdars:hover{background:linear-gradient(135deg,#55aa88,#449977);transform:translateY(-2px)}
-    .btn-home{background:linear-gradient(135deg,#004080,#0066cc);box-shadow:0 4px 10px rgba(0,64,128,.4)}
-    .btn-home:hover{background:linear-gradient(135deg,#0066cc,#004080);transform:translateY(-2px)}
-    footer{background:#eee;text-align:center;padding:15px;margin-top:24px;font-size:14px}
-    @media(max-width:600px){
-      header{height:80px}
-      header h1{font-size:18px}
-      .header-img{height:70%;margin-right:10px}
-      .course-card{padding:15px;margin:12px}
-      .btn-nikdars,.btn-home{font-size:14px;padding:10px 20px}
-      h2{font-size:15px} /* 👈 کاهش یک واحد برای تیترها در موبایل */
-    }
-  </style>
-</head>
-<body>
+<!DOCTYPE html><html lang="fa" dir="rtl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><title>آموزش ریاضی عمومی ۱</title><style>
+body{font-family:"IRANSans","Vazir",sans-serif;line-height:1.9;margin:0;padding:0;background:#fdfdfd;direction:rtl;text-align:right}
+header{background:#004080;color:#fff;display:flex;align-items:center;justify-content:center;position:relative;height:100px;overflow:hidden}
+header h1{margin:0;font-size:22px;z-index:3}
+.header-img{height:80%;margin-right:15px;border-radius:8px;z-index:3}
+header .symbols span{position:absolute;font-size:60px;color:rgba(255,255,255,0.22)}
+header .symbols span:nth-child(1){top:6px;left:12px;transform:rotate(-18deg)}
+header .symbols span:nth-child(2){top:22px;right:24px;transform:rotate(31deg)}
+header .symbols span:nth-child(3){bottom:10px;left:50%;transform:rotate(-7deg)}
+header .symbols span:nth-child(4){top:56px;left:68%;transform:rotate(43deg)}
+header .symbols span:nth-child(5){bottom:3px;right:8px;transform:rotate(-33deg)}
+header .symbols span:nth-child(6){top:8px;left:40%;transform:rotate(12deg)}
+header .symbols span:nth-child(7){bottom:20px;left:8%;transform:rotate(-25deg)}
+header .symbols span:nth-child(8){top:38px;right:50%;transform:rotate(5deg)}
+header .symbols span:nth-child(9){bottom:28px;right:36%;transform:rotate(18deg)}
+header .symbols span:nth-child(10){top:14px;right:70%;transform:rotate(-12deg)}
+main{padding:8px;max-width:900px;margin:auto}
+.content-box{max-width:900px;margin:10px auto 16px;padding:22px;border-radius:18px;background:#f7fbff;box-shadow:0 4px 14px rgba(0,0,0,0.08);position:relative;overflow:hidden}
+.content-box::before{content:"∫ Σ f(x) lim ∂ ∑ ∞ ∫ Σ ∞";font-size:118px;color:rgba(0,64,128,0.12);position:absolute;top:6px;left:12px;white-space:nowrap;z-index:0}
+.content-box h2,.content-box p,.content-box ul{position:relative;z-index:1}
+h2{color:#004080;margin-top:6px}
+ul{padding-right:20px}
+.course-card{text-align:center;background:#f9f9f9;padding:20px;margin:20px auto;border-radius:10px;max-width:600px;box-shadow:0 4px 8px rgba(0,0,0,0.1)}
+.btn-nikdars,.btn-home{display:inline-block;padding:12px 25px;color:#fff;text-decoration:none;font-size:16px;border-radius:6px;margin:8px;transition:all .3s ease}
+.btn-nikdars{background:linear-gradient(135deg,#66cc99,#55aa88);box-shadow:0 4px 10px rgba(102,204,153,.4)}
+.btn-nikdars:hover{background:linear-gradient(135deg,#55aa88,#449977);transform:translateY(-2px)}
+.btn-home{background:linear-gradient(135deg,#004080,#0066cc);box-shadow:0 4px 10px rgba(0,64,128,.4)}
+.btn-home:hover{background:linear-gradient(135deg,#0066cc,#004080);transform:translateY(-2px)}
+footer{background:#eee;text-align:center;padding:15px;margin-top:24px;font-size:14px}
+@media(max-width:600px){header{height:80px}header h1{font-size:18px}.header-img{height:70%;margin-right:10px}.course-card{padding:15px;margin:12px}.btn-nikdars,.btn-home{font-size:14px;padding:10px 20px}h2{font-size:16px}}
+</style></head><body>
 <header>
   <div class="symbols"><span>∑</span><span>π</span><span>√</span><span>∫</span><span>Δ</span><span>∞</span><span>lim</span><span>∂</span><span>Σ</span><span>≈</span></div>
   <img src="img/general-math1-cover.jpg" alt="کامل‌ترین فیلم آموزش ریاضی عمومی 1" class="header-img">
@@ -60,45 +45,17 @@
 <p>استفاده شده تا کامل‌ترین و ساده‌ترین آموزش ممکن ارائه شود و نیازهای دانشجویان تمام دانشگاه‌ها را به طور کامل برآورده کند.</p>
 <h2>سرفصل‌های دوره ریاضی عمومی ۱</h2>
 <ul>
-  <li>فصل اول: تابع</ <li
-  <li>فصل دوم: حد و پیوستگی</li>
-  <li>فصل سوم: توابع مثلثاتی، نمایی، هیپربولیک و معکوس آنها</li>
-  <li>فصل چهارم: مشتق</li>
-  <li>فصل پنجم: کاربرد مشتق</li>
-  <li>فصل ششم: انتگرال</li>
-  <li>فصل هفتم: کاربردهای انتگرال</li>
-  <li>فصل هشتم: دستگاه مختصات قطبی</li>
-  <li>فصل نهم: انتگرال ناسره (نامتعارف یا غیرعادی)</li>
-  <li>فصل دهم: دنباله</li>
-  <li>فصل یازدهم: سری</li>
-  <li>فصل دوازدهم: اعداد مختلط</li>
+  <li>فصل اول: تابع</li><li>فصل دوم: حد و پیوستگی</li><li>فصل سوم: توابع مثلثاتی، نمایی، هیپربولیک و معکوس آنها</li><li>فصل چهارم: مشتق</li><li>فصل پنجم: کاربرد مشتق</li><li>فصل ششم: انتگرال</li><li>فصل هفتم: کاربردهای انتگرال</li><li>فصل هشتم: دستگاه مختصات قطبی</li><li>فصل نهم: انتگرال ناسره (نامتعارف یا غیرعادی)</li><li>فصل دهم: دنباله</li><li>فصل یازدهم: سری</li><li>فصل دوازدهم: اعداد مختلط</li>
 </ul>
-
 <h2>شرایط خرید و تخفیف</h2>
-<ul>
-  <li>امکان خرید آموزش در سایت نیک‌درس به دو صورت نقدی و اقساطی وجود دارد.</li>
-  <li>دانشجویان داخل و خارج ایران می‌توانند بدون محدودیت این آموزش را تهیه کنند.</li>
-  <li>کد تخفیف ۲۰ درصدی مدرس: <strong>cdemada</strong></li>
-</ul>
-
+<ul><li>امکان خرید آموزش در سایت نیک‌درس به دو صورت نقدی و اقساطی وجود دارد.</li><li>دانشجویان داخل و خارج ایران می‌توانند بدون محدودیت این آموزش را تهیه کنند.</li><li>کد تخفیف ۲۰ درصدی مدرس: <strong>cdemada</strong></li></ul>
 <h2>جمع‌بندی</h2>
-<p>
-  دوره آموزش ریاضی عمومی ۱ آکادمی نیک درس، با بهره‌مندی از توضیحات روان،
-  مثال‌های فراوان، پوشش کامل سرفصل، استفاده از منابع معتبر و ارائه جزوه همراه فیلم،
-  کامل‌ترین آموزش ریاضی عمومی ۱ است که نیازهای دانشجویان در تمام دانشگاه‌ها را
-  برآورده می‌کند.
-</p>
-
+<p>دوره آموزش ریاضی عمومی1 آکادمی نیک درس، با بهره مندی از  توضیحات روان، مثال‌های فراوان، پوشش کامل سرفصل، استفاده از منابع معتبر و ارائه جزوه همراه فیلم، کامل‌ترین آموزش‌ ریاضی عمومی ۱ است که نیازهای دانشجویان در تمام دانشگاه‌ها را برآورده می‌کند.</p>
 <div class="course-card">
   <h2>ریاضی عمومی ۱</h2>
-  <a href="https://nikdars.com/edu/mmdmat01-00022-general-mathematics-1/" target="_blank" class="btn-nikdars">
-    مشاهده آموزش در نیک‌درس
-  </a>
+  <a href="https://nikdars.com/edu/mmdmat01-00022-general-mathematics-1/" target="_blank" class="btn-nikdars">مشاهده آموزش در نیک‌درس</a>
   <a href="index.html" class="btn-home">بازگشت به صفحه اصلی</a>
 </div>
-</div>
-</main>
-
+</div></main>
 <footer>© ۲۰۲۵ مریم داورپناه - همه حقوق محفوظ است</footer>
-</body>
-</html>
+</body></html>
