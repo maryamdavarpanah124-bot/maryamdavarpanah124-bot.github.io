@@ -1,79 +1,157 @@
 <!DOCTYPE html>
-<html lang="fa">
+<html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>آموزش ریاضی عمومی ۱</title>
   <meta name="description" content="کامل‌ترین فیلم آموزش ریاضی عمومی ۱ با ۳۳۵ مثال حل‌شده، جزوه پاورپوینت و رضایت ۵ ستاره دانشجویان.">
   <style>
-    body { font-family: Tahoma, sans-serif; line-height: 1.8; margin: 20px; }
-    h1, h2, h3 { color: #004080; }
-    .buttons { margin-top: 30px; }
-    .buttons a {
-      display: inline-block;
-      margin: 5px;
-      padding: 10px 20px;
-      background-color: #004080;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
+    body {
+      font-family: "IRANSans", "Vazir", sans-serif;
+      line-height: 1.9;
+      margin: 0;
+      padding: 0;
+      background: #fdfdfd;
+      direction: rtl;
+      text-align: right;
     }
-    .buttons a:hover { background-color: #0066cc; }
-    img { margin-bottom: 20px; }
+    header {
+      background: #004080;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+    }
+    header img.logo { height: 60px; vertical-align: middle; }
+    header img.profile { height: 80px; border-radius: 50%; margin-left: 15px; vertical-align: middle; }
+    header h1 { margin: 10px 0 0; font-size: 22px; }
+    main { padding: 20px; max-width: 900px; margin: auto; }
+
+    .content-box {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 30px;
+      border-radius: 18px;
+      background: #f7fbff;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+      position: relative;
+      overflow: hidden;
+    }
+    .content-box::before {
+      content: "∫ Σ f(x) lim ∂ ∑ ∞";
+      font-size: 120px;
+      color: rgba(0, 64, 128, 0.08);
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      white-space: nowrap;
+      z-index: 0;
+    }
+    .content-box h2, .content-box p, .content-box ul {
+      position: relative;
+      z-index: 1;
+    }
+
+    h2 { color: #004080; margin-top: 20px; }
+    ul { padding-right: 20px; }
+
+    .course-card {
+      text-align: center;
+      background: #f9f9f9;
+      padding: 20px;
+      margin: 20px auto;
+      border-radius: 10px;
+      max-width: 600px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .btn-nikdars, .btn-home {
+      display:inline-block;
+      padding:12px 25px;
+      color:#fff;
+      text-decoration:none;
+      font-size:16px;
+      border-radius:6px;
+      margin:5px;
+      transition:background-color 0.3s ease;
+    }
+    .btn-nikdars { background-color:#66cc99; }
+    .btn-nikdars:hover { background-color:#55aa88; }
+    .btn-home { background-color:#004080; }
+    .btn-home:hover { background-color:#0066cc; }
+
+    footer { background: #eee; text-align: center; padding: 15px; margin-top: 40px; font-size: 14px; }
+
+    @media (max-width: 600px) {
+      header img.logo { height: 40px; }
+      header img.profile { height: 60px; }
+      header h1 { font-size: 18px; }
+      .course-card { padding: 15px; margin: 10px; }
+      .btn-nikdars, .btn-home { font-size: 14px; padding: 10px 20px; }
+    }
   </style>
 </head>
 <body>
 
+<header>
+  <img src="images/logo.png" alt="لوگو" class="logo">
+  <img src="images/profile.jpg" alt="مریم داورپناه" class="profile">
+  <h1>آموزش‌های جامع ریاضی دانشگاهی</h1>
+</header>
+
+<main>
   <!-- تصویر کاور -->
-  <img src="images/general-math1-cover.jpg" alt="کامل‌ترین فیلم آموزش ریاضی عمومی 1" style="max-width:100%; height:auto;">
+  <img src="images/general-math1-cover.jpg" alt="کامل‌ترین فیلم آموزش ریاضی عمومی 1" style="max-width:100%; height:auto; margin-bottom:20px;">
 
-  <h1>توضیحات آموزش ریاضی عمومی ۱</h1>
+  <div class="content-box">
+    <h2>توضیحات آموزش ریاضی عمومی ۱</h2>
+    <p><strong>ریاضی عمومی ۱</strong> یکی از بنیادی‌ترین دروس دانشگاهی در رشته‌های فنی، مهندسی و علوم پایه است. این درس نه‌تنها پیش‌نیاز بسیاری از واحدهای تخصصی در مقطع کارشناسی محسوب می‌شود، بلکه در آزمون‌های کارشناسی ارشد، دکتری و حتی برخی آزمون‌های استخدامی نیز نقش کلیدی دارد.</p>
 
-  <p><strong>ریاضی عمومی ۱</strong> یکی از بنیادی‌ترین دروس دانشگاهی در رشته‌های فنی، مهندسی و علوم پایه است. این درس نه‌تنها پیش‌نیاز بسیاری از واحدهای تخصصی در مقطع کارشناسی محسوب می‌شود، بلکه در آزمون‌های کارشناسی ارشد، دکتری و حتی برخی آزمون‌های استخدامی نیز نقش کلیدی دارد.</p>
+    <p>این مجموعه آموزشی با رویکردی جامع و مثال‌محور طراحی شده تا دانشجویان بتوانند در مدت زمان کوتاه، تسلط عمیق بر مفاهیم پیدا کنند و برای امتحانات دانشگاهی و کنکور آماده شوند. این دوره به‌عنوان <strong>کامل‌ترین فیلم ریاضی عمومی ۱</strong> شناخته می‌شود و از نظر کیفیت تدریس، مثال‌های فراوان و بیان مدرس، به‌حق <strong>بهترین فیلم ریاضی عمومی ۱</strong> است.</p>
 
-  <p>این مجموعه آموزشی با رویکردی جامع و مثال‌محور طراحی شده تا دانشجویان بتوانند در مدت زمان کوتاه، تسلط عمیق بر مفاهیم پیدا کنند و برای امتحانات دانشگاهی و کنکور آماده شوند. این دوره به‌عنوان <strong>کامل‌ترین فیلم ریاضی عمومی ۱</strong> شناخته می‌شود و از نظر کیفیت تدریس، مثال‌های فراوان و بیان مدرس، به‌حق <strong>بهترین فیلم ریاضی عمومی ۱</strong> است.</p>
+    <h2>ویژگی‌های برجسته دوره</h2>
+    <ul>
+      <li>پوشش کامل سرفصل‌های مصوب دانشگاهی</li>
+      <li>بیش از ۳۳۵ مثال حل‌شده با توضیحات مرحله‌به‌مرحله</li>
+      <li>بیان شفاف و ساده مدرس</li>
+      <li>جزوه پاورپوینت همراه فیلم</li>
+      <li>رضایت ۵ ستاره دانشجویان</li>
+    </ul>
 
-  <h2>ویژگی‌های برجسته دوره</h2>
-  <ul>
-    <li>پوشش کامل سرفصل‌های مصوب دانشگاهی.</li>
-    <li>ارائه‌ی بیش از <strong>۳۳۵ مثال حل‌شده</strong> همراه با توضیحات مرحله‌به‌مرحله.</li>
-    <li><strong>بیان شفاف مدرس</strong>، مفاهیم پیچیده را به زبانی ساده و قابل فهم منتقل می‌کند.</li>
-    <li><strong>تجربه‌ی سال‌ها تدریس مدرس</strong> در دانشگاه‌های مختلف، کیفیت بالای آموزش را تضمین می‌کند.</li>
-    <li>این آموزش، از نظر سرفصل و محتوا، کامل‌ترین آموزشی است که با این نام منتشر شده است.</li>
-    <li>از نظر تعداد و تنوع مثال‌ها و قدرت انتقال مطالب توسط مدرس، بی‌نظیر است.</li>
-    <li>این آموزش بالاترین امتیاز رضایتمندی مخاطبان (دانشجویان) را کسب کرده و موفق به دریافت ۵ ستاره طلایی رضایتمندی گوگل شده است.</li>
-    <li>علاوه بر فیلم آموزشی، <strong>پاورپوینت (جزوه)</strong> نیز در اختیار مخاطبان قرار می‌گیرد.</li>
-    <li>امکان تهیه‌ی <strong>بسته آموزش جامع ریاضی عمومی ۱ و ۲</strong> و همچنین <strong>بسته آموزش جامع ریاضی عمومی ۱ و ۲ + معادلات دیفرانسیل</strong> با قیمت مناسب‌تر وجود دارد.</li>
-  </ul>
+    <h2>منابع آموزشی</h2>
+    <ul>
+      <li>کتاب حساب دیفرانسیل و انتگرال جورج توماس</li>
+      <li>کتاب حساب دیفرانسیل و انتگرال جیمز استوارت</li>
+      <li>آثار ریچارد سیلورمن</li>
+      <li>کتاب‌های دکتر نیکوکار</li>
+      <li>کتاب ریاضی عمومی ۱ نوشته دکتر کرایه‌چیان</li>
+      <li>منابع دانشگاه پیام نور</li>
+    </ul>
 
-  <h2>منابع آموزشی</h2>
-  <ul>
-    <li>کتاب <strong>حساب دیفرانسیل و انتگرال جورج توماس</strong></li>
-    <li>کتاب <strong>حساب دیفرانسیل و انتگرال جیمز استوارت</strong></li>
-    <li>آثار <strong>ریچارد سیلورمن</strong></li>
-    <li>کتاب‌های <strong>دکتر نیکوکار</strong></li>
-    <li>کتاب <strong>ریاضی عمومی ۱ نوشته دکتر کرایه‌چیان</strong></li>
-    <li>منابع دانشگاه پیام نور</li>
-    <li>و چندین مرجع معتبر دیگر</li>
-  </ul>
+    <h2>سرفصل‌های دوره ریاضی عمومی ۱</h2>
+    <p><strong>سرفصل دوره:</strong></p>
+    <ul>
+      <li>فصل اول: تابع</li>
+      <li>فصل دوم: حد و پیوستگی</li>
+      <li>فصل سوم: توابع مثلثاتی، نمایی، هیپربولیک و معکوس آنها</li>
+      <li>فصل چهارم: مشتق</li>
+      <li>فصل پنجم: کاربرد مشتق</li>
+      <li>فصل ششم: انتگرال</li>
+      <li>فصل هفتم: کاربردهای انتگرال</li>
+      <li>فصل هشتم: دستگاه مختصات قطبی</li>
+      <li>فصل نهم: انتگرال ناسره (نامتعارف یا غیرعادی)</li>
+      <li>فصل دهم: دنباله</li>
+      <li>فصل یازدهم: سری</li>
+      <li>فصل دوازدهم: اعداد مختلط</li>
+    </ul>
 
-  <h2>سرفصل‌های دوره ریاضی عمومی ۱</h2>
-  <p>(تمام فصل‌های ۱ تا ۱۲ که فرستادی، بدون تغییر و دقیق درج می‌شوند)</p>
+    <h2>شرایط خرید و تخفیف</h2>
+    <ul>
+      <li>امکان خرید نقدی و اقساطی در سایت نیک‌درس</li>
+      <li>کد تخفیف ۲۰ درصدی: <strong>cdemada</strong></li>
+    </ul>
 
-  <h2>شرایط خرید و تخفیف</h2>
-  <ul>
-    <li>امکان خرید آموزش در سایت <strong>نیک‌درس</strong> به دو صورت <strong>نقدی</strong> و <strong>اقساطی</strong> وجود دارد.</li>
-    <li>دانشجویان داخل و خارج ایران می‌توانند بدون محدودیت این آموزش را تهیه کنند.</li>
-    <li>برای بهره‌مندی از تخفیف ویژه، کافی است کد زیر را هنگام خرید وارد کنید: <br><strong>کد تخفیف ۲۰ درصدی مدرس: cdemada</strong></li>
-  </ul>
+    <h2>جمع‌بندی</h2>
+    <p>این دوره با ترکیب توضیحات روان، مثال‌های فراوان، پوشش کامل منابع معتبر و ارائه جزوه همراه فیلم، یکی از کامل‌ترین آموزش‌های ریاضی عمومی ۱ است که نیازهای دانشجویان در تمام دانشگاه‌ها را برآورده می‌کند. این دوره به‌عنوان <strong>کامل‌ترین فیلم ریاضی عمومی ۱</strong> شناخته می‌شود و انتخابی مطمئن برای موفقیت در امتحانات و کنکور است.</p>
 
-  <h2>جمع‌بندی</h2>
-  <p>این دوره با ترکیب توضیحات روان، مثال‌های فراوان، پوشش کامل منابع معتبر و ارائه جزوه همراه فیلم، یکی از کامل‌ترین آموزش‌های ریاضی عمومی ۱ است که نیازهای دانشجویان در تمام دانشگاه‌ها را برآورده می‌کند. این دوره به‌عنوان <strong>کامل‌ترین فیلم ریاضی عمومی ۱</strong> و <strong>بهترین فیلم ریاضی عمومی ۱</strong> شناخته می‌شود و انتخابی مطمئن برای موفقیت در امتحانات و کنکور است.</p>
-
-  <div class="buttons">
-    <a href="index.html">برگشت به صفحه اصلی</a>
-    <a href="https://nikdars.com/edu/mmdmat01-00022-general-mathematics-1/" target="_blank">مشاهده در نیک‌درس</a>
-  </div>
-
-</body>
-</html>
+    <div class="course-card">
+      <h2>ریاضی عمومی ۱</h2>
+      <
