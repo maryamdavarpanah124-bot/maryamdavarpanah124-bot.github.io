@@ -6,14 +6,62 @@
   <title>آموزش ریاضی عمومی&nbsp;1</title>
   <style>
     body{font-family:"IRANSans","Vazir",sans-serif;line-height:1.9;margin:0;padding:0;background:#fdfdfd;direction:rtl;text-align:right}
-    header{background:#004080;color:#fff;display:flex;align-items:center;justify-content:center;position:relative;height:100px;overflow:hidden}
-    header h1{margin:0;font-size:22px;z-index:3}
-    .header-img{height:80%;margin-right:15px;border-radius:8px;z-index:3}
-    header .symbols span{position:absolute;font-size:60px;color:rgba(255,255,255,0.22)}
+
+    /* Header (کادر سورمه‌ای) */
+    header{
+      background:#004080;color:#fff;display:flex;align-items:center;justify-content:center;
+      position:relative;height:100px;overflow:hidden
+    }
+    header h1{margin:0 0 0 8px;font-size:22px;z-index:3}
+    .header-img{
+      height:80%;margin-right:15px;border-radius:8px;z-index:2;
+      box-shadow:none;filter:none;outline:none /* حذف هر سایه/افکت */
+    }
+
+    /* نمادهای ریاضیِ پراکنده و زیاد پشت عناصر */
+    header .symbols span{
+      position:absolute;font-size:60px;color:rgba(255,255,255,0.24);z-index:1;pointer-events:none
+    }
+    /* چیدمان متنوع نمادها (بیشتر از قبل) */
+    header .symbols span:nth-child(1){top:6px;left:12px;transform:rotate(-18deg)}
+    header .symbols span:nth-child(2){top:22px;right:24px;transform:rotate(31deg)}
+    header .symbols span:nth-child(3){bottom:10px;left:50%;transform:rotate(-7deg)}
+    header .symbols span:nth-child(4){top:56px;left:68%;transform:rotate(43deg)}
+    header .symbols span:nth-child(5){bottom:3px;right:8px;transform:rotate(-33deg)}
+    header .symbols span:nth-child(6){top:8px;left:40%;transform:rotate(12deg)}
+    header .symbols span:nth-child(7){bottom:20px;left:8%;transform:rotate(-25deg)}
+    header .symbols span:nth-child(8){top:38px;right:50%;transform:rotate(5deg)}
+    header .symbols span:nth-child(9){bottom:28px;right:36%;transform:rotate(18deg)}
+    header .symbols span:nth-child(10){top:14px;right:70%;transform:rotate(-12deg)}
+    /* افزوده‌های جدید برای پرتر شدن هدر */
+    header .symbols span:nth-child(11){top:8px;right:8%;transform:rotate(9deg)}
+    header .symbols span:nth-child(12){bottom:8px;left:18%;transform:rotate(-14deg)}
+    header .symbols span:nth-child(13){top:12px;left:56%;transform:rotate(22deg)}
+    header .symbols span:nth-child(14){bottom:6px;left:72%;transform:rotate(-8deg)}
+    header .symbols span:nth-child(15){top:32px;left:30%;transform:rotate(35deg)}
+    header .symbols span:nth-child(16){bottom:26px;left:44%;transform:rotate(-19deg)}
+    header .symbols span:nth-child(17){top:18px;right:32%;transform:rotate(27deg)}
+    header .symbols span:nth-child(18){bottom:16px;right:22%;transform:rotate(-21deg)}
+    header .symbols span:nth-child(19){top:44px;right:12%;transform:rotate(15deg)}
+    header .symbols span:nth-child(20){top:4px;left:85%;transform:rotate(-28deg)}
+
     main{padding:8px;max-width:900px;margin:auto}
-    .content-box{max-width:900px;margin:10px auto 16px;padding:22px;border-radius:18px;background:#f7fbff;box-shadow:0 4px 14px rgba(0,0,0,0.08);position:relative;overflow:hidden}
+
+    /* کادر توضیحات با پس‌زمینه نمادهای ریاضی (حفظ و تقویت شده) */
+    .content-box{
+      max-width:900px;margin:10px auto 16px;padding:22px;border-radius:18px;background:#f7fbff;
+      box-shadow:0 4px 14px rgba(0,0,0,0.08);position:relative;overflow:hidden
+    }
+    .content-box::before{
+      content:"∫  Σ  f(x)  lim  ∂  ∑  ∞  ∫  Σ  ∞  π  √  Δ  ≈  cosx  e^x";
+      font-size:112px;color:rgba(0,64,128,0.10);position:absolute;top:4px;left:10px;
+      white-space:nowrap;z-index:0;line-height:1
+    }
+    .content-box h2,.content-box p,.content-box ul{position:relative;z-index:1}
+
     h2{color:#004080;margin-top:6px}
     ul{padding-right:20px}
+
     .course-card{text-align:center;background:#f9f9f9;padding:20px;margin:20px auto;border-radius:10px;max-width:600px;box-shadow:0 4px 8px rgba(0,0,0,0.1)}
     .btn-nikdars,.btn-home{display:inline-block;padding:12px 25px;color:#fff;text-decoration:none;font-size:16px;border-radius:6px;margin:8px;transition:all .3s ease}
     .btn-nikdars{background:linear-gradient(135deg,#66cc99,#55aa88);box-shadow:0 4px 10px rgba(102,204,153,.4)}
@@ -21,22 +69,33 @@
     .btn-home{background:linear-gradient(135deg,#004080,#0066cc);box-shadow:0 4px 10px rgba(0,64,128,.4)}
     .btn-home:hover{background:linear-gradient(135deg,#0066cc,#004080);transform:translateY(-2px)}
     footer{background:#eee;text-align:center;padding:15px;margin-top:24px;font-size:14px}
-    @media(max-width:600px){header{height:80px}header h1{font-size:18px}.header-img{height:70%;margin-right:10px}.course-card{padding:15px;margin:12px}.btn-nikdars,.btn-home{font-size:14px;padding:10px 20px}}
+
+    @media(max-width:600px){
+      header{height:80px}
+      header h1{font-size:18px}
+      .header-img{height:70%;margin-right:10px}
+      .course-card{padding:15px;margin:12px}
+      .btn-nikdars,.btn-home{font-size:14px;padding:10px 20px}
+      .content-box::before{font-size:96px;top:2px;left:8px}
+    }
   </style>
 </head>
 <body>
 <header>
   <div class="symbols">
     <span>∑</span><span>π</span><span>√</span><span>∫</span><span>Δ</span><span>∞</span><span>lim</span><span>∂</span><span>Σ</span><span>≈</span>
+    <span>∫</span><span>Σ</span><span>π</span><span>√</span><span>∞</span><span>lim</span><span>∂</span><span>Δ</span><span>≈</span><span>∑</span>
   </div>
   <img src="img/general-math1-cover.jpg" alt="کامل‌ترین فیلم آموزش ریاضی عمومی&nbsp;1" class="header-img">
   <h1>مریم داورپناه مدرس آموزش ریاضی عمومی&nbsp;1</h1>
 </header>
+
 <main>
   <div class="content-box">
     <h2>توضیحات آموزش ریاضی عمومی&nbsp;1</h2>
     <p><strong>ریاضی عمومی&nbsp;1</strong> یکی از دروس اصلی دانشگاهی در رشته‌های فنی، مهندسی و علوم پایه است. این درس نه‌تنها پیش‌نیاز بسیاری از واحدهای تخصصی در مقطع کارشناسی محسوب می‌شود، بلکه در آزمون‌های کارشناسی ارشد، دکتری و حتی برخی آزمون‌های استخدامی نیز نقش کلیدی دارد.</p>
     <p>با توجه به گستردگی مباحث و محدودیت زمان کلاس‌های حضوری، بسیاری از اساتید امکان پوشش کامل همه‌ی مطالب و مثال‌ها را ندارند. آموزش ریاضی عمومی&nbsp;1 با رویکردی جامع، پایه‌ای و مثال‌محور طراحی شده تا دانشجویان بتوانند در مدت زمان کوتاه، تسلط عمیق بر مفاهیم پیدا کنند و برای امتحانات دانشگاهی و کنکور کارشناسی ارشد آماده شوند. این دوره آموزشی به‌عنوان کامل‌ترین فیلم ریاضی عمومی&nbsp;1 شناخته می‌شود و بنا بر نظرات دانشجویان، از نظر کیفیت تدریس، مثال‌های فراوان و بیان مدرس، بی‌نظیر است.</p>
+
     <h2>ویژگی‌های برجسته دوره</h2>
     <ul>
       <li>پوشش کامل سرفصل‌های مصوب دانشگاهی.</li>
@@ -49,6 +108,7 @@
       <li>جزوه پاورپوینت همراه فیلم.</li>
       <li>امکان تهیه بسته جامع (۱+۲) و (۱+۲+معادلات دیفرانسیل).</li>
     </ul>
+
     <h2>منابع آموزشی</h2>
     <ul>
       <li>حساب دیفرانسیل و انتگرال نوشته: جورج توماس</li>
