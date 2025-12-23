@@ -50,6 +50,24 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.25);
     }
 
+    /* دکمه بازگشت */
+    .back-btn {
+      position: absolute;
+      bottom: 10px;
+      left: 20px;
+      background: #4caf50; /* سبز ملایم */
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 700;
+      box-shadow: 0 4px 10px rgba(0,0,0,.2);
+      z-index: 11;
+    }
+    .back-btn:hover {
+      background: #43a047;
+    }
+
     /* نام و عنوان */
     .name-box {
       margin: 22px 20px 0;
@@ -57,7 +75,7 @@
     .name-box h1 {
       font-size: 2.1rem;
       font-weight: 900;
-      color: #1f3fb8; /* سورمه‌ای براق و روشن‌تر */
+      color: #1f3fb8;
       margin: 0;
     }
     .name-box h2 {
@@ -71,7 +89,7 @@
     .articles-section {
       width: 92%;
       margin: 16px auto 34px;
-      background-image: url("img/math-pattern.png"); /* نمادهای ریاضی کم‌رنگ */
+      background-image: url("img/math-pattern.png");
       background-repeat: repeat;
       background-size: 120px;
       border-radius: 12px;
@@ -79,7 +97,7 @@
     }
     .articles-section h2 {
       text-align: center;
-      color: #1f3fb8; /* سورمه‌ای براق */
+      color: #1f3fb8;
       margin: 8px 0 18px;
       font-size: 1.6rem;
       font-weight: 900;
@@ -102,7 +120,7 @@
       margin: 0 0 12px;
       font-size: 1.25rem;
       font-weight: 900;
-      color: #1f3fb8; /* سورمه‌ای براق و جذاب برای تیترها */
+      color: #1f3fb8;
     }
     .article-card p {
       font-size: 1.05rem;
@@ -114,12 +132,19 @@
       display: inline-block;
       margin-top: 8px;
       padding: 10px 20px;
-      background: #4a6cf7;
-      color: #fff;
+      background: #aeea00; /* سبز لیمویی */
+      color: #24324a;
       border-radius: 10px;
       text-decoration: none;
       font-weight: 700;
       font-size: 1rem;
+      box-shadow: 0 6px 14px rgba(174,234,0,.3);
+      transition: all .2s ease;
+    }
+    .article-card a:hover {
+      background: #c6ff00;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(174,234,0,.4);
     }
 
     /* رنگ‌های بخش‌ها */
@@ -129,15 +154,16 @@
     .color4 {background: rgba(255,220,200,.30);}
 
     /* رسپانسیو */
-    @media(min-width:993px){ /* لپ‌تاپ */
-      .articles-section h2 { font-size: 2.4rem; } /* 50% بزرگتر */
-      .article-card h3 { font-size: 1.46rem; } /* تیترها 17% بزرگتر */
+    @media(min-width:993px){
+      .articles-section h2 { font-size: 2.4rem; }
+      .article-card h3 { font-size: 1.46rem; }
     }
-    @media(max-width:600px){ /* گوشی */
-      .header-profile img { width: 132px; height: 132px; } /* 55% */
-      .article-card h3 { font-size: 1.46rem; } /* تیترها 17% بزرگتر */
-      .article-card p { font-size: 1.23rem; } /* توضیحات 17% بزرگتر */
-      .articles-grid { grid-template-columns: 1fr; } /* هر ردیف یک کادر در گوشی */
+    @media(max-width:600px){
+      .header-profile img { width: 132px; height: 132px; }
+      .article-card h3 { font-size: 1.46rem; }
+      .article-card p { font-size: 1.23rem; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .back-btn { bottom: 5px; left: 10px; padding: 6px 12px; font-size: 0.9rem; }
     }
   </style>
 </head>
@@ -149,6 +175,7 @@
   <div class="header-profile">
     <img src="img/articles-cover.jpg" alt="تصویر مقالات">
   </div>
+  <a class="back-btn" href="index.html">بازگشت به صفحه اصلی</a>
 </header>
 
 <div class="name-box">
@@ -163,25 +190,25 @@
     <div class="article-card color1">
       <h3>مقالات آموزشی ریاضی</h3>
       <p>موضوعات مختلف ریاضی از ابتدایی تا دانشگاه.</p>
-      <a href="math-articles.html">مشاهده</a>
+      <a href="articles/math-articles.html">مشاهده</a>
     </div>
 
     <div class="article-card color2">
       <h3>GMath، بازی ریاضی</h3>
       <p>تست هوش و سرگرمی‌های ریاضی.</p>
-      <a href="math-games.html">مشاهده</a>
+      <a href="articles/math-games.html">مشاهده</a>
     </div>
 
     <div class="article-card color3">
       <h3>یادداشت‌های مدرس</h3>
       <p>خاطرات تدریس، تجربیات شخصی و نکات تربیتی.</p>
-      <a href="teacher-notes.html">مشاهده</a>
+      <a href="articles/teacher-notes.html">مشاهده</a>
     </div>
 
     <div class="article-card color4">
       <h3>نرم‌افزارهای ریاضی</h3>
       <p>لینک دانلود و توضیحات نرم‌افزارهای ریاضی.</p>
-      <a href="math-software.html">مشاهده</a>
+      <a href="articles/math-software.html">مشاهده</a>
     </div>
 
   </div>
