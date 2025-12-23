@@ -10,12 +10,13 @@
       font-family: "IRANSans", sans-serif;
       background: #f7f9fc;
       margin: 0;
+      color: #24324a;
     }
 
-    /* هدر */
+    /* هدر و لوگو (لوگوی بزرگ، بدون نسخه‌ی کوچک) */
     .header-bar {
       width: 100%;
-      height: 165px;
+      height: 165px; /* دسکتاپ و لپ‌تاپ: همان ارتفاع صفحه اصلی */
       position: relative;
       overflow: hidden;
       border-radius: 0 0 18px 18px;
@@ -30,18 +31,7 @@
       filter: brightness(.92);
     }
 
-    /* لوگو مدرس */
-    .logo-box {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-    }
-    .logo-box img {
-      width: auto;
-      height: 120px; /* ابعاد اصلی در دسکتاپ */
-    }
-
-    /* عکس پروفایل/کاور مقالات */
+    /* تصویر کاور مقالات (به‌جای عکس مدرس) */
     .header-profile {
       position: absolute;
       bottom: -24px;
@@ -57,88 +47,158 @@
       box-shadow: 0 4px 14px rgba(0,0,0,0.25);
     }
 
-    /* نام و توضیحات */
-    .name-text {
-      margin: 15px 20px 0;
-      font-size: 1.45rem;
-      font-weight: 900;
-      color: #0a1a4d;
+    /* نام و عنوان زیر لوگو */
+    .name-box {
+      margin: 22px 20px 0;
     }
-    .name-sub {
-      margin: 5px 20px 0;
-      font-size: 1.1rem;
-      font-weight: 600;
-      color: #333;
+    .name-box h1 {
+      font-size: 2.1rem;        /* بزرگ‌تر و خواناتر */
+      font-weight: 900;
+      color: #0f2a5f;           /* رنگ متفاوت و عمیق */
+      margin: 0;
+      line-height: 1.3;
+    }
+    .name-box h2 {
+      font-size: 1.5rem;        /* کمی بزرگ‌تر از قبل */
+      font-weight: 700;
+      color: #334e7d;
+      margin: 10px 0 0;
+      line-height: 1.6;
     }
 
-    /* بخش مقالات */
+    /* بخش‌های مقالات */
     .articles-section {
       width: 92%;
-      margin: 30px auto;
+      margin: 18px auto 34px;   /* کمی بالاتر آوردن لیست بخش‌ها */
     }
     .articles-section h2 {
       text-align: center;
       color: #0a1a4d;
-      margin: 8px 0 20px;
-      font-size: 1.4rem;
+      margin: 8px 0 18px;
+      font-size: 1.6rem;        /* تیتر صفحه کمی بزرگ‌تر */
+      font-weight: 900;
     }
+
     .articles-grid {
       display: grid;
       grid-template-columns: repeat(2,1fr);
-      gap: 22px;
+      gap: 24px;
     }
     .article-card {
       background: #fff;
-      padding: 18px;
+      padding: 22px;
       border-radius: 16px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.06);
       text-align: center;
-      min-height: 160px;
+      min-height: 180px;
+      border: 1px solid rgba(10,26,77,0.08);
     }
     .article-card h3 {
       margin: 0 0 12px;
-      font-size: 1.1rem;
+      font-size: 1.25rem;      /* تیتر کارت‌ها بزرگ‌تر */
       font-weight: 900;
-      color: #12306b;
+      color: #0a1a4d;          /* سورمه‌ای (نه مشکی) */
+      letter-spacing: .2px;
     }
     .article-card p {
-      font-size: .95rem;
-      line-height: 1.7;
-      color: #333;
-      margin: 10px 0;
+      font-size: 1.08rem;      /* توضیحات بزرگ‌تر و خواناتر */
+      line-height: 1.85;
+      color: #2f3e5c;
+      margin: 10px 0 14px;
     }
     .article-card a {
       display: inline-block;
-      margin-top: 10px;
-      padding: 8px 18px;
+      margin-top: 4px;
+      padding: 10px 22px;
       background: #4a6cf7;
       color: #fff;
       border-radius: 10px;
       text-decoration: none;
-      font-weight: 700;
-      font-size: .9rem;
+      font-weight: 800;
+      font-size: 1rem;         /* متن دکمه بزرگ‌تر */
+      transition: transform .15s ease, box-shadow .15s ease;
+      box-shadow: 0 6px 14px rgba(74,108,247,0.22);
+    }
+    .article-card a:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(74,108,247,0.28);
     }
 
-    /* رنگ‌های بخش‌ها */
-    .color1 {background: rgba(180,200,255,.35);}
-    .color2 {background: rgba(200,180,255,.35);}
-    .color3 {background: rgba(180,255,220,.35);}
-    .color4 {background: rgba(255,220,200,.35);}
+    /* رنگ‌های زمینه نرم برای تنوع بصری */
+    .color1 {background: rgba(180,200,255,.30);}
+    .color2 {background: rgba(200,180,255,.30);}
+    .color3 {background: rgba(180,255,220,.30);}
+    .color4 {background: rgba(255,220,200,.30);}
+
+    /* مودال «در حال آماده‌سازی» */
+    .modal {
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.45);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: #fff;
+      width: min(520px, 92%);
+      border-radius: 16px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
+      padding: 22px;
+      text-align: center;
+      border: 1px solid rgba(10,26,77,0.08);
+    }
+    .modal-content h3 {
+      margin: 0 0 10px;
+      font-size: 1.3rem;
+      color: #0a1a4d;
+      font-weight: 900;
+    }
+    .modal-content p {
+      margin: 6px 0 16px;
+      font-size: 1.04rem;
+      color: #2f3e5c;
+      line-height: 1.85;
+    }
+    .modal-content button {
+      padding: 10px 22px;
+      border: none;
+      border-radius: 10px;
+      background: #4a6cf7;
+      color: #fff;
+      font-weight: 800;
+      font-size: .98rem;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(74,108,247,0.22);
+    }
+    .modal-content button:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 18px rgba(74,108,247,0.28);
+    }
 
     /* رسپانسیو */
     @media(max-width:992px){
       .articles-grid{grid-template-columns:1fr;}
     }
     @media(max-width:600px){
-      /* لوگو در گوشی 30% کمتر */
-      .logo-box img {
-        height: 84px; /* 30% کمتر از 120px */
-        width: auto;
+      /* لوگوی بزرگ: فقط ارتفاع هدر (و در نتیجه لوگو) 30% کمتر در گوشی */
+      .header-bar { height: 116px; } /* ~165 * 0.70 */
+
+      /* تصویر کاور مقالات در گوشی: 55% اندازه فعلی */
+      .header-profile img {
+        width: 132px;  /* 55% از 240px */
+        height: 132px;
       }
-      .name-text,.name-sub{
-        text-align:center;
-        margin-right:0;
-      }
+
+      .name-box { text-align: center; margin-right: 0; }
+      .name-box h1 { font-size: 1.9rem; }
+      .name-box h2 { font-size: 1.35rem; }
+
+      .articles-section h2 { font-size: 1.45rem; }
+      .article-card h3 { font-size: 1.18rem; }
+      .article-card p { font-size: 1.02rem; }
+      .article-card a { font-size: .98rem; padding: 9px 20px; }
     }
   </style>
 </head>
@@ -146,19 +206,22 @@
 <body>
 
 <header class="header-bar">
+  <!-- لوگوی بزرگ (پس‌زمینه هدر، همان مکان و ابعاد صفحه اصلی) -->
   <img src="img/logo2.png" alt="لوگو" class="bg-logo">
-  <div class="logo-box">
-    <img src="img/logo2.png" alt="لوگو مدرس">
-  </div>
+
+  <!-- تصویر مرتبط با مقالات (به‌جای عکس مدرس) -->
   <div class="header-profile">
-    <!-- عکس مرتبط با مقالات -->
     <img src="img/articles-cover.jpg" alt="تصویر مقالات">
   </div>
 </header>
 
-<div class="name-text">مقالات آموزشی و یادداشت‌ها</div>
-<div class="name-sub">مریم داورپناه</div>
+<!-- زیر لوگو: نام و عنوان صفحه -->
+<div class="name-box">
+  <h1>مریم داورپناه</h1>
+  <h2>مقالات آموزشی و یادداشت‌ها</h2>
+</div>
 
+<!-- بخش‌های مقالات -->
 <div class="articles-section">
   <h2>بخش‌های مقالات</h2>
   <div class="articles-grid">
@@ -166,33 +229,64 @@
     <!-- بخش ۱ -->
     <div class="article-card color1">
       <h3>مقالات آموزشی ریاضی</h3>
-      <p>موضوعات مختلف ریاضی از ابتدایی تا دانشگاه.</p>
-      <a href="math-articles.html">مشاهده</a>
+      <p>موضوعات مختلف ریاضی از ابتدایی تا سطوح عالی دانشگاه؛ مثال‌محور، دقیق و خوانا.</p>
+      <a href="#" onclick="openModal()">مشاهده</a>
     </div>
 
     <!-- بخش ۲ -->
     <div class="article-card color2">
-      <h3>جی‌مث، بازی ریاضی</h3>
-      <p>تست هوش و سرگرمی‌های ریاضی.</p>
-      <a href="math-games.html">مشاهده</a>
+      <h3>GMath، بازی ریاضی</h3>
+      <p>تست هوش، سرگرمی‌های ریاضی و چالش‌های سبک؛ ترکیب لذت و یادگیری.</p>
+      <a href="#" onclick="openModal()">مشاهده</a>
     </div>
 
     <!-- بخش ۳ -->
     <div class="article-card color3">
       <h3>یادداشت‌های مدرس</h3>
-      <p>خاطرات تدریس، تجربیات شخصی و نکات تربیتی.</p>
-      <a href="teacher-notes.html">مشاهده</a>
+      <p>خاطرات تدریس، تجربه‌های شخصی و نکات تربیتی برای آموزش انسانی و مؤثر.</p>
+      <a href="#" onclick="openModal()">مشاهده</a>
     </div>
 
     <!-- بخش ۴ -->
     <div class="article-card color4">
       <h3>نرم‌افزارهای ریاضی</h3>
-      <p>لینک دانلود و توضیحات نرم‌افزارهای ریاضی.</p>
-      <a href="math-software.html">مشاهده</a>
+      <p>لینک دانلود و معرفی ابزارها؛ توضیحات کوتاه درباره کاربرد و کارکرد هر نرم‌افزار.</p>
+      <a href="#" onclick="openModal()">مشاهده</a>
     </div>
 
   </div>
 </div>
 
+<!-- مودال آماده‌سازی -->
+<div class="modal" id="comingModal" aria-hidden="true" role="dialog">
+  <div class="modal-content" role="document">
+    <h3>این صفحه در حال آماده‌سازی است</h3>
+    <p>به‌زودی محتوای این بخش با استانداردهای آموزشی و زیبایی‌شناسی سایت منتشر می‌شود. ممنون از همراهی شما.</p>
+    <button onclick="closeModal()">باشه</button>
+  </div>
+</div>
+
+<script>
+  function openModal() {
+    const m = document.getElementById('comingModal');
+    m.style.display = 'flex';
+    m.setAttribute('aria-hidden', 'false');
+  }
+  function closeModal() {
+    const m = document.getElementById('comingModal');
+    m.style.display = 'none';
+    m.setAttribute('aria-hidden', 'true');
+  }
+  // بستن مودال با کلیک روی زمینه‌ی نیمه‌شفاف
+  document.getElementById('comingModal').addEventListener('click', function(e){
+    if(e.target.id === 'comingModal'){ closeModal(); }
+  });
+  // بستن مودال با Escape
+  document.addEventListener('keydown', function(e){
+    if(e.key === 'Escape'){ closeModal(); }
+  });
+</script>
+
 </body>
 </html>
+
