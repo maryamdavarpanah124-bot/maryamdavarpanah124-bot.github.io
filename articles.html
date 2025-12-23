@@ -57,7 +57,7 @@
     .name-box h1 {
       font-size: 2.1rem;
       font-weight: 900;
-      color: #0f2a5f;
+      color: #1f3fb8; /* سورمه‌ای براق و روشن‌تر */
       margin: 0;
     }
     .name-box h2 {
@@ -70,8 +70,8 @@
     /* بخش مقالات */
     .articles-section {
       width: 92%;
-      margin: 16px auto 34px; /* کمی بالاتر */
-      background-image: url("img/math-pattern.png"); /* تصویر پس‌زمینه با نمادهای ریاضی کم‌رنگ */
+      margin: 16px auto 34px;
+      background-image: url("img/math-pattern.png"); /* نمادهای ریاضی کم‌رنگ */
       background-repeat: repeat;
       background-size: 120px;
       border-radius: 12px;
@@ -79,7 +79,7 @@
     }
     .articles-section h2 {
       text-align: center;
-      color: #0a1a4d;
+      color: #1f3fb8; /* سورمه‌ای براق */
       margin: 8px 0 18px;
       font-size: 1.6rem;
       font-weight: 900;
@@ -92,7 +92,7 @@
     }
     .article-card {
       background: #fff;
-      padding: 18px; /* کوچکتر برای فضای خالی */
+      padding: 18px;
       border-radius: 16px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.06);
       text-align: center;
@@ -102,7 +102,7 @@
       margin: 0 0 12px;
       font-size: 1.25rem;
       font-weight: 900;
-      color: #0a1a4d; /* سورمه‌ای خوش‌رنگ */
+      color: #1f3fb8; /* سورمه‌ای براق و جذاب برای تیترها */
     }
     .article-card p {
       font-size: 1.05rem;
@@ -128,34 +128,6 @@
     .color3 {background: rgba(180,255,220,.30);}
     .color4 {background: rgba(255,220,200,.30);}
 
-    /* مودال آماده‌سازی */
-    .modal {
-      position: fixed;
-      inset: 0;
-      background: rgba(0,0,0,0.45);
-      display: none;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-    }
-    .modal-content {
-      background: #fff;
-      width: min(520px, 92%);
-      border-radius: 16px;
-      box-shadow: 0 12px 28px rgba(0,0,0,0.18);
-      padding: 22px;
-      text-align: center;
-    }
-    .modal-content h3 {
-      font-size: 1.3rem;
-      color: #0a1a4d;
-      font-weight: 900;
-    }
-    .modal-content p {
-      font-size: 1.05rem;
-      color: #2f3e5c;
-    }
-
     /* رسپانسیو */
     @media(min-width:993px){ /* لپ‌تاپ */
       .articles-section h2 { font-size: 2.4rem; } /* 50% بزرگتر */
@@ -165,6 +137,7 @@
       .header-profile img { width: 132px; height: 132px; } /* 55% */
       .article-card h3 { font-size: 1.46rem; } /* تیترها 17% بزرگتر */
       .article-card p { font-size: 1.23rem; } /* توضیحات 17% بزرگتر */
+      .articles-grid { grid-template-columns: 1fr; } /* هر ردیف یک کادر در گوشی */
     }
   </style>
 </head>
@@ -190,19 +163,29 @@
     <div class="article-card color1">
       <h3>مقالات آموزشی ریاضی</h3>
       <p>مقالات آموزشی ریاضی از ابتدایی تا دانشگاه.</p>
-      <a href="#" onclick="openModal()">مشاهده</a>
+      <a href="math-articles.html">مشاهده</a>
     </div>
 
     <div class="article-card color2">
       <h3>GMath، بازی ریاضی</h3>
       <p>تست هوش، خلاقیت و سرگرمی‌های ریاضی.</p>
-      <a href="#" onclick="openModal()">مشاهده</a>
+      <a href="math-games.html">مشاهده</a>
     </div>
 
     <div class="article-card color3">
       <h3>یادداشت‌های مدرس</h3>
-      <p>خاطرات تدریس، تجربیات شخصی و نکات تربیتی و آموزشی</p>
-      <a href="#" onclick="openModal()">مشاهده</a>
+      <p>خاطرات تدریس، تجربیات شخصی، نکات تربیتی و آموزشی.</p>
+      <a href="teacher-notes.html">مشاهده</a>
     </div>
 
-    <div class="article
+    <div class="article-card color4">
+      <h3>نرم‌افزارهای ریاضی</h3>
+      <p>لینک دانلود و توضیحات کوتاه نرم‌افزارهای ریاضی.</p>
+      <a href="math-software.html">مشاهده</a>
+    </div>
+
+  </div>
+</div>
+
+</body>
+</html>
