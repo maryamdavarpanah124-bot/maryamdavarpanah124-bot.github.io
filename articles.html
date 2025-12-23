@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <title>صفحه مقالات - مریم داورپناه</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- فونت -->
+  <!-- فونت زیبا -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@500;700;900&display=swap" rel="stylesheet">
   <style>
     body {
@@ -13,16 +13,13 @@
       margin: 0;
       color: #24234a;
     }
-
-    /* هدر: لوگو و دکمه بازگشت زیر آن، سمت چپ و واکنش‌گرا */
     header {
       background: #1f3fb8;
       color: #fff;
       padding: 16px;
       display: flex;
-      flex-direction: column;
-      align-items: flex-start; /* چپ‌چین در RTL */
-      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
     }
     header img {
       height: 50px;
@@ -39,8 +36,6 @@
     .back-btn:hover {
       background: #43a047;
     }
-
-    /* شبکه کارت‌ها */
     .container {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -52,28 +47,17 @@
       border-radius: 12px;
       box-shadow: 0 6px 16px rgba(0,0,0,.08);
       padding: 20px;
+      text-align: center;
     }
     .card h2 {
-      margin: 0 0 10px;
-      font-size: 1.25rem;
+      margin: 0 0 12px;
+      font-size: 1.3rem;
       color: #1f3fb8;
-      font-weight: 900;
-    }
-    .desc {
-      margin: 8px 0 14px;
-      font-size: 0.98rem;
-      line-height: 1.85;
-      color: #2f3e5c;
-    }
-
-    /* دکمه‌های مشاهده: لیمویی/سبز ملایم */
-    .actions {
-      margin-top: 8px;
     }
     .btn {
       display: inline-block;
       text-decoration: none;
-      background: #aeea00; /* لیمویی/سبز ملایم */
+      background: #aeea00; /* رنگ لیمویی/سبز ملایم */
       color: #24324a;
       border-radius: 10px;
       padding: 10px 18px;
@@ -90,54 +74,28 @@
 </head>
 <body>
   <header>
-    <img src="img/logo2.png" alt="لوگو">
+    <img src="img/logo.png" alt="لوگو">
     <a class="back-btn" href="index.html">بازگشت به صفحه اصلی</a>
   </header>
 
   <div class="container">
-    <!-- مقالات آموزشی ریاضی -->
     <div class="card">
       <h2>مقالات آموزشی ریاضی</h2>
-      <p class="desc">
-        مقالات آموزشی ریاضی از ابتدایی تا سطوح پیشرفته دانشگاهی.
-      </p>
-      <div class="actions">
-        <a class="btn" href="articles/math-articles.html">مشاهده</a>
-      </div>
+      <a class="btn" href="math-articles.html">مشاهده</a>
     </div>
-
-    <!-- GMath، بازی ریاضی -->
     <div class="card">
       <h2>GMath، بازی ریاضی</h2>
-      <p class="desc">
-        تست هوش، خلاقیت و سرگرمی‌های ریاضی
-      </p>
-      <div class="actions">
-        <a class="btn" href="articles/math-games.html">مشاهده</a>
-      </div>
+      <a class="btn" href="math-games.html">مشاهده</a>
     </div>
-
-    <!-- یادداشت‌های مدرس -->
     <div class="card">
       <h2>یادداشت‌های مدرس</h2>
-      <p class="desc">
-        خاطرات مدرس، تجربه‌های آموزشی، نکات تربیتی و آموزشی
-      </p>
-      <div class="actions">
-        <a class="btn" href="articles/teacher-notes.html">مشاهده</a>
-      </div>
+      <a class="btn" href="teacher-notes.html">مشاهده</a>
     </div>
-
-    <!-- نرم‌افزارهای ریاضی -->
     <div class="card">
       <h2>نرم‌افزارهای ریاضی</h2>
-      <p class="desc">
-        لینک و توضیحات مختصری درباره نرم افزارهای محاسبات ریاضی
-      </p>
-      <div class="actions">
-        <a class="btn" href="articles/math-software.html">مشاهده</a>
-      </div>
+      <a class="btn" href="math-software.html">مشاهده</a>
     </div>
   </div>
 </body>
 </html>
+
