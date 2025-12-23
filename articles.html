@@ -2,190 +2,142 @@
 <html lang="fa" dir="rtl">
 <head>
   <meta charset="UTF-8">
-  <title>مقالات - مریم داورپناه</title>
+  <title>صفحه مقالات - مریم داورپناه</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- فونت زیبا -->
+  <!-- فونت -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@500;700;900&display=swap" rel="stylesheet">
-
   <style>
     body {
       font-family: "Vazirmatn", sans-serif;
       background: #f7f9fc;
       margin: 0;
-      color: #24324a;
+      color: #24234a;
     }
 
-    /* هدر */
-    .header-bar {
-      width: 100%;
-      height: 165px;
-      position: relative;
-      overflow: hidden;
-      border-radius: 0 0 18px 18px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
-    }
-    .header-bar img.bg-logo {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      filter: brightness(.92);
-    }
-
-    /* تصویر مقالات */
-    .header-profile {
-      position: absolute;
-      bottom: -24px;
-      right: 20px;
-      z-index: 10;
-    }
-    .header-profile img {
-      width: 240px;
-      height: 240px;
-      border-radius: 50%;
-      border: 4px solid #fff;
-      object-fit: cover;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.25);
-    }
-
-    /* نام و عنوان */
-    .name-box {
-      margin: 22px 20px 0;
-    }
-    .name-box h1 {
-      font-size: 2.1rem;
-      font-weight: 900;
-      color: #1f3fb8; /* سورمه‌ای براق و روشن‌تر */
-      margin: 0;
-    }
-    .name-box h2 {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #334e7d;
-      margin: 10px 0 0;
-    }
-
-    /* بخش مقالات */
-    .articles-section {
-      width: 92%;
-      margin: 16px auto 34px;
-      background-image: url("img/math-pattern.png"); /* نمادهای ریاضی کم‌رنگ */
-      background-repeat: repeat;
-      background-size: 120px;
-      border-radius: 12px;
-      padding: 20px;
-    }
-    .articles-section h2 {
-      text-align: center;
-      color: #1f3fb8; /* سورمه‌ای براق */
-      margin: 8px 0 18px;
-      font-size: 1.6rem;
-      font-weight: 900;
-    }
-
-    .articles-grid {
-      display: grid;
-      grid-template-columns: repeat(2,1fr);
-      gap: 24px;
-    }
-    .article-card {
-      background: #fff;
-      padding: 18px;
-      border-radius: 16px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
-      text-align: center;
-      min-height: 160px;
-    }
-    .article-card h3 {
-      margin: 0 0 12px;
-      font-size: 1.25rem;
-      font-weight: 900;
-      color: #1f3fb8; /* سورمه‌ای براق و جذاب برای تیترها */
-    }
-    .article-card p {
-      font-size: 1.05rem;
-      line-height: 1.8;
-      color: #333;
-      margin: 10px 0;
-    }
-    .article-card a {
-      display: inline-block;
-      margin-top: 8px;
-      padding: 10px 20px;
-      background: #4a6cf7;
+    /* هدر: لوگو و دکمه بازگشت زیر آن، سمت چپ و واکنش‌گرا */
+    header {
+      background: #1f3fb8;
       color: #fff;
-      border-radius: 10px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start; /* چپ‌چین در RTL */
+      gap: 10px;
+    }
+    header img {
+      height: 50px;
+    }
+    .back-btn {
+      background: #4caf50; /* سبز ملایم */
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: 700;
-      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    }
+    .back-btn:hover {
+      background: #43a047;
     }
 
-    /* رنگ‌های بخش‌ها */
-    .color1 {background: rgba(180,200,255,.30);}
-    .color2 {background: rgba(200,180,255,.30);}
-    .color3 {background: rgba(180,255,220,.30);}
-    .color4 {background: rgba(255,220,200,.30);}
-
-    /* رسپانسیو */
-    @media(min-width:993px){ /* لپ‌تاپ */
-      .articles-section h2 { font-size: 2.4rem; } /* 50% بزرگتر */
-      .article-card h3 { font-size: 1.46rem; } /* تیترها 17% بزرگتر */
+    /* شبکه کارت‌ها */
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 20px;
+      padding: 24px;
     }
-    @media(max-width:600px){ /* گوشی */
-      .header-profile img { width: 132px; height: 132px; } /* 55% */
-      .article-card h3 { font-size: 1.46rem; } /* تیترها 17% بزرگتر */
-      .article-card p { font-size: 1.23rem; } /* توضیحات 17% بزرگتر */
-      .articles-grid { grid-template-columns: 1fr; } /* هر ردیف یک کادر در گوشی */
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,.08);
+      padding: 20px;
+    }
+    .card h2 {
+      margin: 0 0 10px;
+      font-size: 1.25rem;
+      color: #1f3fb8;
+      font-weight: 900;
+    }
+    .desc {
+      margin: 8px 0 14px;
+      font-size: 0.98rem;
+      line-height: 1.85;
+      color: #2f3e5c;
+    }
+
+    /* دکمه‌های مشاهده: لیمویی/سبز ملایم */
+    .actions {
+      margin-top: 8px;
+    }
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      background: #aeea00; /* لیمویی/سبز ملایم */
+      color: #24324a;
+      border-radius: 10px;
+      padding: 10px 18px;
+      font-weight: 800;
+      box-shadow: 0 6px 14px rgba(174,234,0,.3);
+      transition: all .2s ease;
+    }
+    .btn:hover {
+      background: #c6ff00;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 18px rgba(174,234,0,.4);
     }
   </style>
 </head>
-
 <body>
+  <header>
+    <img src="img/logo2.png" alt="لوگو">
+    <a class="back-btn" href="index.html">بازگشت به صفحه اصلی</a>
+  </header>
 
-<header class="header-bar">
-  <img src="img/logo2.png" alt="لوگو" class="bg-logo">
-  <div class="header-profile">
-    <img src="img/articles-cover.jpg" alt="تصویر مقالات">
+  <div class="container">
+    <!-- مقالات آموزشی ریاضی -->
+    <div class="card">
+      <h2>مقالات آموزشی ریاضی</h2>
+      <p class="desc">
+        مقالات آموزشی ریاضی از ابتدایی تا سطوح پیشرفته دانشگاهی.
+      </p>
+      <div class="actions">
+        <a class="btn" href="articles/math-articles.html">مشاهده</a>
+      </div>
+    </div>
+
+    <!-- GMath، بازی ریاضی -->
+    <div class="card">
+      <h2>GMath، بازی ریاضی</h2>
+      <p class="desc">
+        تست هوش، خلاقیت و سرگرمی‌های ریاضی
+      </p>
+      <div class="actions">
+        <a class="btn" href="articles/math-games.html">مشاهده</a>
+      </div>
+    </div>
+
+    <!-- یادداشت‌های مدرس -->
+    <div class="card">
+      <h2>یادداشت‌های مدرس</h2>
+      <p class="desc">
+        خاطرات مدرس، تجربه‌های آموزشی، نکات تربیتی و آموزشی
+      </p>
+      <div class="actions">
+        <a class="btn" href="articles/teacher-notes.html">مشاهده</a>
+      </div>
+    </div>
+
+    <!-- نرم‌افزارهای ریاضی -->
+    <div class="card">
+      <h2>نرم‌افزارهای ریاضی</h2>
+      <p class="desc">
+        لینک و توضیحات مختصری درباره نرم افزارهای محاسبات ریاضی
+      </p>
+      <div class="actions">
+        <a class="btn" href="articles/math-software.html">مشاهده</a>
+      </div>
+    </div>
   </div>
-</header>
-
-<div class="name-box">
-  <h1>مریم داورپناه</h1>
-  <h2>مقالات آموزشی و یادداشت‌ها</h2>
-</div>
-
-<div class="articles-section">
-  <h2>بخش‌های مقالات</h2>
-  <div class="articles-grid">
-
-    <div class="article-card color1">
-      <h3>مقالات آموزشی ریاضی</h3>
-      <p>مقالات آموزشی ریاضی از ابتدایی تا دانشگاه.</p>
-      <a href="math-articles.html">مشاهده</a>
-    </div>
-
-    <div class="article-card color2">
-      <h3>GMath، بازی ریاضی</h3>
-      <p>تست هوش، خلاقیت و سرگرمی‌های ریاضی.</p>
-      <a href="math-games.html">مشاهده</a>
-    </div>
-
-    <div class="article-card color3">
-      <h3>یادداشت‌های مدرس</h3>
-      <p>خاطرات تدریس، تجربیات شخصی، نکات تربیتی و آموزشی.</p>
-      <a href="teacher-notes.html">مشاهده</a>
-    </div>
-
-    <div class="article-card color4">
-      <h3>نرم‌افزارهای ریاضی</h3>
-      <p>لینک دانلود و توضیحات کوتاه نرم‌افزارهای ریاضی.</p>
-      <a href="math-software.html">مشاهده</a>
-    </div>
-
-  </div>
-</div>
-
 </body>
 </html>
