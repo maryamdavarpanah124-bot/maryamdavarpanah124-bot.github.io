@@ -1,1 +1,7 @@
-theme: minimal
+title: سایت آموزشی مریم داورپناه
+description: آموزش ریاضی عمومی ۱
+
+collections:
+  notes:
+    output: true
+
