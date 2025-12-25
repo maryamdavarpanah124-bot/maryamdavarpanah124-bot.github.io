@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>بعضی شغل‌ها فقط یک شغل نیستند؛ مانند عشقی بی‌پایانند</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;700;900&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Vazirmatn", sans-serif;
+      background: #f7f9fc url("/img/math-pattern.png") repeat;
+      background-size: 120px;
+      margin: 0;
+      color: #24324a;
+      direction: rtl;
+      text-align: right;
+    }
+    .note-container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 16px;
+      padding: 24px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.1);
+    }
+    .note-container h1 {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: #1f3fb8;
+      margin-top: 0;
+    }
+    .note-container p {
+      line-height: 1.9;
+      font-size: 1rem;
+      margin: 12px 0;
+    }
+    .note-container img {
+      display: block;
+      max-width: 50%;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .buttons a {
+      display: inline-block;
+      margin: 6px;
+      background: #2e7d32;
+      color: #fff;
+      padding: 10px 16px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: 800;
+      box-shadow: 0 6px 14px rgba(0,0,0,.18);
+      transform: translateY(0);
+      transition: background .15s ease, box-shadow .15s ease, transform .08s ease;
+    }
+    .buttons a:hover { background: #1b5e20; box-shadow: 0 8px 18px rgba(0,0,0,.22); }
+    .buttons a:active { transform: translateY(1px); box-shadow: 0 4px 10px rgba(0,0,0,.2); }
+    .buttons a:focus-visible { outline: 3px solid rgba(31,63,184,.35); outline-offset: 3px; }
+    .buttons a:visited { background: #33691e; }
+
+    .feedback {
+      margin-top: 24px;
+      text-align: center;
+      font-weight: 700;
+      color: #24324a;
+    }
+    .feedback .buttons-inline { margin-top: 8px; }
+    .feedback button {
+      margin: 6px;
+      padding: 10px 14px;
+      border: 2px solid transparent;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 800;
+      transition: transform .08s ease, box-shadow .15s ease, background .15s ease;
+    }
+    .feedback .like { background: #f8bbd0; color: #7b1e57; border-color: #f48fb1; }
+    .feedback .like:hover { background: #f48fb1; }
+    .feedback .dislike { background: #e0e0e0; color: #37474f; border-color: #bdbdbd; }
+    .feedback .dislike:hover { background: #cfcfcf; }
+    .feedback button:active { transform: translateY(1px); }
+    .feedback button:focus-visible { outline: 3px solid rgba(31,63,184,.35); outline-offset: 3px; }
+    .feedback button.active { box-shadow: 0 0 0 4px rgba(31,63,184,.22); }
+    .feedback .like.active { background: #f06292; color: #4a0f2c; }
+    .feedback .dislike.active { background: #b0b0b0; color: #1c313a; }
+    .feedback .status { margin-top: 10px; font-weight: 700; color: #1f3fb8; }
+  </style>
+</head>
+<body>
+
+<div class="note-container">
+  <h1>بعضی شغل‌ها فقط یک شغل نیستند؛ مانند عشقی بی‌پایانند</h1>
+
+  <p>بعضی شغل‌ها، فقط شغل نیستند؛ شبیه یک عشق بی‌پایانند که تمام وجود انسان را درگیر می‌کند. برای من، تدریس ریاضی دقیقاً همین است!</p>
+
+  <!-- متن‌ها و تصویر مثل قبل -->
+
+  <div class="buttons">
+    <a href="/articles/teacher-notes.html">بازگشت به فهرست یادداشت‌ها</a>
+    <a href="/index.html">بازگشت به صفحه اصلی</a>
+    <a href="https://maryamdavarpanah124.blogfa.com/" target="_blank">مشاهده وبلاگ</a>
+  </div>
+
+  <div class="feedback" id="feedback">
+    <p>آیا مطالعه این مطلب برای شما مفید بود؟</p>
+    <div class="buttons-inline">
+      <button class="like" data-type="like">👍 بله</button>
+      <button class="dislike" data-type="dislike">👎 خیر</button>
+    </div>
+    <div class="status" id="feedback-status" aria-live="polite"></div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var container = document.getElementById('feedback');
+    var status = document.getElementById('feedback-status');
+    var buttons = container.querySelectorAll('button');
+
+    function setActive(btn){
+      buttons.forEach(function(b){
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed','false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed','true');
+      if (btn.dataset.type === 'like') {
+        status.textContent = '✅ با تشکر از شما بازخورد مثبت، ثبت شد.';
+      } else {
+        status.textContent = '✅  متاسفم، بازخورد شما ثبت شد.';
+      }
+    }
+
+    buttons.forEach(function(btn){
+      btn.setAttribute('role','button');
+      btn.setAttribute('tabindex','0');
+      btn.addEventListener('click', function(){ setActive(btn); });
+      btn.addEventListener('keydown', function(e){
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setActive(btn);
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
