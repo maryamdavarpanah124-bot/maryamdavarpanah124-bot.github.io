@@ -185,4 +185,46 @@
   <div class="feedback" id="feedback">
     <p>آیا مطالعه این مطلب برای شما مفید بود؟</p>
     <div class="buttons-inline">
-      <button class="like" data-type="like">👍 بله
+      <button class="like" data-type="like">👍 بله</button>
+      <button class="dislike" data-type="dislike">👎 خیر</button>
+    </div>
+    <div class="status" id="feedback-status" aria-live="polite"></div>
+  </div>
+</div>
+
+<script>
+  (function(){
+    var container = document.getElementById('feedback');
+    var status = document.getElementById('feedback-status');
+    var buttons = container.querySelectorAll('button');
+
+    function setActive(btn){
+      buttons.forEach(function(b){
+        b.classList.remove('active');
+        b.setAttribute('aria-pressed','false');
+      });
+      btn.classList.add('active');
+      btn.setAttribute('aria-pressed','true');
+      if (btn.dataset.type === 'like') {
+        status.textContent = 'سپاس از شما! بازخورد مثبت ثبت شد.';
+      } else {
+        status.textContent = 'متشکرم! بازخورد شما ثبت شد.';
+      }
+    }
+
+    buttons.forEach(function(btn){
+      btn.setAttribute('role','button');
+      btn.setAttribute('tabindex','0');
+      btn.addEventListener('click', function(){ setActive(btn); });
+      btn.addEventListener('keydown', function(e){
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          setActive(btn);
+        }
+      });
+    });
+  })();
+</script>
+
+</body>
+</html>
