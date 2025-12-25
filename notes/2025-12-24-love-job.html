@@ -1,8 +1,3 @@
----
-layout: null
-title: بعضی شغل‌ها فقط یک شغل نیستند مثل یک عشق بی‌پایانند
----
-
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
@@ -46,6 +41,8 @@ title: بعضی شغل‌ها فقط یک شغل نیستند مثل یک عشق
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     }
+
+    /* لینک‌های سبز پایین */
     .buttons {
       margin-top: 20px;
       text-align: center;
@@ -53,17 +50,33 @@ title: بعضی شغل‌ها فقط یک شغل نیستند مثل یک عشق
     .buttons a {
       display: inline-block;
       margin: 6px;
-      background: #4caf50;
+      background: #2e7d32;
       color: #fff;
-      padding: 8px 14px;
-      border-radius: 8px;
+      padding: 10px 16px;
+      border-radius: 10px;
       text-decoration: none;
-      font-weight: 700;
-      box-shadow: 0 4px 10px rgba(0,0,0,.2);
+      font-weight: 800;
+      box-shadow: 0 6px 14px rgba(0,0,0,.18);
+      transform: translateY(0);
+      transition: background .15s ease, box-shadow .15s ease, transform .08s ease;
     }
     .buttons a:hover {
-      background: #43a047;
+      background: #1b5e20;
+      box-shadow: 0 8px 18px rgba(0,0,0,.22);
     }
+    .buttons a:active {
+      transform: translateY(1px);
+      box-shadow: 0 4px 10px rgba(0,0,0,.2);
+    }
+    .buttons a:focus-visible {
+      outline: 3px solid rgba(31,63,184,.35);
+      outline-offset: 3px;
+    }
+    .buttons a:visited {
+      background: #33691e;
+    }
+
+    /* دکمه‌های بازخورد */
     .feedback {
       margin-top: 24px;
       text-align: center;
@@ -75,34 +88,46 @@ title: بعضی شغل‌ها فقط یک شغل نیستند مثل یک عشق
     }
     .feedback button {
       margin: 6px;
-      padding: 8px 12px;
+      padding: 10px 14px;
       border: 2px solid transparent;
-      border-radius: 8px;
+      border-radius: 10px;
       cursor: pointer;
       font-size: 1rem;
-      transition: all .2s ease;
+      font-weight: 800;
+      transition: transform .08s ease, box-shadow .15s ease, background .15s ease;
     }
-    /* صورتی برای «بله - مفید بود» */
     .feedback .like {
       background: #f8bbd0;
-      color: #880e4f;
+      color: #7b1e57;
       border-color: #f48fb1;
     }
-    /* طوسی برای «خیر - مفید نبود» */
+    .feedback .like:hover { background: #f48fb1; }
     .feedback .dislike {
       background: #e0e0e0;
-      color: #424242;
+      color: #37474f;
       border-color: #bdbdbd;
     }
-    .feedback button.active {
-      box-shadow: 0 0 0 3px rgba(31,63,184,0.2);
-      transform: translateY(-1px);
+    .feedback .dislike:hover { background: #cfcfcf; }
+
+    .feedback button:active {
+      transform: translateY(1px);
     }
+    .feedback button:focus-visible {
+      outline: 3px solid rgba(31,63,184,.35);
+      outline-offset: 3px;
+    }
+    .feedback button.active {
+      box-shadow: 0 0 0 4px rgba(31,63,184,.22);
+    }
+    .feedback .like.active { background: #f06292; color: #4a0f2c; }
+    .feedback .dislike.active { background: #b0b0b0; color: #1c313a; }
+
     .feedback .status {
       margin-top: 10px;
       font-weight: 700;
       color: #1f3fb8;
     }
+
     @media(max-width:600px){
       .note-container {
         margin: 10px;
@@ -160,32 +185,4 @@ title: بعضی شغل‌ها فقط یک شغل نیستند مثل یک عشق
   <div class="feedback" id="feedback">
     <p>آیا مطالعه این مطلب برای شما مفید بود؟</p>
     <div class="buttons-inline">
-      <button class="like" data-type="like">👍 بله</button>
-      <button class="dislike" data-type="dislike">👎 خیر</button>
-    </div>
-    <div class="status" id="feedback-status" aria-live="polite"></div>
-  </div>
-</div>
-
-<script>
-  (function(){
-    var container = document.getElementById('feedback');
-    var status = document.getElementById('feedback-status');
-    var buttons = container.querySelectorAll('button');
-
-    buttons.forEach(function(btn){
-      btn.addEventListener('click', function(){
-        buttons.forEach(function(b){ b.classList.remove('active'); });
-        btn.classList.add('active');
-        if (btn.dataset.type === 'like') {
-          status.textContent = 'سپاس از شما! بازخورد مثبت ثبت شد.';
-        } else {
-          status.textContent = 'متشکرم! بازخورد شما ثبت شد.';
-        }
-      });
-    });
-  })();
-</script>
-
-</body>
-</html>
+      <button class="like" data-type="like">👍 بله
