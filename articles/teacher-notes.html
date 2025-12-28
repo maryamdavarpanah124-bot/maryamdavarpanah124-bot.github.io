@@ -51,7 +51,6 @@ title: خاطرات، تجربیات و یادداشت‌های مدرس
     }
     .note-item { margin-bottom: 8px; padding: 6px; border-bottom: 1px solid #ddd; }
     .note-item a { font-weight: 700; font-size: 1rem; color: #1f3fb8; text-decoration: none; }
-    .note-item small { color: #666; margin-right: 8px; font-size: 0.85rem; }
     @media(max-width:600px){
       .header-bar { height: auto; flex-direction: column; align-items: center; padding: 10px; text-align: center; }
       .header-profile img { width: 96px; height: 96px; margin-top: 6px; }
@@ -71,4 +70,19 @@ title: خاطرات، تجربیات و یادداشت‌های مدرس
   <div class="header-profile">
     <img src="/img/teacher-cover.jpg" alt="تصویر مدرس">
   </div>
-  <a class="back-btn" href="/index.html">
+  <a class="back-btn" href="/index.html">بازگشت به صفحه اصلی</a>
+</header>
+
+<div class="notes-section">
+  <h2>فهرست یادداشت‌ها</h2>
+  {% assign sorted = site.notes | sort: "date" | reverse %}
+  {% for item in sorted %}
+    <div class="note-item">
+      <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+    </div>
+  {% endfor %}
+</div>
+
+</body>
+</html>
+
