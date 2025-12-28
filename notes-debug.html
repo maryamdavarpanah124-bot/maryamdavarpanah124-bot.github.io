@@ -1,0 +1,10 @@
+---
+title: "Notes debug"
+---
+<ul>
+  {% for item in site.notes %}
+    <li>
+      {{ item.path }} → <a href="{{ item.url | relative_url }}">{{ item.url }}</a>
+    </li>
+  {% endfor %}
+</ul>
