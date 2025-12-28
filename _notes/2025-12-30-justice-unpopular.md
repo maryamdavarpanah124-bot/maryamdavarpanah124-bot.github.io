@@ -1,6 +1,7 @@
 ---
 title: "وقتی عدالت، محبوب نمی‌شود"
 date: 2025-12-30
+permalink: /notes/2025-12-30-justice-unpopular.html
 ---
 
 <head>
