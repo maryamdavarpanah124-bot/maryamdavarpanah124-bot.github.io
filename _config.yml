@@ -1,5 +1,7 @@
-title: سایت آموزشی مریم داورپناه
+title: سایت آموزشی خانم داورپناه
 description: آموزش ریاضی عمومی ۱
+baseurl: ""
+url: "https://maryamdavarpanah124-bot.github.io"
 
 collections:
   notes:
