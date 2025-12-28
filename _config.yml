@@ -4,4 +4,4 @@ description: آموزش ریاضی عمومی ۱
 collections:
   notes:
     output: true
-
+    permalink: /notes/:name.html
