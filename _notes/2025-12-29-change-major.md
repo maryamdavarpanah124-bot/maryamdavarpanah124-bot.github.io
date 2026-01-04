@@ -118,4 +118,8 @@ permalink: /notes/2025-12-29-change-major.html
 
   <div class="buttons">
     <a class="note-btn btn-blue" href="/articles/teacher-notes.html">بازگشت به فهرست یادداشت‌ها</a>
-    <a class="note-btn btn-green" href="/index.html">بازگشت به صفحه اصلی
+    <a class="note-btn btn-green" href="/index.html">بازگشت به صفحه اصلی</a>
+    <a class="note-btn btn-rose" href="https://maryamdavarpanah124.blogfa.com/" target="_blank" rel="noopener">مشاهده وبلاگ</a>
+  </div>
+
+</div>
