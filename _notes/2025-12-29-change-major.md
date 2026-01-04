@@ -111,15 +111,11 @@ permalink: /notes/2025-12-29-change-major.html
 
   <p>💥 یادت باشد: اگر مسیرت را عوض می‌کنی، باید کفش‌هایت را هم عوض کنی. نمی‌توانی با دمپایی ساحلی، کوهنوردی کنی.</p>
 
-  <p>🦋 پی‌نوشت ۱: داستان فوق واقعی بود.  
-  🎓 پی‌نوشت ۲: اگر به آموزش مشتق جزئی نیاز داری، می‌توانی این آموزش را (به صورت رایگان) از سایت نیکدرس دریافت کنی.</p>
+  <p>🦋 پی‌نوشت ۱: داستان فوق واقعی بود.</p>
+  <p>🎓 پی‌نوشت ۲: اگر به آموزش مشتق جزئی نیاز داری، می‌توانی این آموزش را (به صورت رایگان) از سایت نیکدرس دریافت کنی.</p>
 
   <img src="/img/change-major.jpg" alt="تصویر نمادین تغییر رشته و مسیر جدید">
 
   <div class="buttons">
     <a class="note-btn btn-blue" href="/articles/teacher-notes.html">بازگشت به فهرست یادداشت‌ها</a>
-    <a class="note-btn btn-green" href="/index.html">بازگشت به صفحه اصلی</a>
-    <a class="note-btn btn-rose" href="https://maryamdavarpanah124.blogfa.com/" target="_blank" rel="noopener">مشاهده وبلاگ</a>
-  </div>
-
-</div>
+    <a class="note-btn btn-green" href="/index.html">بازگشت به صفحه اصلی
