@@ -1,6 +1,7 @@
 ---
 title: "ای کاش پدر و مادرم پزشک نبودند"
 date: 2025-12-31
+permalink: /notes/2025-12-31-doctor-parents.html
 ---
 
 <head>
