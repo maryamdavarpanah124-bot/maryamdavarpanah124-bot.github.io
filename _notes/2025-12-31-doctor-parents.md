@@ -78,7 +78,7 @@ permalink: /notes/2025-12-31-doctor-parents.html
   .note-container h1 { font-size: 4.8vw !important; } /* واکنش‌گرا، 20٪ کمتر */
   .note-container p  { font-size: 4.6vw !important; line-height: 1.8 !important; }
   .note-container img {
-    width: 100% !important;
+    width: 100% !重要;
     max-width: 100% !important;
   }
   .note-container .note-btn {
@@ -126,3 +126,9 @@ permalink: /notes/2025-12-31-doctor-parents.html
   <img src="/img/student-love.jpg" alt="تصویر دانشجو و گفت‌وگو درباره عشق">
 
   <div class="buttons">
+    <a class="note-btn btn-blue" href="/articles/teacher-notes.html">بازگشت به فهرست یادداشت‌ها</a>
+    <a class="note-btn btn-green" href="/index.html">بازگشت به صفحه اصلی</a>
+    <a class="note-btn btn-rose" href="https://maryamdavarpanah124.blogfa.com/" target="_blank" rel="noopener">مشاهده وبلاگ</a>
+  </div>
+
+</div>
