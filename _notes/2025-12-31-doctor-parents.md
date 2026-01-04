@@ -126,4 +126,3 @@ permalink: /notes/2025-12-31-doctor-parents.html
   <img src="/img/student-love.jpg" alt="تصویر دانشجو و گفت‌وگو درباره عشق">
 
   <div class="buttons">
-    <a class="note-btn btn-blue" href="/articles/teacher-notes.html">بازگشت به فهرست یاد
