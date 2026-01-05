@@ -9,10 +9,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@500;700;900&display=swap" rel="stylesheet">
 
   <style>
-    /* پایه واکنش‌گرا برای همه نمایشگرها */
     html {
-      /* بین 15px و 18px، با تطبیق بر اساس عرض viewport */
-      font-size: clamp(15px, 1.05vw + 0.5rem, 18px);
+      font-size: clamp(15px, 1vw + 0.5rem, 18px); /* واکنش‌گرا */
     }
     body {
       font-family: "Vazirmatn", sans-serif;
@@ -24,7 +22,7 @@
     /* هدر */
     .header-bar {
       width: 100%;
-      height: 165px;
+      height: 150px; /* کمی کوتاه‌تر */
       position: relative;
       overflow: hidden;
       border-radius: 0 0 18px 18px;
@@ -42,13 +40,13 @@
     /* تصویر مقالات */
     .header-profile {
       position: absolute;
-      bottom: -24px;
+      bottom: -20px;
       right: 20px;
       z-index: 10;
     }
     .header-profile img {
-      width: 15rem;
-      height: 15rem;
+      width: 12rem;
+      height: 12rem;
       border-radius: 50%;
       border: 0.25rem solid #fff;
       object-fit: cover;
@@ -62,166 +60,77 @@
       left: 1.2rem;
       background: #4caf50;
       color: #fff;
-      padding: 0.5rem 0.9rem;
+      padding: 0.4rem 0.8rem;
       border-radius: 0.5rem;
       text-decoration: none;
       font-weight: 700;
       box-shadow: 0 4px 10px rgba(0,0,0,.2);
       z-index: 11;
-      font-size: 1rem;
+      font-size: 0.95rem;
     }
     .back-btn:hover { background: #43a047; }
 
     /* نام و عنوان */
     .name-box {
-      margin: 1.5rem 1.2rem 0;
+      margin: 1rem 1.2rem 0;
     }
     .name-box h1 {
-      font-size: 2rem;
+      font-size: 1.8rem;
       font-weight: 900;
       color: #1f3fb8;
       margin: 0;
     }
     .name-box h2 {
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       font-weight: 700;
       color: #334e7d;
-      margin: 0.6rem 0 0;
+      margin: 0.5rem 0 0;
     }
 
     /* بخش مقالات */
     .articles-section {
       width: 92%;
-      margin: 0 auto 2rem; /* بالاتر آمدن کارت‌ها */
+      margin: 0.5rem auto 2rem;
       background-image: url("img/math-pattern.png");
       background-repeat: repeat;
-      background-size: 7.5rem;
+      background-size: 7rem;
       border-radius: 0.75rem;
-      padding: 1.2rem;
+      padding: 1rem;
     }
 
     .articles-grid {
       display: grid;
       grid-template-columns: repeat(2,1fr);
-      gap: 1.5rem;
+      gap: 1rem;
     }
     .article-card {
       background: #fff;
-      padding: 1.1rem;
-      border-radius: 1rem;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      padding: 0.8rem;
+      border-radius: 0.8rem;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.06);
       text-align: center;
-      min-height: 10rem;
+      min-height: 7.5rem; /* کوچکتر */
     }
     .article-card h3 {
-      margin: 0 0 0.8rem;
-      font-size: 1.3rem;
+      margin: 0 0 0.5rem;
+      font-size: 1.2rem;
       font-weight: 900;
       color: #1f3fb8;
     }
     .article-card p {
-      font-size: 1.1rem;
-      line-height: 1.8;
+      font-size: 1rem;
+      line-height: 1.6;
       color: #333;
-      margin: 0.6rem 0;
+      margin: 0.4rem 0;
     }
     .article-card a {
       display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.6rem 1.2rem;
+      margin-top: 0.4rem;
+      padding: 0.5rem 1rem;
       background: #aeea00;
       color: #24324a;
       border-radius: 0.6rem;
       text-decoration: none;
       font-weight: 700;
-      font-size: 1rem;
-      box-shadow: 0 6px 14px rgba(174,234,0,.3);
-      transition: all .2s ease;
-    }
-    .article-card a:hover {
-      background: #c6ff00;
-      transform: translateY(-2px);
-      box-shadow: 0 8px 18px rgba(174,234,0,.4);
-    }
-
-    /* رنگ‌های بخش‌ها */
-    .color1 {background: rgba(180,200,255,.30);}
-    .color2 {background: rgba(200,180,255,.30);}
-    .color3 {background: rgba(180,255,220,.30);}
-    .color4 {background: rgba(255,220,200,.30);}
-
-    /* تقویت خوانایی روی نمایشگرهای با DPI بالا */
-    @media (min-resolution: 2dppx) and (max-width: 480px) {
-      html { font-size: clamp(16px, 1.2vw + 0.6rem, 19px); }
-      .article-card h3 { font-size: 1.5rem; }
-      .article-card p { font-size: 1.25rem; }
-      .article-card { padding: 1.2rem; }
-    }
-
-    /* تبلت و دسکتاپ کوچک */
-    @media (max-width: 900px) {
-      .articles-grid { grid-template-columns: 1fr; }
-      .article-card h3 { font-size: 1.4rem; }
-      .article-card p { font-size: 1.2rem; }
-    }
-
-    /* موبایل: کوتاه‌تر کردن هدر برای دیده شدن کارت‌ها بدون اسکرول */
-    @media (max-width: 600px) {
-      .header-bar { height: 128px; }
-      .header-profile img { width: 8rem; height: 8rem; }
-      .header-profile { bottom: -18px; right: 16px; }
-      .name-box { margin: 1rem 0.9rem 0; }
-      .article-card h3 { font-size: 1.5rem; }
-      .article-card p { font-size: 1.3rem; }
-      .back-btn { bottom: 0.4rem; left: 0.6rem; padding: 0.4rem 0.8rem; font-size: 0.9rem; }
-    }
-  </style>
-</head>
-
-<body>
-
-<header class="header-bar">
-  <img src="img/logo2.png" alt="لوگو" class="bg-logo">
-  <div class="header-profile">
-    <img src="img/articles-cover.jpg" alt="تصویر مقالات">
-  </div>
-  <a class="back-btn" href="index.html">بازگشت به صفحه اصلی</a>
-</header>
-
-<div class="name-box">
-  <h1>مریم داورپناه</h1>
-  <h2>مقالات ریاضی، خاطرات و یادداشت‌های آموزشی، تست هوش و سرگرمی، نرم افزارهای ریاضی</h2>
-</div>
-
-<div class="articles-section">
-  <div class="articles-grid">
-
-    <div class="article-card color1">
-      <h3>مقالات آموزشی ریاضی</h3>
-      <p>موضوعات مختلف ریاضی از ابتدایی تا دانشگاه.</p>
-      <a href="articles/math-articles.html">مشاهده</a>
-    </div>
-
-    <div class="article-card color2">
-      <h3>GMath، بازی ریاضی</h3>
-      <p>تست هوش و سرگرمی‌های ریاضی.</p>
-      <a href="articles/math-games.html">مشاهده</a>
-    </div>
-
-    <div class="article-card color3">
-      <h3>یادداشت‌های مدرس</h3>
-      <p>خاطرات تدریس، تجربیات شخصی و نکات تربیتی و آموزشی</p>
-      <a href="articles/teacher-notes.html">مشاهده</a>
-    </div>
-
-    <div class="article-card color4">
-      <h3>نرم‌افزارهای ریاضی</h3>
-      <p>لینک دانلود و توضیحات نرم‌افزارهای ریاضی.</p>
-      <a href="articles/math-software.html">مشاهده</a>
-    </div>
-
-  </div>
-</div>
-
-</body>
-</html>
+      font-size: 0.95rem;
+      box-shadow: 0 6px 14px rgba
