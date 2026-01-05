@@ -3,18 +3,22 @@
 <head>
   <meta charset="UTF-8">
   <title>مقالات - مریم داورپناه</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 
   <!-- فونت زیبا -->
   <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@500;700;900&display=swap" rel="stylesheet">
 
   <style>
+    /* پایه واکنش‌گرا برای همه نمایشگرها */
+    html {
+      /* بین 15px و 18px، با تطبیق بر اساس عرض viewport */
+      font-size: clamp(15px, 1.05vw + 0.5rem, 18px);
+    }
     body {
       font-family: "Vazirmatn", sans-serif;
       background: #f7f9fc;
       margin: 0;
       color: #24324a;
-      font-size: 16px; /* پایه برای rem */
     }
 
     /* هدر */
@@ -66,9 +70,7 @@
       z-index: 11;
       font-size: 1rem;
     }
-    .back-btn:hover {
-      background: #43a047;
-    }
+    .back-btn:hover { background: #43a047; }
 
     /* نام و عنوان */
     .name-box {
@@ -148,18 +150,27 @@
     .color3 {background: rgba(180,255,220,.30);}
     .color4 {background: rgba(255,220,200,.30);}
 
-    /* رسپانسیو */
-    @media(min-width:993px){
-      .article-card h3 { font-size: 1.4rem; }
-      .article-card p { font-size: 1.15rem; }
+    /* تقویت خوانایی روی نمایشگرهای با DPI بالا */
+    @media (min-resolution: 2dppx) and (max-width: 480px) {
+      html { font-size: clamp(16px, 1.2vw + 0.6rem, 19px); }
+      .article-card h3 { font-size: 1.5rem; }
+      .article-card p { font-size: 1.25rem; }
+      .article-card { padding: 1.2rem; }
     }
-    @media(max-width:900px){
+
+    /* تبلت و دسکتاپ کوچک */
+    @media (max-width: 900px) {
       .articles-grid { grid-template-columns: 1fr; }
       .article-card h3 { font-size: 1.4rem; }
       .article-card p { font-size: 1.2rem; }
     }
-    @media(max-width:600px){
+
+    /* موبایل: کوتاه‌تر کردن هدر برای دیده شدن کارت‌ها بدون اسکرول */
+    @media (max-width: 600px) {
+      .header-bar { height: 128px; }
       .header-profile img { width: 8rem; height: 8rem; }
+      .header-profile { bottom: -18px; right: 16px; }
+      .name-box { margin: 1rem 0.9rem 0; }
       .article-card h3 { font-size: 1.5rem; }
       .article-card p { font-size: 1.3rem; }
       .back-btn { bottom: 0.4rem; left: 0.6rem; padding: 0.4rem 0.8rem; font-size: 0.9rem; }
